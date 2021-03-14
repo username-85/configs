@@ -1,0 +1,58 @@
+"dark numbers:
+"hi Hint::after					  content: attr(number); color:#96ae81;
+hi Hint::after					  content: attr(number); color:#a9a969;
+
+"light numbers
+"hi Hint::after					  content: attr(number); 
+
+"Hint section
+"hi Hint							  font-family: 'Terminus(TTF)'; font-size: 14px !important; font-weight: bold !important; color: #ffffff !important; background-color: rgba(0, 0, 0, 0.6) !important; border: solid 1px #000000 !important; position: absolute !important;
+hi Hint							  font-family: 'xos4 Terminus'; font-size: 14px !important; font-weight: bold !important; color: #ffffff !important; background-color: rgba(0, 0, 0, 0.6) !important; border: solid 1px #000000 !important; position: absolute !important;
+hi HintActive					  background: #4682b4 !important; color: #ffffff !important;
+hi HintElem						  background-color: inherit !important;
+hi HintImage					  opacity: .5 !important;
+
+" command line
+hi CmdNormal color:#969896; background:#1b1b1b;
+hi CmdLine color: inherit; background: inherit;
+hi Normal color: #969896; background:#282a2e;
+hi StatusNormal: background: #282a2e;
+hi StatusLine font-weight: normal; padding-right: 5px; min-height: 14px;
+hi StatusLineBroken   color: #ffa0a0; background: #1d1f21;
+hi StatusLineNormal   color: #969896; background: #282a2e;
+hi StatusLineSecure   color: #81a2be; background: #282a2e;
+hi StatusLineExtended color: #a0ffa0; background: #282a2e;
+
+" completions
+hi CompDesc color: #cc9393; width: 55%;
+hi CompGroup color: inherit; font-weight: bold;
+hi CompIcon display: none;
+hi CompItem color:inherit; background:inherit; font-weight:normal;
+hi CompItem:nth-child(2n+1) none;
+hi CompItem[selected] color:#f0c674; background:#434443;
+hi CompTitle font-weight: bold; color:#ffcfaf; background:#1b1b1b;
+hi CompTitleSep display: none;
+
+" messages
+hi ErrorMsg color: #80d4aa; font-weight: bold;
+hi InfoMsg color:#f8f893;
+hi ModeMsg color:#ffcfaf;
+hi MoreMsg color:#b5bd68;
+hi WarningMsg color: #dfe4cf; font-weight: bold;
+hi StatusErrorMsg color:#80d4aa !important;
+hi StatusInfoMsg color:#f8f893 !important; font-weight:inherit;
+hi StatusModeMsg color:#ffcfaf !important;
+hi StatusMoreMsg color:#b5bd68 !important; font-weight:bold;
+hi StatusWarningMsg color:#dfe4cf !important; font-weight:bold !important;
+
+hi Filter color: #ffffff; font-weight:bold;
+hi String color: #cc9393; white-space: pre;
+hi NonText color:#5b605e; font-weight:bold;
+hi Title color:#ffcfaf; font-weight:bold;
+hi URL color: #7f9f7f;
+hi Indicator color: #93b3a3; font-weight: bold; width:1em; text-align: center;
+
+hi Question color: #82a282; background: #282a2e; font-weight: bold;
+hi StatusQuestion color: #82a282; background: #282a2e; font-weight: bold;
+
+

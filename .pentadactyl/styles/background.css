@@ -1,0 +1,32 @@
+@-moz-document url(about:newtab),url-prefix(dactyl://),url-prefix(resource://)   {
+
+window {
+background: #1a1a1a !important;
+}
+
+
+#newtab-scrollbox {
+background: transparent none !important;
+}
+
+
+.newtab-title {
+background-color: rgba(0,0,0,.75) !important; 
+color: #eee !important;
+}
+
+
+
+}
+
+
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+
+
+/* Browser Background */
+browser[type="content-primary"] {
+background-color: #1a1a1a !important;
+} 
+
+}

@@ -1,0 +1,71 @@
+"so ~/.pentadactyl/styles/background.css
+"so ~/.pentadactyl/styles/nightshift-dark.css
+"so ~/.pentadactyl/styles/terminus.css
+so ~/.pentadactyl/styles/input-color-fix.css
+
+"set! gfx.downloadable_fonts.enabled=false
+set findcase=ignore
+colorscheme zenburn
+set! ui.key.menuAccessKey=0
+set editor='urxvt -e "vim" '
+set! browser.tabs.closeWindowWithLastTab=false
+set guioptions=s
+set autocomplete=
+set complete=bookmark
+set showtabline=never
+set defsearch=startpage-com-english
+"set defsearch=duckduckgo
+set encoding=UTF-8
+set verbose=0
+set! javascript.enabled=false
+set history=0
+
+"copy to system clipboard
+"js editor.defaultRegister="+"
+
+map <F1> :set! javascript.enabled<CR>
+map q <Nop>
+map gf <Nop>
+map <C-q> <Nop>
+map <C-w> <Nop>
+imap <C-j> <CR>
+nmap <C-j> <CR>
+
+nmap <C-m> <CR>
+imap <C-m> <CR>
+map <C-m> <CR>
+map -m hints <C-m> <Return>
+
+"   toggle images
+map <A-S-i> -js <<EOF
+var tmp = 'permissions.default.image';
+prefs.set(tmp, prefs.get(tmp) == 1 ? 2 : 1);
+tabs.reload(config.browser.mCurrentTab);
+EOF
+
+"   toggle javascript
+map <A-S-j> -js <<EOF
+var tmp = 'javascript.enabled';
+prefs.set(tmp, prefs.get(tmp) == true ? false : true);
+tabs.reload(config.browser.mCurrentTab);
+EOF
+
+"disable smooth scrolling
+set scrollsteps=1
+set scrolltime=0
+
+map -b j 8j
+map -b k 8k
+map -b h 8h
+map -b l 8l
+
+"   toggle styles
+map <A-S-s> -js <<EOF
+var tmp = 'extensions.stylem.styleRegistrationEnabled';
+prefs.set(tmp, prefs.get(tmp) ? false : true);
+EOF
+
+"https://github.com/lzh9102/dotfiles/blob/master/pentadactyl/pentadactylrc
+"https://github.com/MaskRay/Config/blob/master/home/.pentadactylrc
+
+

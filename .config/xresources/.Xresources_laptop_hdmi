@@ -1,0 +1,156 @@
+rofi.terminal: urxvt
+!pc
+rofi.font: Terminus(TTF) 12
+!laptop
+!rofi.font: Terminus(TTF) bold 18
+! -----------------------------------------------------------------------------
+! ROFI Color theme
+! -----------------------------------------------------------------------------
+rofi.color-enabled: true
+rofi.disable-history: true
+rofi.hide-scrollbar: true
+rofi.no-custom: true
+! hlbg is color236
+! State:           'bg',     'fg',   'bgalt',  'hlbg',   'hlfg'
+rofi.color-normal: #000000, #acb7cf, #000000, #303030, #acb7cf
+rofi.color-active: #000000, #c5c59c, #000000, #303030, #c5c59c
+rofi.color-urgent: #000000, #d2a7a7, #000000, #303030, #d2a7a7
+!                 'background', 'border', 'separator'
+rofi.color-window: #000000, #222222, #222222
+
+! pc
+Xft.dpi: 96
+urxvt*font:-*-terminus-medium-*-*-*-14-*-*-*-*-*-iso10646-*
+urxvt*boldFont:-*-terminus-medium-*-*-*-14-*-*-*-*-*-iso10646-*
+urxvt*italicFont:-*-terminus-medium-*-*-*-14-*-*-*-*-*-iso10646-*
+urxvt*boldItalicFont:-*-terminus-medium-*-*-*-14-*-*-*-*-*-iso10646-*
+! right DPI for work
+! 1920x1080  21.5
+!Xft.dpi: 102
+!--Laptop--
+!dpi for 14 inch 1920 x 1080
+!Xft.dpi:157
+!urxvt*font:-*-terminus-bold-*-*-*-24-*-*-*-*-*-iso10646-*
+!urxvt*boldFont:-*-terminus-bold-*-*-*-24-*-*-*-*-*-iso10646-*
+!urxvt*italicFont:-*-terminus-bold-*-*-*-24-*-*-*-*-*-iso10646-*
+!urxvt*boldItalicFont:-*-terminus-bold-*-*-*-24-*-*-*-*-*-iso10646-*
+
+
+!Xft.rgba: rgb
+!Xft.lcdfilter: lcddefault
+Xft.rgba: none
+Xft.lcdfilter: lcdnone
+Xft.autohint: false
+Xft.antialias: 0 
+Xft.hinting: 1 
+Xft.hintstyle: hintfull
+
+uxvt*boldMode: false
+urxvt*termName: rxvt-256color
+urxvt*saveLines:0
+urxvt.scrollBar:false
+urxvt.intensityStyles:false
+urxvt.iso14755: false
+!urxvt.perl-ext-common:default,-searchable-scrollback
+urxvt.perl-ext-common:
+
+
+!urxvt colors
+
+!dark
+urxvt*foreground:7
+urxvt*background:0
+urxvt*cursorColor:2
+urxvt*highlightColor:grey28
+
+
+!!black
+!*color0:       #000000
+!*color8:       #9b9b9b
+!! DarkRed + Red
+!*color1:       #c48a8a
+!*color9:       #c48a8a
+!! DarkGreen + Green
+!*color2:       #a0b68d
+!*color10:      #a0b68d
+!! DarkYellow + Yellow
+!*color3:       #b6b67c
+!*color11:      #b6b67c
+!! DarkBlue + Blue
+!*color4:       #a3afca
+!*color12:      #a3afca
+!! DarkMagenta + Mangenta
+!*color5:       #b895bc
+!*color13:      #b895bc
+!!DarkCyan + Cyan
+!*color6:       #8eb5ae
+!*color14:      #8eb5ae
+!! LightGrey + White
+!*color7:       #b8b8b8
+!*color15:      #b8b8b8
+
+!! black
+!*color0:       #000000
+!*color8:       #9b9b9b
+!! DarkRed + Red
+*color1:       #cd9e9e
+*color9:       #cd9e9e
+!! DarkGreen + Green
+!*color2:       #a9bd98
+!*color10:      #a9bd98
+!! DarkYellow + Yellow
+!*color3:       #bfbf91
+!*color11:      #bfbf91
+! DarkBlue + Blue
+!*color4:       #a3afca
+!*color12:      #a3afca
+!! DarkMagenta + Mangenta
+!*color5:       #c0a1c3
+!*color13:      #c0a1c3
+!!DarkCyan + Cyan
+!*color6:       #9bbdb7
+!*color14:      #9bbdb7
+!! LightGrey + White
+!*color7:       #c0c0c0
+!*color15:      #c0c0c0
+
+!black
+*color0:       #000000
+*color8:       #a5a5a5
+! DarkRed + Red
+!*color1:       #d2a7a7
+!*color9:       #d2a7a7
+! DarkGreen + Green
+*color2:       #b1c3a2
+*color10:      #b1c3a2
+! DarkYellow + Yellow
+*color3:       #c5c59c
+*color11:      #c5c59c
+! DarkBlue + Blue
+*color4:       #acb7cf
+*color12:      #acb7cf
+! DarkMagenta + Mangenta
+*color5:       #c6aac9
+*color13:      #c6aac9
+!DarkCyan + Cyan
+*color6:       #a5c3be
+*color14:      #a5c3be
+! LightGrey + White
+*color7:       #c6c6c6
+*color15:      #c6c6c6
+
+URxvt.lineSpace: 1
+URxvt.letterSpace: 0
+
+Sxiv.foreground: #000000
+Sxiv.background: #586151
+Sxiv.font: Terminus(TTF)
+
+
+Xft.autohint: 0
+Xft.lcdfilter:  lcddefault
+Xft.hintstyle:  hintfull
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+

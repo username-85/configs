@@ -1,0 +1,5 @@
+# status
+set-option -g status-interval 0
+set -g status-right-length 50
+set-option -g status-right-style "fg=blue,bg=black"
+set -g status-right "#{host_short}"

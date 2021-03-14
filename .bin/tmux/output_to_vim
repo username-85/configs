@@ -1,0 +1,10 @@
+#!/bin/bash
+
+rm /tmp/*.tmux_pane_for_vim
+
+file=`mktemp -u`.tmux_pane_for_vim
+tmux capture-pane -pS -32768 > $file
+# to open at the begining of file
+#tmux new-window -n:pane_output "vim '+ normal $' $file"
+# to open at the end of file
+tmux new-window -n:mywindow "vim '+ normal G $' $file"

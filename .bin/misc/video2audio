@@ -1,0 +1,9 @@
+#!/bin/sh
+
+if [ "$#" -ne 2 ]; then
+	echo "Usage: $0 video_file audio_file" >&2
+	exit 1
+fi
+
+#ffmpeg -i "$1" -f mp3 -ab 128000 -vn "$2"
+ffmpeg -i "$1" -f mp3 -ab 64000 -vn "$2"

@@ -1,0 +1,3 @@
+#!/bin/sh
+
+exe=`ls $HOME/.bin/menu/elements | dmenu ` && exec $HOME/.bin/menu/elements/$exe

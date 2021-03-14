@@ -1,0 +1,2 @@
+#!/bin/sh
+cppcheck --enable=all --force --inconclusive --output-file=cppcheck.txt .

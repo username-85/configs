@@ -1,0 +1,4 @@
+#!/bin/sh
+
+urxvt -title tmux -e sh -c "if (tmux has-session); then exec tmux attach-session -d -t $(tmux ls |  grep -m 1 -v attached | cut -d ':' -f 1); else exec tmux new-session -c /tmp/misc; fi"
+

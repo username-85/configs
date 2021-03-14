@@ -1,0 +1,22 @@
+#!/bin/bash
+MAX_COUNT=2
+JABBER_COUNTER=`echo $HOME/.mcabber/unread_counter`
+
+if ! [ -f $JABBER_COUNTER ]; then
+    exit 0
+fi
+
+counter=$(<$JABBER_COUNTER)
+# 4 numbers separated with space chars:
+# Nr of unread buffers, nr of unread buffers with attention sign,
+# nr of MUC unread buffers, nr of MUC unread buffers with attention sign.
+counter=$(echo $counter | cut -d ' ' -f 1)
+
+if [ $counter -ge $MAX_COUNT ]; then
+    counter=$MAX_COUNT
+fi
+
+for (( i=1; i<=$counter; i++ ))
+do
+   echo -ne "  "
+done

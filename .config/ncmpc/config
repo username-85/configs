@@ -1,0 +1,20 @@
+welcome-screen-list = no
+visible-bitrate = no
+auto-center = yes
+enable-colors = yes
+wide-cursor = no
+hardware-cursor = yes
+
+
+color background = black
+color title = blue/black
+color title-bold = blue/black
+color line = blue/black
+color list-bold = yellow/236
+color browser-directory = blue
+
+color browser-playlist = green
+color progressbar = blue/black
+color status-state = blue/black
+color status-song = blue/black
+

@@ -1,0 +1,150 @@
+##
+## Key bindings for ncmpc (~/.ncmpc/keys)
+##
+##
+## Its possible to bind maximum three keys to a command
+## Keys can be defined with a character or a decimal/hexadecimal value.
+## A command can be disabled by binding it to 0 (key bind quit = 0).
+##
+## Example - bind the Q key to quit in three different ways:
+## (character, decimal [81], hexadecimal [51])
+##
+## key quit = 'Q'
+## key quit = 81
+## key quit = 0x51
+##
+
+## Quit
+key quit = 'q',  'Q'
+
+## Move cursor up
+key up = 259,  'k'
+
+## Move cursor down
+key down = 258,  'j'
+
+## Home
+key home = 262,  1
+
+## End
+key end = 360,  5
+
+## Page up
+key pgup = 339
+
+## Page down
+key pgdn = 338
+
+## Help screen
+key screen-help = 0
+
+## Playlist screen
+key screen-playlist = '2',  266
+
+## Browse screen
+key screen-browse = '3',  267
+
+## Play/Enter directory
+key play = 13
+
+## Pause
+key pause = 0
+
+## Stop
+key stop = 0
+
+## Next track
+key next = 0
+
+## Previous track
+key prev = 0
+
+## Seek forward
+key seek-forward = 'f'
+
+## Seek backward
+key seek-backward = 'b'
+
+## Increase volume
+key volume-up = 0
+
+## Decrease volume
+key volume-down = 0
+
+## Select/deselect song in playlist
+key select = 32
+
+## Delete song from playlist
+key delete = 330,  'd'
+
+## Shuffle playlist
+key shuffle = 0
+
+## Clear playlist
+key clear = 'c'
+
+## Toggle repeat mode
+key repeat = 'r'
+
+## Toggle random mode
+key random = 0
+
+## Toggle crossfade mode
+key crossfade = 0
+
+## Toggle consume mode
+key consume = 0
+
+## Start a music database update
+key db-update = 21
+
+## Save playlist
+key save = 's'
+
+## Add url/file to playlist
+key add = 'a'
+
+## Move item up
+key move-up = 'K'
+
+## Move item down
+key move-down = 'J'
+
+## Update screen
+key update = 12
+
+## Toggle find mode
+key wrap-mode = 0
+
+## Toggle auto center mode
+key autocenter-mode = 0
+
+## Next screen
+key screen-next = 9
+
+## Previous screen
+key screen-prev = 0
+
+## Forward find
+key find = 0
+
+## Forward find next
+key find-next = 0
+
+## Backward find
+key rfind = 0
+
+## Backward find previous
+key rfind-next = 0
+
+## Jump to
+key jump = 0
+
+## Key configuration screen
+key screen-keyedit = 0
+
+
+key screen-search = 0
+key screen-lyrics = 0
+key screen-outputs = 0
+key screen-artist = 0

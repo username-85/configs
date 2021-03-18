@@ -1,0 +1,93 @@
+###############################################################################
+#   bspwm
+###############################################################################
+
+#rotate horiz
+super + shift + r
+	bspc node @focused:/ -R 90
+
+#close window
+alt + shift + c
+	bspc node -c
+
+#layout tiled
+super + shift + t
+	bspc desktop -l tiled
+
+#layout monocle
+super + shift + m
+	bspc desktop -l monocle
+
+XF86Mail
+	~/.bin/XF86Mail
+
+XF86HomePage
+    xte "mousemove 1920 1080"
+
+#toggle floating
+super + shift + f
+	bspc node -t \~floating
+
+alt + Tab
+	bspc desktop -f last
+
+alt + {space,semicolon}
+	bspc node -f last.local
+
+alt + {n, w}
+    bspc node -f next.local.!hidden.window
+
+alt + p
+    bspc node -f prev.local.!hidden.window
+
+alt + a
+    rofi -modi windowcd -show windowcd
+alt + F4
+    rofi -modi window -show window
+
+alt + r
+	~/.bin/dmenu_static
+
+# move win
+alt + shift + {Left,Down,Up,Right}
+	bspc node -s {west,south,north,east}
+
+#resize win
+super + shift + {Left,Down,Up,Right}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# preselect the direction
+super + ctrl + {Left,Down,Up,Right}
+	bspc node -p {\~west,\~south,\~north,\~east}
+
+# focus or send to the given desktop
+alt + {_,shift + }{1-3,0}
+	bspc {desktop -f,node -d} ^{1-3,4}
+
+###############################################################################
+#   other
+###############################################################################
+alt + shift + Return
+	urxvt -e bash -c "if (tmux has-session); then exec tmux attach-session -d -t $(tmux ls |  grep -m 1 -v attached | cut -d ':' -f 1); else exec tmux new-session -c /tmp/misc; fi"
+
+super + l
+	slock
+
+# audio
+XF86AudioPlay
+	mpc --host /tmp/mpd toggle
+
+XF86AudioRaiseVolume
+	mpc --host /tmp/mpd volume +5
+
+XF86AudioLowerVolume
+	mpc --host /tmp/mpd volume -5
+
+XF86MonBrightnessUp
+    xbacklight -inc 1
+
+XF86MonBrightnessDown
+    xbacklight -dec 1
+
+{Print,Menu}
+    xkb-switch -n

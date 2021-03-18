@@ -1,0 +1,51 @@
+set recolor
+set font "xos4 Terminus bold 12"
+
+# ------------------------------- keys   --------------------------------------
+map = toggle_statusbar
+unmap F11
+unmap [fullscreen] F11
+unmap [index] F11
+unmap q
+unmap [fullscreen] q
+unmap [index] q
+# ------------------------------- colors --------------------------------------
+# cyan #669a93
+# red #b06060
+# green #8ba574
+# yellow #9c9c4d
+# dark grey #1c1c1c
+# light grey #a0a0a0
+
+set recolor-darkcolor "#8ba574"
+set completion-bg "#000000"
+set completion-fg "#a0a0a0"
+
+set completion-group-bg "#000000"
+set completion-group-fg "#9c9c4d"
+
+set completion-highlight-bg "#1c1c1c"
+set completion-highlight-fg "#8ba574"
+
+set inputbar-bg "#000000"
+set inputbar-fg "#669a93"
+
+set notification-bg "#000000"
+set notification-fg "#8ba574"
+
+set notification-error-bg "#000000"
+set notification-error-fg "#b06060"
+
+set notification-warning-bg "#000000"
+set notification-warning-fg "#9c9c4d"
+
+set statusbar-bg "#000000"
+set statusbar-fg "#669a93"
+
+set index-bg "#000000"
+set index-fg "#a0a0a0"
+
+set index-active-bg "#1c1c1c"
+set index-active-fg "#8ba574"
+
+

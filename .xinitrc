@@ -4,7 +4,7 @@
 #
 # Executed by startx (run your window manager from here)
 
-xresources_file="${HOME}/.config/xresources/.Xresources_${HOSTNAME}"
+xresources_file="${HOME}/.config/xresources/Xresources_${HOSTNAME}"
 
 if [ $HOSTNAME = "laptop" ]; then
     output_hdmi=$(xrandr | awk '/connected/ && /HDMI1/ { print; }' | cut -d " " -f1)
@@ -24,6 +24,7 @@ mkdir -p /tmp/misc
 mkdir -p /tmp/music
 mkdir -p /tmp/mutt
 
+autocutsel -fork &
 autocutsel -selection PRIMARY -fork &
 
 dunst &

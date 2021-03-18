@@ -3,7 +3,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 
-exec_always --no-startup-id habak -ms ~/wall.png
+#exec_always --no-startup-id habak -ms ~/wall.png
 
 #workspace_auto_back_and_forth yes
 hide_edge_borders smart
@@ -44,13 +44,11 @@ bindsym XF86Bluetooth exec --no-startup-id xte "mousemove 1920 1080"
 #f11
 #?
 
-bindsym XF86HomePage exec --no-startup-id xte "mousemove 1920 1080"
-
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 1
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 1
 
-#bindsym XF86HomePage exec --no-startup-id ~/.bin/XF86HomePage
-bindsym XF86Mail exec --no-startup-id ~/.bin/XF86Mail
+bindsym XF86HomePage exec --no-startup-id ~/.bin/keys/XF86HomePage
+bindsym XF86Mail exec --no-startup-id ~/.bin/keys/XF86Mail
 #bindsym XF86Mail exec --no-startup-id notify-send -u low "$(mpc --host /tmp/mpd current)"
 bindsym XF86AudioRaiseVolume exec --no-startup-id  mpc --host /tmp/mpd volume +5
 bindsym XF86AudioLowerVolume exec --no-startup-id mpc --host /tmp/mpd volume -5
@@ -137,8 +135,8 @@ set $ws0 "tmp"
 # switch to workspace
 bindsym Mod1+1 workspace number $ws1
 bindsym Mod1+2 workspace number $ws2
-#bindsym Mod1+0 workspace $ws0
-bindsym Mod1+0 exec --no-startup-id ~/.bin/i3/ws_switch $ws0
+bindsym Mod1+0 workspace $ws0
+#bindsym Mod1+0 exec --no-startup-id ~/.bin/i3/ws_switch $ws0
 
 # move focused container to workspace
 bindsym Mod1+Shift+1 move container to workspace number $ws1

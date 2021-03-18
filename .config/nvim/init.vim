@@ -98,10 +98,6 @@ nnoremap <C-w>a :Buffers<CR>
 nnoremap <F5> :call bufferhint#Popup()<CR>
 "let g:bufferhint_SortMode = 1
 
-"spell
-map <F7> :setlocal spell! spelllang=ru,en<CR>
-imap <F7> <C-o>:setlocal spell! spelllang=ru,en<CR>
-
 "tagbar
 let g:tagbar_compact = 1
 au FileType c,cpp,h,python imap <F11> <Esc> :TagbarToggle<CR>a
@@ -109,20 +105,16 @@ au BufEnter *.h,*py imap <F11> <Esc> :TagbarToggle<CR>a
 au FileType c,cpp,h,python nmap <F11> :TagbarToggle<CR>
 au BufEnter *.h,*py nmap <F11> :TagbarToggle<CR>
 
-set pastetoggle=<F6>
-nmap <F12> <Plug>CscopeDBInit
+set pastetoggle=<F12>
 
 " remap changing forux window
 noremap <C-w>; <C-w>p
 
-nmap <F9> :set list! <bar> :ToggleWhitespace <CR>
-imap <F9> <Esc> :set list! <bar> :ToggleWhitespace <CR>
+nmap <F10> :set list! <bar> :ToggleWhitespace <CR>
+imap <F10> <Esc> :set list! <bar> :ToggleWhitespace <CR>
 
 nmap <F1> :NERDTreeToggle  <CR>
 imap <F1> <Esc> :NERDTreeToggle <CR>
-
-nmap <silent><F10> :call ExpandTabToggle()<CR>
-imap <silent><F10> <Esc> :call ExpandTabToggle()<CR>
 
 " Switch to last-active tab
 if !exists('g:Lasttab')
@@ -169,13 +161,8 @@ if v:version >= 700
 endif
 
 " toggle space or tabs identation
-function! ExpandTabToggle()
-  if &expandtab
-    set noexpandtab
-  else
-    set expandtab
-  endif
-endfunction
+"set noexpandtab
+"set expandtab
 
 "------ plugins settings ------
 
@@ -246,3 +233,11 @@ let g:cscopedb_small_file = 'cscope_small.out'
 let g:cscopedb_auto_files = 1
 let g:cscopedb_auto_init = 1
 
+
+" command for as
+"nmap <F12> <Plug>CscopeDBInit
+command Rebuid call <SNR>16_initForce()
+command Spell setlocal spell! spelllang=ru,en
+
+" status line only if 2 windows
+set laststatus=1

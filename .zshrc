@@ -95,7 +95,7 @@ alias dya="firejail youtube-dl --no-cache-dir -f bestaudio --no-playlist -o '/tm
 #alias mib2c='mib2c -c mib2c.iterate.conf'
 alias rebuild_tags='cscope -Rbkq'
 alias rebuild_python_tags='ctags -R --fields=+l --languages=python --python-kinds=-iv -f'
-alias clean_tags='find . -name "*cscope*.*" -exec rm -v {} \;'
+alias clear_tags='find . -name "*cscope*.*" -exec rm -v {} \;'
 
 # home
 #alias urxvt_ssh_work="urxvt -e bash -c 'ssh -Y -p 1522 user@localhost'"

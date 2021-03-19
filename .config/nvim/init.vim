@@ -58,12 +58,13 @@ set autoindent
 set copyindent
 set preserveindent
 set smarttab
-set smartindent
+"set smartindent
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 "set noexpandtab
 set expandtab
+filetype indent off
 
 au Syntax c,cpp syn keyword cType uint ubyte ulong boolean_t
 au Syntax c,cpp syn keyword cType int64_t int32_t int16_t int8_t

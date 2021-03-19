@@ -1,0 +1,3 @@
+#!/bin/sh
+~/.bin/menu/run_or_raise class Telegram telegram-desktop
+

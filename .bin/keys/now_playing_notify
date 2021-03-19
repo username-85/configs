@@ -1,0 +1,3 @@
+#!/bin/sh
+notify-send -u low "$(mpc --host /tmp/mpd current)"
+

@@ -1,3 +1,2 @@
 #!/bin/sh
-
-exe=`ls $HOME/.bin/menu/elements | dmenu ` && exec $HOME/.bin/menu/elements/$exe
+exe=`ls $HOME/.bin/menu/elements/$HOSTNAME | dmenu ` && exec $HOME/.bin/menu/elements/$HOSTNAME/$exe

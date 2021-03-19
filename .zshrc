@@ -55,7 +55,7 @@ alias try_en='trans -t en -e yandex -pager w3m -show-translation-phonetics=n -sh
 alias v=nvim
 alias weather='curl "wttr.in/Novosibirsk?TMQF"'
 alias less='less -M'
-alias newsboat='cd /tmp/downloads && newsboat'
+alias newsboat='cd /tmp/downloads && newsboat --cache-file=~/.cache/newsboat_cache.db'
 alias picocom='picocom -b 115200'
 
 # web

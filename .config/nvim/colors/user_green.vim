@@ -96,6 +96,8 @@ hi PmenuThumb		ctermfg=0 ctermbg=6 cterm=NONE term=NONE
 
 hi Todo         ctermfg=1 ctermbg=0 cterm=NONE term=NONE
 
+hi Underlined term=underline cterm=underline ctermfg=12
+
 " from zenburn
 hi DiffAdd         guifg=#709080 guibg=#313c36 gui=bold       ctermfg=66  ctermbg=237 cterm=bold
 hi DiffChange      guibg=#333333                              ctermbg=236

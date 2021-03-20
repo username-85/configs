@@ -38,7 +38,7 @@ hi vimError     ctermfg=1 ctermbg=0
 "magenta 5
 
 "black fg
-hi NonText		ctermfg=0 ctermbg=0 
+hi NonText		ctermfg=4 ctermbg=0
 hi WildMenu		ctermfg=3 ctermbg=0 cterm=NONE term=NONE
 hi TablineFill	ctermfg=234 ctermbg=234 cterm=NONE
 hi Search		ctermfg=3 ctermbg=238 cterm=NONE term=NONE guifg=NONE guibg=NONE

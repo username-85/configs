@@ -7,7 +7,7 @@
 xresources_file="${HOME}/.config/xresources/Xresources_${HOSTNAME}"
 
 if [ $HOSTNAME = "laptop" ]; then
-    output_hdmi=$(xrandr | awk '/connected/ && /HDMI1/ { print; }' | cut -d " " -f1)
+    output_hdmi=$(xrandr | grep "HDMI1 connected")
 
     if [ -n "$output_hdmi" ]; then
         xresources_file="${xresources_file}_hdmi"

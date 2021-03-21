@@ -1,9 +1,9 @@
 #------------------------------------------------------------------------------
 #   export
 
-export WINEARCH="win32"
-export WINEPREFIX="/home/user/data/wine"
-export WINEDEBUG="-all,+fps"
+#export WINEARCH="win32"
+#export WINEPREFIX="/home/user/data/wine"
+#export WINEDEBUG="-all,+fps"
 
 #export FZF_DEFAULT_COMMAND="fd . $HOME"
 export FZF_DEFAULT_COMMAND="fd . "

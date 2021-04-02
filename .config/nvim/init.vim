@@ -236,9 +236,10 @@ let g:cscopedb_auto_init = 1
 
 
 " command for as
-"nmap <F12> <Plug>CscopeDBInit
-command Rebuid call <SNR>16_initForce()
+nmap <F9> <Plug>CscopeDBInit
 command Spell setlocal spell! spelllang=ru,en
+
+nmap <F8> :cs show<CR>
 
 " status line only if 2 windows
 set laststatus=1

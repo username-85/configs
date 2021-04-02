@@ -26,6 +26,7 @@ export BROWSER=w3m
 export EDITOR=nvim
 export MPD_HOST=/tmp/mpd
 export PAGER=w3m
+export SYSTEMD_PAGER=
 export QT_QPA_PLATFORMTHEME=gtk2
 export SDCV_HISTSIZE=0
 export SDCV_PAGER=w3m

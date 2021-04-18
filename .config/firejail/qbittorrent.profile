@@ -50,7 +50,7 @@ protocol unix,inet,inet6,netlink
 seccomp
 shell none
 
-private-bin qbittorrent,python*
+private-bin qbittorrent,qbittorrent-nox,python*
 private-dev
 # private-etc X11,fonts,xdg,resolv.conf
 # private-lib - problems on Arch

@@ -26,19 +26,19 @@ font pango:DejaVu Sans Mono 0
 #font -*-terminus-medium-*-*-*-18-*-*-*-*-*-iso10646-*
 
 # exec
-exec --no-startup-id xte "mousemove 1920 1080"
+exec --no-startup-id xte "mousemove 0 0"
 exec --no-startup-id ~/.bin/i3/cycle_focus.py --ignore-floating --active-workspace --delay 0
 
 # user bind
-bindsym XF86AudioMute exec --no-startup-id xte "mousemove 1920 1080"
+bindsym XF86AudioMute exec --no-startup-id xte "mousemove 0 0"
 #f4
 #?
 #f7
-bindsym XF86Display exec --no-startup-id xte "mousemove 1920 1080"
+bindsym XF86Display exec --no-startup-id xte "mousemove 0 0"
 #f8
 #?
 #f10
-bindsym XF86Bluetooth exec --no-startup-id xte "mousemove 1920 1080"
+bindsym XF86Bluetooth exec --no-startup-id xte "mousemove 0 0"
 #fn + 4
 #???
 #f11
@@ -126,6 +126,7 @@ bindsym $mod+Shift+f floating toggle
 set $ws1 "1"
 set $ws2 "2"
 set $ws0 "tmp"
+#workspace $ws0 output HDMI1
 
 #assign [class="Wine"] $ws2
 #for_window [class="Wine"] move to workspace $ws2

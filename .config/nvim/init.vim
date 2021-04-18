@@ -53,18 +53,19 @@ syntax on
 colorscheme user_green
 
 "indent
-"set cin
+set cin
 set autoindent
 set copyindent
 set preserveindent
 set smarttab
-"set smartindent
+set smartindent
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 "set noexpandtab
 set expandtab
 filetype indent off
+set cino=(shiftwidth
 
 au Syntax c,cpp syn keyword cType uint ubyte ulong boolean_t
 au Syntax c,cpp syn keyword cType int64_t int32_t int16_t int8_t
@@ -235,7 +236,6 @@ let g:cscopedb_auto_files = 1
 let g:cscopedb_auto_init = 1
 
 
-" command for as
 nmap <F9> <Plug>CscopeDBInit
 command Spell setlocal spell! spelllang=ru,en
 
@@ -243,3 +243,6 @@ nmap <F8> :cs show<CR>
 
 " status line only if 2 windows
 set laststatus=1
+
+au FileType gitcommit setlocal tw=90
+au BufNewFile,BufRead Jenkinsfile setf groovy

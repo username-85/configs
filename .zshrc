@@ -101,6 +101,8 @@ alias clear_tags='find . -name "*cscope*.*" -exec rm -v {} \;'
 # home
 #alias urxvt_ssh_work="urxvt -e bash -c 'ssh -Y -p 1522 user@localhost'"
 
+alias dual_monitor='xrandr --output eDP1 --auto --output HDMI1 --auto --right-of eDP1'
+
 # archive
 #dsite='wget -r -p -np -nc -E'
 #alias keymap_def='setxkbmap -option;setxkbmap -layout us,ru -option grp:menu_toggle,grp_led:caps,caps:escape -variant ,winkeys'

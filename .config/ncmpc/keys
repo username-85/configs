@@ -48,7 +48,7 @@ key screen-browse = '3',  267
 key play = 13
 
 ## Pause
-key pause = 0
+key pause = 'p'
 
 ## Stop
 key stop = 0

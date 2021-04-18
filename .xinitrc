@@ -35,6 +35,6 @@ xss-lock --ignore-sleep slock &
 
 unclutter -root -idle 1 -jitter 3 &
 
-xsetroot -cursor_name left_ptr
+xsetroot -cursor_name left_ptr -solid black
 
 exec i3

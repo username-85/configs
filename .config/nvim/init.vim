@@ -246,3 +246,6 @@ set laststatus=1
 
 au FileType gitcommit setlocal tw=90
 au BufNewFile,BufRead Jenkinsfile setf groovy
+
+imap jj <Esc>
+imap оо <Esc>

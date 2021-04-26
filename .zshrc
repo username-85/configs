@@ -134,6 +134,7 @@ setopt ignoreeof
 #vim key mode
 bindkey -v
 source /usr/share/fzf/key-bindings.zsh
+bindkey jj vi-cmd-mode
 
 #SAVEHIST=10
 #HISTFILE=~/.zsh_history

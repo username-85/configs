@@ -16,7 +16,7 @@ set autoread
 set foldmethod=manual
 set switchbuf=useopen,usetab
 set complete=.,w,b,u,t
-set timeoutlen=1000
+set timeoutlen=200
 set ttimeoutlen=100
 "set keymap=russian-jcukenwin
 set iminsert=0
@@ -247,5 +247,5 @@ set laststatus=1
 au FileType gitcommit setlocal tw=90
 au BufNewFile,BufRead Jenkinsfile setf groovy
 
-imap jj <Esc>
-imap оо <Esc>
+inoremap jj <Esc>
+inoremap оо <Esc>

@@ -1,0 +1,10 @@
+Description='A basic static ethernet connection'
+Interface=eth0
+Connection=ethernet
+IP=static
+Address=('192.168.0.7/24')
+Gateway='192.168.0.1'
+DNS=('77.88.8.7' '77.88.8.3')
+TimeoutUp=90
+TimeoutCarrier=90
+IP6=no

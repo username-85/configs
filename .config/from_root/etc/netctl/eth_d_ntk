@@ -1,0 +1,16 @@
+Description='A basic dhcp ethernet connection'
+Interface=eth0
+Connection=ethernet
+IP=dhcp
+DHCPClient=dhcpcd
+#DHCPReleaseOnStop=no
+## for DHCPv6
+#IP6=dhcp
+#DHCP6Client=dhclient
+## for IPv6 autoconfiguration
+#IP6=stateless
+DNS=('77.88.8.7' '77.88.8.3')
+TimeoutUp=90
+TimeoutDHCP=90
+TimeoutCarrier=90
+IP6=no

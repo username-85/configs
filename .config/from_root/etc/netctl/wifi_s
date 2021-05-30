@@ -1,0 +1,12 @@
+Interface=wlan0
+Connection=wireless
+Security=wpa
+ESSID='SET ID'
+Key='SET WIFI PASSWORD'
+IP=static
+Address='192.168.1.7/24'
+Gateway='192.168.1.1'
+DNS=('77.88.8.7' '77.88.8.3')
+RFKill='auto'
+# Uncomment this if your ssid is hidden
+Hidden=yes

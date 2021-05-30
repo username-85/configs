@@ -1,0 +1,6 @@
+#!/bin/sh
+case $1 in
+  post)
+    /etc/rc.local
+  ;;
+esac

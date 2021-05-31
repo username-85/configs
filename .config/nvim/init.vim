@@ -1,5 +1,5 @@
 " for gitgutter also
-set updatetime=100
+set updatetime=2000
 "set statusline+=%F
 set enc=utf-8
 set fillchars=vert:\│
@@ -16,7 +16,7 @@ set autoread
 set foldmethod=manual
 set switchbuf=useopen,usetab
 set complete=.,w,b,u,t
-set timeoutlen=200
+set timeoutlen=500
 set ttimeoutlen=100
 "set keymap=russian-jcukenwin
 set iminsert=0

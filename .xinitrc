@@ -4,19 +4,23 @@
 #
 # Executed by startx (run your window manager from here)
 
-xresources_file="${HOME}/.config/xresources/Xresources_${HOSTNAME}"
+HOSTNAME=$(hostname)
+xresources_file="${HOME}/.config/xresources/${HOSTNAME}"
 
 if [ $HOSTNAME = "laptop" ]; then
     output_hdmi=$(xrandr | grep "HDMI1 connected")
 
     if [ -n "$output_hdmi" ]; then
-        xresources_file="${xresources_file}_hdmi"
+        xresources_file="${xresources_fi#le}_hdmi"
     fi
 fi
 
 xrdb -merge $xresources_file
 
-slock &
+if [ $HOSTNAME = "work" ]; then
+    slock &
+    xss-lock --ignore-sleep slock &
+fi
 
 export QT_QPA_PLATFORMTHEME=gtk2
 mkdir -p /tmp/downloads
@@ -31,10 +35,11 @@ dunst &
 
 xset +dpms # enable dpms
 xset dpms 900 1200 1500 #blank, suspend,poweroff
-xss-lock --ignore-sleep slock &
 
 unclutter -root -idle 1 -jitter 3 &
 
 xsetroot -cursor_name left_ptr -solid black
+
+habak -ms ~/.config/wall/wall
 
 exec i3

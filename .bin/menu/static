@@ -1,2 +1,3 @@
 #!/bin/sh
+HOSTNAME=$(hostname)
 exe=`ls $HOME/.bin/menu/elements/$HOSTNAME | dmenu ` && exec $HOME/.bin/menu/elements/$HOSTNAME/$exe

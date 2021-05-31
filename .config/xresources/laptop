@@ -1,8 +1,5 @@
 rofi.terminal: urxvt
-!pc
-!rofi.font: Terminus(TTF) 12
-!laptop
-rofi.font: Terminus(TTF) bold 18
+rofi.font: Terminus bold 18
 ! -----------------------------------------------------------------------------
 ! ROFI Color theme
 ! -----------------------------------------------------------------------------

@@ -114,3 +114,5 @@ hi SignColumn    guibg=#181818                         ctermbg=233
 "hi DiffChange ctermbg=18 cterm=NONE term=NONE
 "green 
 "hi DiffAdd ctermbg=23 cterm=NONE term=NONE
+
+hi MyTagListFileName ctermfg=6 ctermbg=0

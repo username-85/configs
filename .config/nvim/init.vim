@@ -1,5 +1,19 @@
+call plug#begin()
+    Plug 'airblade/vim-gitgutter'
+    Plug 'bsdelf/bufferhint'
+    Plug 'easymotion/vim-easymotion'
+    Plug 'junegunn/fzf.vim'
+    Plug 'junegunn/vim-easy-align'
+    Plug 'lyokha/vim-xkbswitch'
+    Plug 'ntpeters/vim-better-whitespace'
+    Plug 'ronakg/quickr-cscope.vim'
+    Plug 'roxma/vim-tmux-clipboard'
+    Plug 'scrooloose/nerdtree'
+    Plug 'vim-scripts/taglist.vim'
+call plug#end()
+
 " for gitgutter also
-set updatetime=2000
+set updatetime=300
 "set statusline+=%F
 set enc=utf-8
 set fillchars=vert:\│
@@ -100,12 +114,22 @@ nnoremap <C-w>a :Buffers<CR>
 nnoremap <F5> :call bufferhint#Popup()<CR>
 "let g:bufferhint_SortMode = 1
 
-"tagbar
-let g:tagbar_compact = 1
-au FileType c,cpp,h,python imap <F11> <Esc> :TagbarToggle<CR>a
-au BufEnter *.h,*py imap <F11> <Esc> :TagbarToggle<CR>a
-au FileType c,cpp,h,python nmap <F11> :TagbarToggle<CR>
-au BufEnter *.h,*py nmap <F11> :TagbarToggle<CR>
+" taglist
+au FileType c,cpp,h,python nmap <F11> :TlistToggle<CR>
+au BufEnter *.h,*py nmap <F11> :TlistToggle<CR>
+let g:Tlist_Compact_Format = 1
+let g:Tlist_Display_Prototype = 0
+let g:Tlist_Display_Tag_Scope = 0
+let g:Tlist_Enable_Fold_Column = 0
+let g:Tlist_File_Fold_Auto_Close = 1
+let g:Tlist_Process_File_Always = 0
+let g:Tlist_Show_One_File = 1
+let g:Tlist_Use_Right_Window = 1
+let g:Tlist_WinWidth = 40
+let g:Tlist_Close_On_Select = 1
+let g:Tlist_Exit_OnlyWindow = 1
+let tlist_c_settings = 'c;f:functions'
+let tlist_cpp_settings = 'c++;c:class;f:function'
 
 set pastetoggle=<F12>
 
@@ -249,3 +273,17 @@ au BufNewFile,BufRead Jenkinsfile setf groovy
 
 inoremap jj <Esc>
 inoremap оо <Esc>
+
+" use xorg clipboard
+" set clipboard+=unnamedplus
+
+" " Copy to clipboard
+vnoremap  <leader>y  "+y
+nnoremap  <leader>Y  "+yg_
+nnoremap  <leader>y  "+y
+
+" " Paste from clipboard
+nnoremap <leader>p "+p
+nnoremap <leader>P "+P
+vnoremap <leader>p "+p
+vnoremap <leader>P "+P

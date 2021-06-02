@@ -17,7 +17,7 @@ set defsearch=startpage-com-english
 "set defsearch=duckduckgo
 set encoding=UTF-8
 set verbose=0
-set! javascript.enabled=false
+"set! javascript.enabled=false
 set history=0
 
 "copy to system clipboard

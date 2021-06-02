@@ -117,17 +117,19 @@ nnoremap <F5> :call bufferhint#Popup()<CR>
 " taglist
 au FileType c,cpp,h,python nmap <F11> :TlistToggle<CR>
 au BufEnter *.h,*py nmap <F11> :TlistToggle<CR>
-let g:Tlist_Compact_Format = 1
-let g:Tlist_Display_Prototype = 0
-let g:Tlist_Display_Tag_Scope = 0
-let g:Tlist_Enable_Fold_Column = 0
-let g:Tlist_File_Fold_Auto_Close = 1
-let g:Tlist_Process_File_Always = 0
-let g:Tlist_Show_One_File = 1
-let g:Tlist_Use_Right_Window = 1
-let g:Tlist_WinWidth = 40
-let g:Tlist_Close_On_Select = 1
-let g:Tlist_Exit_OnlyWindow = 1
+let Tlist_Compact_Format = 1
+let Tlist_Display_Prototype = 0
+let Tlist_Display_Tag_Scope = 0
+let Tlist_Enable_Fold_Column = 0
+let Tlist_File_Fold_Auto_Close = 1
+let Tlist_Process_File_Always = 0
+let Tlist_Show_One_File = 1
+let Tlist_Inc_Winwidth = 0
+let Tlist_Use_Right_Window = 1
+let Tlist_WinWidth = 60
+let Tlist_Close_On_Select = 1
+let Tlist_Exit_OnlyWindow = 1
+let Tlist_GainFocus_On_ToggleOpen = 1
 let tlist_c_settings = 'c;f:functions'
 let tlist_cpp_settings = 'c++;c:class;f:function'
 
@@ -275,15 +277,15 @@ inoremap jj <Esc>
 inoremap оо <Esc>
 
 " use xorg clipboard
-" set clipboard+=unnamedplus
+set clipboard+=unnamedplus
 
 " " Copy to clipboard
-vnoremap  <leader>y  "+y
-nnoremap  <leader>Y  "+yg_
-nnoremap  <leader>y  "+y
+"vnoremap  <leader>y  "+y
+"nnoremap  <leader>Y  "+yg_
+"nnoremap  <leader>y  "+y
 
 " " Paste from clipboard
-nnoremap <leader>p "+p
-nnoremap <leader>P "+P
-vnoremap <leader>p "+p
-vnoremap <leader>P "+P
+"nnoremap <leader>p "+p
+"nnoremap <leader>P "+P
+"vnoremap <leader>p "+p
+"vnoremap <leader>P "+P

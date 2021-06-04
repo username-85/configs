@@ -10,10 +10,11 @@ call plug#begin()
     Plug 'roxma/vim-tmux-clipboard'
     Plug 'scrooloose/nerdtree'
     Plug 'vim-scripts/taglist.vim'
+    Plug 'stefandtw/quickfix-reflector.vim'
 call plug#end()
 
 " for gitgutter also
-set updatetime=300
+set updatetime=500
 "set statusline+=%F
 set enc=utf-8
 set fillchars=vert:\│
@@ -122,7 +123,8 @@ let Tlist_Display_Prototype = 0
 let Tlist_Display_Tag_Scope = 0
 let Tlist_Enable_Fold_Column = 0
 let Tlist_File_Fold_Auto_Close = 1
-let Tlist_Process_File_Always = 0
+let Tlist_Process_File_Always = 1
+let Tlist_Auto_Update = 1
 let Tlist_Show_One_File = 1
 let Tlist_Inc_Winwidth = 0
 let Tlist_Use_Right_Window = 1
@@ -212,6 +214,7 @@ let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="~"
 let g:NERDTreeMapOpenVSplit="s"
 let g:NERDTreeMapOpenSplit="v"
+let g:NERDTreeBookmarksSort=0
 
 " easy - align
 " Start interactive EasyAlign in visual mode (e.g. vip<Enter>)

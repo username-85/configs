@@ -19,8 +19,8 @@ let g:colors_name="user_green"
 "grey fg
 hi Normal		ctermfg=7 ctermbg=0 
 hi MatchParen	ctermfg=0 ctermbg=4
-hi Folded		ctermfg=7 ctermbg=0
-hi FoldColumn	ctermfg=7 ctermbg=0
+hi Folded		ctermfg=4 ctermbg=233
+hi FoldColumn	ctermfg=4 ctermbg=233
 hi VisualNOS	ctermfg=7 ctermbg=8
 
 "dark cyan fg
@@ -99,10 +99,10 @@ hi Todo         ctermfg=1 ctermbg=0 cterm=NONE term=NONE
 hi Underlined term=underline cterm=underline ctermfg=12
 
 " from zenburn
-hi DiffAdd         guifg=#709080 guibg=#313c36 gui=bold       ctermfg=66  ctermbg=237 cterm=bold
-hi DiffChange      guibg=#333333                              ctermbg=236
-hi DiffDelete      guifg=#333333 guibg=#464646                ctermfg=236 ctermbg=238
-hi DiffText        guifg=#ecbcbc guibg=#41363c gui=bold       ctermfg=217 ctermbg=237 cterm=bold
+hi DiffAdd         ctermfg=2 ctermbg=234
+hi DiffChange      ctermfg=6 ctermbg=234
+hi DiffDelete      ctermfg=1 ctermbg=234
+hi DiffText        ctermfg=3 ctermbg=234
 
 hi SignColumn      guifg=#9fafaf gui=bold                     ctermfg=109 cterm=bold
 hi SignColumn    guibg=#181818                         ctermbg=233

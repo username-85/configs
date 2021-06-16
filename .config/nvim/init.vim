@@ -11,6 +11,9 @@ call plug#begin()
     Plug 'scrooloose/nerdtree'
     Plug 'vim-scripts/taglist.vim'
     Plug 'stefandtw/quickfix-reflector.vim'
+    Plug 'rhysd/git-messenger.vim'
+    Plug 'tpope/vim-fugitive'
+    Plug 'erig0/cscope_dynamic', {'frozen': 1}
 call plug#end()
 
 " for gitgutter also
@@ -29,6 +32,11 @@ filetype plugin on
 set autoread
 
 set foldmethod=manual
+"set nofoldenable
+"set foldmethod=syntax
+"set foldnestmax=1
+"nnoremap z<space> zA
+
 set switchbuf=useopen,usetab
 set complete=.,w,b,u,t
 set timeoutlen=500

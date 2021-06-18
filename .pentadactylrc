@@ -3,7 +3,7 @@
 "so ~/.pentadactyl/styles/terminus.css
 so ~/.pentadactyl/styles/input-color-fix.css
 
-"set! gfx.downloadable_fonts.enabled=false
+set! gfx.downloadable_fonts.enabled=false
 set findcase=ignore
 colorscheme zenburn
 set! ui.key.menuAccessKey=0
@@ -13,8 +13,8 @@ set guioptions=s
 set autocomplete=
 set complete=bookmark
 set showtabline=never
-set defsearch=startpage-com-english
-"set defsearch=duckduckgo
+"set defsearch=startpage-com-english
+set defsearch=duckduckgo
 set encoding=UTF-8
 set verbose=0
 "set! javascript.enabled=false

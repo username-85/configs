@@ -32,7 +32,7 @@ filetype plugin on
 set autoread
 
 set foldmethod=manual
-"set nofoldenable
+set nofoldenable
 "set foldmethod=syntax
 "set foldnestmax=1
 "nnoremap z<space> zA

@@ -98,7 +98,6 @@ hi Todo         ctermfg=1 ctermbg=0 cterm=NONE term=NONE
 
 hi Underlined term=underline cterm=underline ctermfg=12
 
-" from zenburn
 hi DiffAdd         ctermfg=2 ctermbg=234
 hi DiffChange      ctermfg=6 ctermbg=234
 hi DiffDelete      ctermfg=1 ctermbg=234

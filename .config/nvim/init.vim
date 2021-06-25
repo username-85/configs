@@ -1,5 +1,5 @@
 call plug#begin()
-    Plug 'airblade/vim-gitgutter'
+    Plug 'mhinz/vim-signify'
     Plug 'bsdelf/bufferhint'
     Plug 'easymotion/vim-easymotion'
     Plug 'junegunn/fzf.vim'

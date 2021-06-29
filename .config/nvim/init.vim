@@ -206,6 +206,20 @@ endif
 
 let g:quickr_cscope_use_qf_g = 1
 let g:quickr_cscope_autoload_db = 0
+let g:quickr_cscope_keymaps = 0
+
+nmap <leader>s <plug>(quickr_cscope_symbols)
+nmap <leader>g <plug>(quickr_cscope_global)
+nmap <leader>c <plug>(quickr_cscope_callers)
+nmap <leader>f <plug>(quickr_cscope_files)
+nmap <leader>i <plug>(quickr_cscope_includes)
+nmap <leader>t <plug>(quickr_cscope_text)
+nmap <leader>d <plug>(quickr_cscope_functions)
+nmap <leader>a <plug>(quickr_cscope_assignments)
+"<plug>(quickr_cscope_egrep)
+"<plug>(quickr_cscope_global_split)
+"<plug>(quickr_cscope_global_vert_split)
+
 
 let g:alternateNoDefaultAlternate=1
 

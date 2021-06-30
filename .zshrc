@@ -1,9 +1,9 @@
 #------------------------------------------------------------------------------
 #   export
 
-export WINEARCH="win32"
-export WINEPREFIX="/home/user/data/wine"
-export WINEDEBUG="-all,+fps"
+#export WINEARCH="win32"
+#export WINEPREFIX="/home/user/data/wine"
+#export WINEDEBUG="-all,+fps"
 
 #export FZF_DEFAULT_COMMAND="fd . $HOME"
 export FZF_DEFAULT_COMMAND="fd . "
@@ -91,7 +91,6 @@ alias mpans="\mpv --no-video"
 alias dyv='firejail youtube-dl --no-cache-dir -f 18 --no-playlist -o "/tmp/downloads/%(title)s-%(id)s.%(ext)s"'
 alias dya="firejail youtube-dl --no-cache-dir -f bestaudio --no-playlist -o '/tmp/downloads/%(title)s-%(id)s.%(ext)s'"
 #alias album_art_update="~/.local/bin/sacad_r ~/data/music 600 cover.jpg"
-alias soulstorm="cd ~/data/wine/drive_c/soulstorm && firejail wine Soulstorm.exe -nomovies"
 
 # dev
 #alias mib2c='mib2c -c mib2c.iterate.conf'

@@ -129,10 +129,10 @@ set $ws2 "2"
 set $ws0 "tmp"
 #workspace $ws0 output HDMI1
 
-assign [class="Wine"] $ws2
-for_window [class="Wine"] move to workspace $ws2
-assign [class="explorer.exe"] $ws2
-for_window [class="explorer.exe"] move to workspace $ws2, move position center
+#assign [class="Wine"] $ws2
+#for_window [class="Wine"] move to workspace $ws2
+#assign [class="explorer.exe"] $ws2
+#for_window [class="explorer.exe"] move to workspace $ws2, move position center
 
 # switch to workspace
 bindsym Mod1+1 workspace number $ws1

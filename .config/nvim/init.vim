@@ -278,8 +278,12 @@ nmap <c-space> <Plug>(easymotion-bd-w)
 
 let g:fzf_preview_window = []
 
-let g:XkbSwitchEnabled = 1
-
+if $DISPLAY == ""
+	let g:XkbSwitchEnabled = 0
+else
+	let g:XkbSwitchEnabled = 1
+	let g:XkbSwitchIMappings = ['ru']
+endif
 
 let g:cscopedb_big_file = 'cscope.out'
 let g:cscopedb_small_file = 'cscope_small.out'

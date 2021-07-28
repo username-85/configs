@@ -40,6 +40,8 @@ unclutter -root -idle 1 -jitter 3 &
 
 xsetroot -cursor_name left_ptr -solid black
 
+perWindowLayoutD
+
 #habak -ms ~/.config/wall/wall
 
 exec i3

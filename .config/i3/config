@@ -3,8 +3,9 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 
-exec_always --no-startup-id xkb-switch --i3
 exec_always --no-startup-id habak -ms ~/.config/wall/wall
+exec_always --no-startup-id xte "mousemove 0 0"
+exec_always --no-startup-id ~/.bin/i3/cycle_focus.py --ignore-floating --active-workspace --delay 0
 
 #workspace_auto_back_and_forth yes
 hide_edge_borders smart
@@ -18,17 +19,11 @@ focus_wrapping force
 set $mod Mod4
 
 # disable titles
-font pango:DejaVu Sans Mono 0
-# pc
-#font pango:Terminus(TTF) normal 9
+#font pango:DejaVu Sans Mono 0
 #pc
-#font -*-terminus-medium-*-*-*-12-*-*-*-*-*-iso10646-*
+font -*-terminus-medium-*-*-*-12-*-*-*-*-*-iso10646-*
 #laptop
 #font -*-terminus-medium-*-*-*-18-*-*-*-*-*-iso10646-*
-
-# exec
-exec --no-startup-id xte "mousemove 0 0"
-exec --no-startup-id ~/.bin/i3/cycle_focus.py --ignore-floating --active-workspace --delay 0
 
 # user bind
 bindsym XF86AudioMute exec --no-startup-id mpc --host /tmp/mpd toggle
@@ -63,7 +58,7 @@ bindsym Mod1+r exec --no-startup-id ~/.bin/menu/static
 bindsym Mod1+Shift+Return [title=tmux workspace=__focused__] focus
 bindsym Mod1+Tab workspace back_and_forth
 bindsym Mod1+semicolon exec --no-startup-id ~/.bin/i3/cycle_focus.py --switch
-bindsym Mod1+space exec --no-startup-id ~/.bin/i3/cycle-focus.py --switch
+bindsym Mod1+space exec --no-startup-id ~/.bin/i3/cycle_focus.py --switch
 #bindsym Mod1+n focus parent; focus next; focus child
 #bindsym Mod1+p focus parent; focus prev; focus child
 bindsym Mod1+p focus parent;
@@ -189,39 +184,39 @@ bindsym $mod+Shift+r mode "resize"
 # $i3-theme-window
 # class                 border  backgr. text    indicator
 client.focused          #3F4F53 #3F4F53 #CCC6B7 #227dbd
-client.focused_inactive #06303b #06303b #93a1a1 #002630
+client.focused_inactive #06303b #06303b #CCC6B7 #002630
 client.unfocused        #002630 #002630 #586e75 #002630
 client.urgent           #c62d2a #c62d2a #CCC6B7 #c62d2a
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-#bar {
-##pc
-#    font -*-terminus-medium-*-*-*-12-*-*-*-*-*-iso10646-*
-##laptop
-##    font -*-terminus-medium-*-*-*-18-*-*-*-*-*-iso10646-*
+bar {
+#pc
+    font -*-terminus-medium-*-*-*-12-*-*-*-*-*-iso10646-*
+#laptop
+#    font -*-terminus-medium-*-*-*-18-*-*-*-*-*-iso10646-*
 
-#    status_command    i3status
-#    position          top
-##    mode              hide
-##    hidden_state      hide
-##    modifier          none
-#    tray_output       none
+    status_command    i3status
+    position          top
+#    mode              hide
+#    hidden_state      hide
+#    modifier          none
+    tray_output       none
 
-###   slate
-#    colors {
-#        separator          #586e75
-#        background         #002630
-#        statusline         #aea79f
-#        focused_workspace  #3F4F53 #3F4F53 #CCC6B7
-#        active_workspace   #06303b #06303b #CCC6B7
-#        inactive_workspace #002630 #002630 #586e75
-#        urgent_workspace   #77216f #77216f #ffffff
-#    }
-#
-#    wheel_up_cmd nop
-#    wheel_down_cmd nop
-#}
+##   slate
+    colors {
+        separator          #586e75
+        background         #002630
+        statusline         #aea79f
+        focused_workspace  #3F4F53 #3F4F53 #CCC6B7
+        active_workspace   #06303b #06303b #CCC6B7
+        inactive_workspace #002630 #002630 #586e75
+        urgent_workspace   #77216f #77216f #ffffff
+    }
+
+    wheel_up_cmd nop
+    wheel_down_cmd nop
+}
 
 # move the currently focused window to the scratchpad
 bindsym $mod+Shift+minus move scratchpad

@@ -19,7 +19,7 @@ super + shift + m
 	bspc desktop -l monocle
 
 XF86Mail
-	~/.bin/XF86Mail
+	~/.bin/keys/XF86Mail
 
 XF86HomePage
     xte "mousemove 1920 1080"
@@ -41,12 +41,10 @@ alt + p
     bspc node -f prev.local.!hidden.window
 
 alt + a
-    rofi -modi windowcd -show windowcd
-alt + F4
-    rofi -modi window -show window
+    rofi -modi window,windowcd -show windowcd
 
 alt + r
-	~/.bin/dmenu_static
+	~/.bin/menu/static
 
 # move win
 alt + shift + {Left,Down,Up,Right}
@@ -61,8 +59,8 @@ super + ctrl + {Left,Down,Up,Right}
 	bspc node -p {\~west,\~south,\~north,\~east}
 
 # focus or send to the given desktop
-alt + {_,shift + }{1-3,0}
-	bspc {desktop -f,node -d} ^{1-3,4}
+alt + {_,shift + }{1-2,0}
+	bspc {desktop -f,node -d} ^{1-2,3}
 
 ###############################################################################
 #   other

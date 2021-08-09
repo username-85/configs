@@ -1,6 +1,10 @@
 #------------------------------------------------------------------------------
 #   export
 
+export WINEARCH="win32"
+export WINEPREFIX="/home/user/data/wine"
+export WINEDEBUG="-all,+fps"
+alias Soulstorm="cd ~/data/wine/drive_c/soulstorm && firejail wine Soulstorm.exe -nomovies"
 
 #export FZF_DEFAULT_COMMAND="fd . $HOME"
 export FZF_DEFAULT_COMMAND="fd . "

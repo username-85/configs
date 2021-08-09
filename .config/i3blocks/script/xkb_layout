@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+while :
+do
+if [ $(xkb-switch -p | grep ru) ]; then
+    echo "▒▒"
+else
+    echo ""
+fi
+
+# Wait for layout change:
+    xkb-switch -w
+done

@@ -41,7 +41,7 @@ xset dpms 900 1200 1500 #blank, suspend,poweroff
 
 unclutter -root -idle 1 -jitter 3 &
 
-xsetroot -cursor_name left_ptr -solid #00161c
+xsetroot -cursor_name left_ptr -solid #001515
 
 perWindowLayoutD
 

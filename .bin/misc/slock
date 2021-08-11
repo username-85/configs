@@ -1,0 +1,3 @@
+#!/bin/sh
+
+./img_lock ~/.config/wall/lock

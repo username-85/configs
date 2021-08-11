@@ -3,7 +3,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 
-exec_always --no-startup-id habak -ms ~/.config/wall/wall
+#exec_always --no-startup-id habak -ms ~/.config/wall/wall
 exec_always --no-startup-id xte "mousemove 0 0"
 exec_always --no-startup-id ~/.bin/i3/cycle_focus.py --ignore-floating --active-workspace --delay 0
 
@@ -49,7 +49,7 @@ bindsym XF86Mail exec --no-startup-id ~/.bin/keys/XF86Mail
 bindsym XF86AudioRaiseVolume exec --no-startup-id  mpc --host /tmp/mpd volume +5
 bindsym XF86AudioLowerVolume exec --no-startup-id mpc --host /tmp/mpd volume -5
 bindsym XF86AudioPlay exec --no-startup-id mpc --host /tmp/mpd toggle
-bindsym --release $mod+l exec --no-startup-id slock
+bindsym --release $mod+l exec --no-startup-id ~/.bin/misc/img_lock ~/.config/wall/lock
 #bindsym --release $mod+l exec --no-startup-id i3lock -efn -c 142014
 bindsym Mod1+a exec --no-startup-id "rofi -modi window,windowcd -show windowcd"
 #bindsym Mod1+a exec --no-startup-id rofi -modi window -show window

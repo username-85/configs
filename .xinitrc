@@ -24,6 +24,8 @@ if [ $HOSTNAME = "work" ]; then
 fi
 
 xss-lock $locker &
+xset +dpms # enable dpms
+xset dpms 900 1200 1500 #blank, suspend,poweroff
 
 export QT_QPA_PLATFORMTHEME=gtk2
 mkdir -p /tmp/downloads
@@ -33,16 +35,7 @@ mkdir -p /tmp/mutt
 
 autocutsel -fork &
 autocutsel -selection PRIMARY -fork &
-
 dunst &
-
-xset +dpms # enable dpms
-xset dpms 900 1200 1500 #blank, suspend,poweroff
-
-unclutter -root -idle 1 -jitter 3 &
-
-xsetroot -cursor_name left_ptr -solid #001515
-
 perWindowLayoutD
 
 exec i3

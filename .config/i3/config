@@ -2,7 +2,8 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-exec_always --no-startup-id xsetroot -cursor_name left_ptr -solid "#001515"
+exec_always --no-startup-id xcompmgr -a
+exec_always --no-startup-id hsetroot -solid "#001515"
 exec_always --no-startup-id xte "mousemove 0 0"
 exec_always --no-startup-id unclutter -root -idle 1 -jitter 3
 exec_always --no-startup-id ~/.bin/i3/cycle_focus.py --ignore-floating --active-workspace --delay 0

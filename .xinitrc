@@ -13,8 +13,6 @@ if [ $HOSTNAME = "laptop" ]; then
     if [ -n "$output_hdmi" ]; then
         xresources_file="${xresources_fi#le}_hdmi"
     fi
-
-    xcompmgr &
 fi
 
 xrdb -merge $xresources_file

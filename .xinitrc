@@ -37,5 +37,6 @@ autocutsel -fork &
 autocutsel -selection PRIMARY -fork &
 dunst &
 perWindowLayoutD
+xcompmgr &
 
 exec i3

@@ -18,11 +18,14 @@ super + shift + t
 super + shift + m
 	bspc desktop -l monocle
 
+super + m
+    bspc node -t \~fullscreen
+
 XF86Mail
 	~/.bin/keys/XF86Mail
 
 XF86HomePage
-    xte "mousemove 1920 1080"
+    ~/.bin/keys/XF86HomePage
 
 #toggle floating
 super + shift + f
@@ -62,14 +65,17 @@ super + ctrl + {Left,Down,Up,Right}
 alt + {_,shift + }{1-2,0}
 	bspc {desktop -f,node -d} ^{1-2,3}
 
+alt + {h,j,k,l}
+	bspc node -f {west,south,north,east}
+
 ###############################################################################
 #   other
 ###############################################################################
-alt + shift + Return
-	urxvt -e bash -c "if (tmux has-session); then exec tmux attach-session -d -t $(tmux ls |  grep -m 1 -v attached | cut -d ':' -f 1); else exec tmux new-session -c /tmp/misc; fi"
+#alt + shift + Return
+#	urxvt -e bash -c "if (tmux has-session); then exec tmux attach-session -d -t $(tmux ls |  grep -m 1 -v attached | cut -d ':' -f 1); else exec tmux new-session -c /tmp/misc; fi"
 
 super + l
-	slock
+	~/.bin/misc/slock
 
 # audio
 XF86AudioPlay

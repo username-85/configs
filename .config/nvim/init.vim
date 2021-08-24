@@ -107,7 +107,7 @@ noremap tt :tab split<CR>
 "map q <Nop>
 imap <F1> <Nop>
 nmap <F1> <Nop>
-map <F2> :update<CR>
+map <F2> :wall<CR>
 
 "switch layout
 "inoremap <C-@> <C-^>

@@ -261,6 +261,7 @@ command! -bang -nargs=* Rg
   \           : fzf#vim#with_preview('right:50%:hidden', '?'),
   \   <bang>0)
 
+nnoremap <silent> <Leader>ps :Rg -tpy <C-R><C-W><CR>
 
 " whitespace handling
 let g:better_whitespace_enabled=0

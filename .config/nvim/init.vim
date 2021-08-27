@@ -49,6 +49,7 @@ set nobackup
 set noswapfile
 set nowritebackup
 set ignorecase
+set smartcase
 set wildmode=list:longest,full
 set wildmenu
 set synmaxcol=4000
@@ -208,7 +209,12 @@ let g:quickr_cscope_use_qf_g = 1
 let g:quickr_cscope_autoload_db = 0
 let g:quickr_cscope_keymaps = 0
 
-nmap <leader>s <plug>(quickr_cscope_symbols)
+"nmap <buffer> <leader>s :Rg <C-R><C-W><CR>
+"au FileType python nmap <buffer> <leader>s :Rg -tpy <C-R><C-W><CR>
+
+nmap <leader>s :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
+au FileType c,cpp,h nmap <buffer> <leader>s <plug>(quickr_cscope_symbols)
+"nmap <leader>s <plug>(quickr_cscope_symbols)
 nmap <leader>g <plug>(quickr_cscope_global)
 nmap <leader>c <plug>(quickr_cscope_callers)
 nmap <leader>f <plug>(quickr_cscope_files)
@@ -252,16 +258,15 @@ let g:easy_align_delimiters = {
 "let g:rg_command='rg --vimgrep -g \!tags -g \!cscope.out -g \!cscope.po.out -g \!cscope.in.out'
 
 set grepprg=rg\ --vimgrep
+"set grepprg=lid\ --substring\ --result=grep\ '\\<$*\\>'\ \\\|\ sort
 
 " Similarly, we can apply it to fzf#vim#grep. To use ripgrep instead of ag:
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
   \   'rg --column --line-number --no-heading --color=always --smart-case '.(<q-args>), 1,
-  \   <bang>0 ? fzf#vim#with_preview('up:60%')
-  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   <bang>0 ? fzf#vim#with_preview('right:60%', 'ctrl-/')
+  \           : fzf#vim#with_preview('right:60%', 'ctrl-/'),
   \   <bang>0)
-
-nnoremap <silent> <Leader>ps :Rg -tpy <C-R><C-W><CR>
 
 " whitespace handling
 let g:better_whitespace_enabled=0
@@ -277,7 +282,8 @@ nmap <c-space> <Plug>(easymotion-bd-w)
 "nmap t <Plug>(easymotion-f2)
 "nmap t <Plug>(easymotion-t2)
 
-let g:fzf_preview_window = []
+"let g:fzf_preview_window = []
+let g:fzf_preview_window = ['right:60%:hidden', 'ctrl-/']
 
 if $DISPLAY == ""
 	let g:XkbSwitchEnabled = 0

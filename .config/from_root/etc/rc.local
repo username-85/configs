@@ -1,4 +1,15 @@
-#!/bin/sh
+#!/bin/sh -e
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
 
 # VM writeback timeout
 echo '1500' > '/proc/sys/vm/dirty_writeback_centisecs'
@@ -53,6 +64,13 @@ if [ $HOSTNAME = "laptop" ]; then
     echo 'auto' > '/sys/bus/pci/devices/0000:04:00.0/power/control'
     echo "1" | tee /sys/devices/system/cpu/intel_pstate/no_turbo
 else
+fi
+
+if [ $HOSTNAME = "pc '; then
     # power management for disk, to disable noise, turn it back if you'be moving laptop
     /usr/bin/hdparm -B 254 -S 0 /dev/sdb
 fi
+
+systemctl disable systemd-tmpfiles-clean.timer
+
+exit 0

@@ -36,7 +36,6 @@ mkdir -p /tmp/mutt
 autocutsel -fork &
 autocutsel -selection PRIMARY -fork &
 dunst &
-perWindowLayoutD
 picom -b --fade-in-step=1 --fade-out-step=1 --fade-delta=0 --no-fading-openclose --backend glx --vsync --config /dev/null
 hsetroot -solid "#001515" &
 xsetroot -cursor_name left_ptr &

@@ -63,10 +63,9 @@ if [ $HOSTNAME = "laptop" ]; then
     # Runtime PM for PCI Device Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller
     echo 'auto' > '/sys/bus/pci/devices/0000:04:00.0/power/control'
     echo "1" | tee /sys/devices/system/cpu/intel_pstate/no_turbo
-else
 fi
 
-if [ $HOSTNAME = "pc '; then
+if [ $HOSTNAME = "pc" ]; then
     # power management for disk, to disable noise, turn it back if you'be moving laptop
     /usr/bin/hdparm -B 254 -S 0 /dev/sdb
 fi

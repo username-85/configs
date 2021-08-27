@@ -81,7 +81,7 @@ key delete = 330,  'd'
 key shuffle = 0
 
 ## Clear playlist
-key clear = 'c'
+key clear = 0
 
 ## Toggle repeat mode
 key repeat = 'r'

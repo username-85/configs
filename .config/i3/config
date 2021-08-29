@@ -182,7 +182,7 @@ bindsym $mod+Shift+r mode "resize"
 # $i3-theme-window
 # class                 border  backgr. text    indicator
 client.focused          #3F4F53 #3F4F53 #CCC6B7 #227dbd
-client.focused_inactive #06303b #06303b #CCC6B7 #002630
+client.focused_inactive #002630 #002630 #CCC6B7 #002630
 client.unfocused        #002630 #002630 #586e75 #002630
 client.urgent           #6F2518 #6F2518 #CCC6B7 #6F2518
 

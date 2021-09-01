@@ -152,7 +152,7 @@ else
     #export WINEARCH="win32"
     #export WINEPREFIX="/home/user/data/wine"
     #export WINEDEBUG="-all,+fps"
-    export GIT_SSH_COMMAND='ssh -i /mnt/ssh/'$(uname -n)'/id_rsa'
+    export GIT_SSH_COMMAND="ssh -i /mnt/ssh/$HOSTNAME/id_rsa"
     alias gphoto="gphoto2 --get-all-files"
     alias mpv="firejail --dns=77.88.8.7 mpv"
     alias mpa="firejail --dns=77.88.8.7 mpv --no-video"
@@ -168,4 +168,5 @@ else
     alias transmission-clis='firejail transmission-cli -w . -v '
     alias dmagnet='cd /tmp/downloads && firejail aria2c --bt-metadata-only --bt-save-metadata '
 
+    alias yandex-disk="yandex-disk -a /mnt/yd/$HOSTNAME/p"
 fi

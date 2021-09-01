@@ -1,3 +1,5 @@
 #!/bin/sh
 
-urxvt -title ssh -e bash -c 'ssh -YC4 -p 3389 user@10.25.48.25'
+HOSTNAME=$(uname -n)
+
+urxvt -title ssh -e bash -c 'ssh -i /mnt/ssh/${HOSTNAME}/id_rsa -YC4 -p 3389 user@10.25.48.25'

@@ -4,7 +4,7 @@
 #
 # Executed by startx (run your window manager from here)
 
-HOSTNAME=$(hostname)
+HOSTNAME=$(uname -n)
 xresources_file="${HOME}/.config/xresources/${HOSTNAME}"
 
 if [ $HOSTNAME = "laptop" ]; then

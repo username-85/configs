@@ -212,9 +212,9 @@ let g:quickr_cscope_keymaps = 0
 "nmap <buffer> <leader>s :Rg <C-R><C-W><CR>
 "au FileType python nmap <buffer> <leader>s :Rg -tpy <C-R><C-W><CR>
 
-nmap <leader>s :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
-au FileType c,cpp,h nmap <buffer> <leader>s <plug>(quickr_cscope_symbols)
-"nmap <leader>s <plug>(quickr_cscope_symbols)
+nmap <leader>v :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
+"au FileType c,cpp,h nmap <buffer> <leader>s <plug>(quickr_cscope_symbols)
+nmap <leader>s <plug>(quickr_cscope_symbols)
 nmap <leader>g <plug>(quickr_cscope_global)
 nmap <leader>c <plug>(quickr_cscope_callers)
 nmap <leader>f <plug>(quickr_cscope_files)
@@ -296,6 +296,8 @@ let g:cscopedb_big_file = 'cscope.out'
 let g:cscopedb_small_file = 'cscope_small.out'
 let g:cscopedb_auto_files = 1
 let g:cscopedb_auto_init = 1
+"let g:cscopedb_extra_files = 'cscope.files'
+let g:cscopedb_src_dirs_file = 'cscope_dirs'
 
 
 nmap <F9> <Plug>CscopeDBInit

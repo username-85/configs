@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if [ "$#" -ne 1 ]; then
+	echo "You should specify file name"
+	exit 1
+fi
+
+umount /mnt/$1 ; cryptsetup luksClose $1

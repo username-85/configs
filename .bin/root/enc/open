@@ -1,0 +1,9 @@
+#!/bin/sh
+set -e
+
+if [ "$#" -ne 1 ]; then
+	echo "You should specify file name"
+	exit 1
+fi
+
+cryptsetup -v luksOpen $1 $1 && mount -o ro /dev/mapper/$1 /mnt/$1/

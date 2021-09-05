@@ -23,7 +23,7 @@ if [ $HOSTNAME = "work" ]; then
     $locker
 fi
 
-xss-lock $locker &
+xss-lock --ignore-sleep $locker &
 xset +dpms # enable dpms
 xset dpms 900 1200 1500 #blank, suspend,poweroff
 

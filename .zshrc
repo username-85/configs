@@ -148,6 +148,7 @@ if [ $HOSTNAME = "work" ]; then
     alias rebuild_python_tags='ctags -R --fields=+l --languages=python --python-kinds=-iv -f'
     alias clear_tags='find . -name "*cscope*.*" -exec rm -v {} \;'
     alias clear_formatter_backups='find . -name "*unc-backup*~*" -exec rm -v {} \;'
+    export BOARD_IP="192.168.1.2"
 else
     #export WINEARCH="win32"
     #export WINEPREFIX="/home/user/data/wine"

@@ -11,10 +11,7 @@ call plug#begin()
     Plug 'scrooloose/nerdtree'
     Plug 'vim-scripts/taglist.vim'
     Plug 'stefandtw/quickfix-reflector.vim'
-    Plug 'rhysd/git-messenger.vim'
     Plug 'tpope/vim-fugitive'
-    "Plug 'erig0/cscope_dynamic', {'frozen': 1}
-    Plug 'ludovicchabant/vim-gutentags'
 call plug#end()
 
 " for gitgutter also
@@ -227,11 +224,6 @@ nmap <leader>a <plug>(quickr_cscope_assignments)
 "<plug>(quickr_cscope_global_split)
 "<plug>(quickr_cscope_global_vert_split)
 
-
-let g:alternateNoDefaultAlternate=1
-
-let g:bufExplorerFindActive=0
-
 " disable plugin
 let loaded_netrwPlugin = 0
 "let NERDTreeHijackNetrw=1
@@ -293,18 +285,7 @@ else
 	let g:XkbSwitchIMappings = ['ru']
 endif
 
-let g:cscopedb_big_file = 'cscope.out'
-let g:cscopedb_small_file = 'cscope_small.out'
-let g:cscopedb_auto_files = 1
-let g:cscopedb_auto_init = 1
-"let g:cscopedb_extra_files = 'cscope.files'
-let g:cscopedb_src_dirs_file = 'cscope_dirs'
-
-
-"nmap <F9> <Plug>CscopeDBInit
 command Spell setlocal spell! spelllang=ru,en
-
-nmap <F8> :cs show<CR>
 
 " status line only if 2 windows
 set laststatus=1
@@ -332,14 +313,7 @@ vnoremap <leader>P "+P
 " disable ex mode
 map Q <Nop>
 
-" enable gtags module
-let g:gutentags_modules = ['gtags_cscope']
-
-" config project root markers.
-let g:gutentags_project_root = ['.root']
-let g:gutentags_add_default_project_roots = ""
-
-" generate datebases in my cache directory, prevent gtags files polluting my project
-let g:gutentags_cache_dir = expand('~/.cache/tags')
-
-"let g:gutentags_file_list_command = 'cat files'
+set csprg=gtags-cscope
+" tags load, update
+silent! cs add GTAGS
+nmap <F9> :!gtags -i<CR>:silent! cs add GTAGS<CR>:cs reset<CR><CR>

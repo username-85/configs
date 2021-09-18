@@ -13,7 +13,8 @@ call plug#begin()
     Plug 'stefandtw/quickfix-reflector.vim'
     Plug 'rhysd/git-messenger.vim'
     Plug 'tpope/vim-fugitive'
-    Plug 'erig0/cscope_dynamic', {'frozen': 1}
+    "Plug 'erig0/cscope_dynamic', {'frozen': 1}
+    Plug 'ludovicchabant/vim-gutentags'
 call plug#end()
 
 " for gitgutter also
@@ -300,7 +301,7 @@ let g:cscopedb_auto_init = 1
 let g:cscopedb_src_dirs_file = 'cscope_dirs'
 
 
-nmap <F9> <Plug>CscopeDBInit
+"nmap <F9> <Plug>CscopeDBInit
 command Spell setlocal spell! spelllang=ru,en
 
 nmap <F8> :cs show<CR>
@@ -330,3 +331,15 @@ vnoremap <leader>P "+P
 
 " disable ex mode
 map Q <Nop>
+
+" enable gtags module
+let g:gutentags_modules = ['gtags_cscope']
+
+" config project root markers.
+let g:gutentags_project_root = ['.root']
+let g:gutentags_add_default_project_roots = ""
+
+" generate datebases in my cache directory, prevent gtags files polluting my project
+let g:gutentags_cache_dir = expand('~/.cache/tags')
+
+"let g:gutentags_file_list_command = 'cat files'

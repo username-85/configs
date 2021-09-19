@@ -208,6 +208,8 @@ endif
 let g:quickr_cscope_use_qf_g = 1
 let g:quickr_cscope_autoload_db = 0
 let g:quickr_cscope_keymaps = 0
+let g:quickr_cscope_program = "gtags-cscope"
+let g:quickr_cscope_db_file = "GTAGS"
 
 "nmap <buffer> <leader>s :Rg <C-R><C-W><CR>
 "au FileType python nmap <buffer> <leader>s :Rg -tpy <C-R><C-W><CR>

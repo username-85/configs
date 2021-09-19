@@ -143,10 +143,8 @@ if [ $HOSTNAME = "work" ]; then
     alias picocom='picocom -b 115200'
 
     # dev
-    #alias mib2c='mib2c -c mib2c.iterate.conf'
-    alias rebuild_tags='cscope -Rbkq'
-    alias rebuild_python_tags='ctags -R --fields=+l --languages=python --python-kinds=-iv -f'
-    alias clear_tags='find . -name "*cscope*.*" -exec rm -v {} \;'
+    alias rebuild_tags='gtags -i'
+    alias clear_tags="find . -type f '(' -name GPATH -o -name GRTAGS -o -name GTAGS ')' -exec rm -v {} \;"
     alias clear_formatter_backups='find . -name "*unc-backup*~*" -exec rm -v {} \;'
     export BOARD_IP="192.168.1.2"
 else

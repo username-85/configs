@@ -12,6 +12,7 @@ call plug#begin()
     Plug 'vim-scripts/taglist.vim'
     Plug 'stefandtw/quickfix-reflector.vim'
     Plug 'tpope/vim-fugitive'
+    Plug 'ronakg/quickr-preview.vim'
 call plug#end()
 
 " for gitgutter also
@@ -321,3 +322,5 @@ set csprg=gtags-cscope
 " tags load, update
 silent! cs add GTAGS
 nmap <F9> :!gtags -i<CR>:silent! cs add GTAGS<CR>:cs reset<CR><CR>
+
+let g:quickr_preview_modifiable = 1

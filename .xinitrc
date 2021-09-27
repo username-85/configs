@@ -17,13 +17,13 @@ fi
 
 xrdb -merge $xresources_file
 
-locker="${HOME}/.bin/misc/slock"
 
 if [ $HOSTNAME = "work" ]; then
+    locker="${HOME}/.bin/misc/slock"
     $locker
+    xss-lock --ignore-sleep $locker &
 fi
 
-xss-lock --ignore-sleep $locker &
 xset +dpms # enable dpms
 xset dpms 900 1200 1500 #blank, suspend,poweroff
 

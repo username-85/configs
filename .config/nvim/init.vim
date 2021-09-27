@@ -107,8 +107,8 @@ noremap tt :tab split<CR>
 imap <F1> <Nop>
 nmap <F1> <Nop>
 map <F2> :wall<CR>
-au FileType c,cpp,h,python nmap <F2> :wall<CR> :!gtags -i<CR>:silent! cs add GTAGS<CR>:cs reset<CR><CR>h
-au BufEnter *.h,*py nmap <F2> :wall<CR> :!gtags -i<CR>:silent! cs add GTAGS<CR>:cs reset<CR><CR>h
+"au FileType c,cpp,h,python nmap <F2> :wall<CR> :!gtags -i<CR>:silent! cs add GTAGS<CR>:cs reset<CR><CR>h
+"au BufEnter *.h,*py nmap <F2> :wall<CR> :!gtags -i<CR>:silent! cs add GTAGS<CR>:cs reset<CR><CR>h
 
 "switch layout
 "inoremap <C-@> <C-^>

@@ -5,18 +5,8 @@
 # Executed by startx (run your window manager from here)
 
 HOSTNAME=$(uname -n)
-xresources_file="${HOME}/.config/xresources/${HOSTNAME}"
 
-if [ $HOSTNAME = "laptop" ]; then
-    output_hdmi=$(xrandr | grep "HDMI1 connected")
-
-    if [ -n "$output_hdmi" ]; then
-        xresources_file="${xresources_fi#le}_hdmi"
-    fi
-fi
-
-xrdb -merge $xresources_file
-
+xrdb -load ~/.config/xresources/config
 
 if [ $HOSTNAME = "work" ]; then
     locker="${HOME}/.bin/misc/slock"

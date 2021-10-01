@@ -1,0 +1,22 @@
+#!/bin/sh
+set -e
+
+if [ "$#" -eq 0 ]; then
+    echo "directories list required for monitoring"
+    exit 1;
+fi;
+
+echo -ne "\nbuild initial tags"
+~/.bin/tags/rebuild $@
+echo -e "build initial tags done\n"
+
+while :
+do
+    inotifywait \
+        --includei ".*\.(c|h|cpp|cxx|hh|hpp|hxx)$" \
+        -e modify,create,delete -r $@
+
+    echo -ne "\nrebuild tags"
+    ~/.bin/tags/rebuild $@
+    echo -e "rebuild tags done\n"
+done

@@ -1,0 +1,13 @@
+#!/bin/sh
+set -e
+
+file_list="gtags.files"
+echo -n -e "\nsearch for files"
+time find -L $@ -regex '.*\.\(c\|h\|cpp\|cxx\|hh\|hpp\|hxx\)$' > "$file_list"
+
+if [ -s "$file_list" ]; then
+    echo -n -e "\nbuild tags"
+    time gtags -i
+fi
+
+rm -f $file_list

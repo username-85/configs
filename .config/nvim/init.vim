@@ -318,9 +318,8 @@ vnoremap <leader>P "+P
 map Q <Nop>
 
 set csprg=gtags-cscope
-" tags load, update
 silent! cs add GTAGS
-nmap <F9> :!gtags -i<CR>:silent! cs add GTAGS<CR>:cs reset<CR><CR>
+"au BufEnter *.c,*.cpp,*.h,*py nmap <F9> :silent exec "!gtags -i" <bar> :silent! cs add GTAGS <bar> :silent cs reset<CR>
 
 nmap <leader>j :cn<CR>
-nmap <leader>p :cp<CR>
+nmap <leader>k :cp<CR>

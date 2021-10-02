@@ -78,7 +78,7 @@ super + l
 	~/.bin/misc/slock
 
 # audio
-XF86AudioPlay
+{XF86AudioPlay,XF86AudioMute}
 	mpc --host /tmp/mpd toggle
 
 XF86AudioRaiseVolume
@@ -95,3 +95,15 @@ XF86MonBrightnessDown
 
 {Print,Menu}
     xkb-switch -n
+
+# laptop
+
+XF86MonBrightnessUp
+    xbacklight -inc 1
+
+XF86MonBrightnessDown
+    xbacklight -dec 1
+
+# other multimedia keys
+{XF86Display,XF86Bluetooth,}
+    xte "mousemove 0 0"

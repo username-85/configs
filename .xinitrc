@@ -26,10 +26,10 @@ mkdir -p /tmp/mutt
 autocutsel -fork &
 autocutsel -selection PRIMARY -fork &
 dunst &
-picom -b --fade-in-step=1 --fade-out-step=1 --fade-delta=0 --no-fading-openclose --backend glx --vsync --config /dev/null
+#picom -b --fade-in-step=1 --fade-out-step=1 --fade-delta=0 --no-fading-openclose --backend glx --vsync --config /dev/null
 hsetroot -solid "#001515" &
 xsetroot -cursor_name left_ptr &
 unclutter -root -idle 1 -jitter 3 &
 xte "mousemove 0 0" &
 
-exec i3
+exec bspwm

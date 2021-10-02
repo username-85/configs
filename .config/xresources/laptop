@@ -124,7 +124,7 @@ URxvt.letterSpace: 0
 
 Sxiv.foreground: #000000
 Sxiv.background: #586151
-Sxiv.font: Terminus(TTF)
+Sxiv.font: Terminus
 
 
 Xft.autohint: 0

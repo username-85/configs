@@ -1,0 +1,5 @@
+#!/bin/sh
+
+HOSTNAME=$(uname -n)
+
+st -t ssh -e sh -c 'ssh -i /mnt/auth/ssh/${HOSTNAME}/id_rsa -YC4 -p 3389 user@10.25.48.25'

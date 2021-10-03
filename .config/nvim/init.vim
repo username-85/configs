@@ -4,7 +4,7 @@ call plug#begin()
     Plug 'easymotion/vim-easymotion'
     Plug 'junegunn/fzf.vim'
     Plug 'junegunn/vim-easy-align'
-    Plug 'lyokha/vim-xkbswitch'
+"    Plug 'lyokha/vim-xkbswitch'
     Plug 'ntpeters/vim-better-whitespace'
     Plug 'ronakg/quickr-cscope.vim'
     Plug 'roxma/vim-tmux-clipboard'

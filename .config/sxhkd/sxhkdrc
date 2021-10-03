@@ -87,14 +87,12 @@ XF86AudioRaiseVolume
 XF86AudioLowerVolume
 	mpc --host /tmp/mpd volume -5
 
-XF86MonBrightnessUp
-    xbacklight -inc 1
-
-XF86MonBrightnessDown
-    xbacklight -dec 1
-
+# layout
 {Print,Menu}
-    xkb-switch -n
+    xkb-switch -s us
+
+ctrl+{Print,Menu}
+    xkb-switch -s "ru(winkeys)"
 
 # laptop
 

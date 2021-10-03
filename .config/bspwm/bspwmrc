@@ -1,6 +1,6 @@
 #! /bin/sh
 
-#xte "mousemove 1920 1080"
+xte "mousemove 0 0"
 sxhkd &
 
 #bspc rule -a "*" split_dir=south

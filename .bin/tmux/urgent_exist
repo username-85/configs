@@ -1,8 +1,9 @@
-#!/bin/sh
-set -e
+#!/bin/bash
 
-urgent="$(bspc query -N -n .urgent.window)"
-
-if [ -n "$urgent" ]; then
-    echo -ne "▓▓"
-fi
+for id in `wmctrl -l | cut -d " " -f 1`; do
+    xprop -id $id | grep "_NET_WM_STATE_DEMANDS_ATTENTION" 2>&1 > /dev/null
+    if [ "$?" = "0" ]; then
+        echo -ne "▓▓"
+        exit 0
+    fi
+done

@@ -6,4 +6,4 @@ set -g status-right "#[bg=blue]#[fg=black]#(~/.bin/tmux/mail_count)\
 #[bg=colour234]#[fg=black] \
 #[bg=colour234]#[fg=red]#(~/.bin/tmux/urgent_exist)\
 #[bg=colour234]#[fg=black] \
-#[bg=magenta]#[fg=black]#(~/.bin/tmux/msg_count)"
+#[bg=colour234]#[fg=magenta]#(~/.bin/tmux/msg_count)"

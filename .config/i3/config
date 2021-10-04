@@ -151,8 +151,7 @@ bindsym $mod+Shift+i reload
 # layout
 bindsym Print exec --no-startup-id xkb-switch -s us
 bindsym Menu exec --no-startup-id xkb-switch -s us
-bindsym --release Shift+Menu exec "xkb-switch -s 'ru(winkeys)'"
-bindsym --release Shift+Print exec "xkb-switch -s 'ru(winkeys)'"
+bindsym --release Control+Print exec "xkb-switch -s 'ru(winkeys)'"
 
 #bindsym Mod1+F4 exec --no-startup-id "rofi -modi window -show window"
 

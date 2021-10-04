@@ -24,7 +24,7 @@ font -*-terminus-medium-*-*-*-12-*-*-*-*-*-iso10646-*
 #font -*-terminus-medium-*-*-*-18-*-*-*-*-*-iso10646-*
 
 # user bind
-bindsym XF86AudioMute exec --no-startup-id mpc --host /tmp/mpd toggle
+bindsym --release XF86AudioMute exec --no-startup-id mpc --host /tmp/mpd toggle
 #f4
 #?
 #f7

@@ -3,7 +3,7 @@ set -g status-interval 5
 set -g status-right-length 50
 set-option -g status-right-style "fg=blue,bg=black"
 set -g status-right "#[bg=blue]#[fg=black]#(~/.bin/tmux/mail_count)\
-#[bg=black]#[fg=black] \
-#[bg=black]#[fg=cyan]#(~/.bin/tmux/urgent_exist)\
-#[bg=black]#[fg=black] \
+#[bg=colour234]#[fg=black] \
+#[bg=colour234]#[fg=cyan]#(~/.bin/tmux/urgent_exist)\
+#[bg=colour234]#[fg=black] \
 #[bg=magenta]#[fg=black]#(~/.bin/tmux/msg_count)"

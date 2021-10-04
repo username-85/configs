@@ -127,6 +127,9 @@ set $ws0 "tmp"
 #assign [class="explorer.exe"] $ws0
 #for_window [class="explorer.exe"] move to workspace $ws0, move position center
 
+# center floating window
+bindsym $mod+c move absolute position center
+
 # switch to workspace
 bindsym Mod1+1 workspace number $ws1
 bindsym Mod1+2 workspace number $ws2

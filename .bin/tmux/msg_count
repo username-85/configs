@@ -18,5 +18,5 @@ fi
 
 for (( i=1; i<=$counter; i++ ))
 do
-   echo -ne "  "
+   echo -ne "▒▒"
 done

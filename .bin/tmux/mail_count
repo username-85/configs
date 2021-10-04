@@ -1,6 +1,6 @@
 #!/bin/bash
 MAX_UNREAD=7
-MAX_SHOW_BRIGHT=4
+MAX_SHOW=4
 
 # Set maildirs
 mdir="$HOME/data/Mail"
@@ -8,11 +8,14 @@ mboxes="$mdir/gitlab/new/ $mdir/inbox/new/ $mdir/inbox-ext/new/ \
         $mdir/redmine/new/ $mdir/xpon/new/"
 
 counter=$(find $mboxes -type f | wc -l)
-symbol="▓"
+symbol="▒"
 
 if [ $counter -ge $MAX_UNREAD ]; then
-    counter=$MAX_SHOW_BRIGHT
-    symbol=" "
+    symbol="▓"
+fi
+
+if [ $counter -ge $MAX_SHOW ]; then
+    counter=$MAX_SHOW
 fi
 
 for (( i=1; i<=$counter; i++ ))

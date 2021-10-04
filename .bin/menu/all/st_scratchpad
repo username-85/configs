@@ -1,0 +1,4 @@
+#!/bin/sh
+session_name=scratchpad
+st -c $session_name -t tmux -e sh -c \
+    "if (tmux has-session -t $session_name); then exec tmux attach-session -d -t $session_name; else exec tmux new-session -c /tmp/misc -s $session_name; fi"

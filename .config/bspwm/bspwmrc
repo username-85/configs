@@ -65,3 +65,7 @@ bspc rule -a explorer.exe desktop=^2 state=floating border=off
 bspc rule -a "window-MainFrame" state=floating
 export _JAVA_AWT_WM_NONREPARENTING=1
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
+
+# scratchpad
+bspc rule -a scratchpad state=floating hidden=on sticky=on
+~/.bin/menu/all/st_scratchpad &

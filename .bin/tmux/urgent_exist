@@ -1,8 +1,8 @@
 #!/bin/sh
 set -e
 
-urgent=$(bspc query -N -n .urgent.window)
+urgent="$(bspc query -N -n .urgent.window)"
 
-if [ -f $urgent ]; then
-    echo -ne "▓"
+if [ -n "$urgent" ]; then
+    echo -ne "▓▓"
 fi

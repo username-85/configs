@@ -8,10 +8,10 @@ mboxes="$mdir/gitlab/new/ $mdir/inbox/new/ $mdir/inbox-ext/new/ \
         $mdir/redmine/new/ $mdir/xpon/new/"
 
 counter=$(find $mboxes -type f | wc -l)
-symbol="▒"
+symbol="░"
 
 if [ $counter -ge $MAX_UNREAD ]; then
-    symbol="▓"
+    symbol="▒"
 fi
 
 if [ $counter -ge $MAX_SHOW ]; then

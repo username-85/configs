@@ -474,6 +474,6 @@ nnoremap <f8> :delete<cr>
 "
 " let $VIFM_SERVER_NAME = v:servername
 
-set millerview
+"set millerview
 only
 set milleroptions=lsize:1,csize:2,rsize:2,rpreview:dirs

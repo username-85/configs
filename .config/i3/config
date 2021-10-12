@@ -122,10 +122,10 @@ set $ws2 "2"
 set $ws0 "tmp"
 #workspace $ws0 output HDMI1
 
-#assign [class="Wine"] $ws0
-#for_window [class="Wine"] move to workspace $ws0
-#assign [class="explorer.exe"] $ws0
-#for_window [class="explorer.exe"] move to workspace $ws0, move position center
+assign [class="Wine"] $ws0
+for_window [class="Wine"] move to workspace $ws0
+assign [class="explorer.exe"] $ws0
+for_window [class="explorer.exe"] move to workspace $ws0, move position center
 
 # center floating window
 bindsym $mod+c move absolute position center

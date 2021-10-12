@@ -4,4 +4,4 @@ set -g status-right-length 50
 set-option -g status-right-style "fg=blue,bg=black"
 set -g status-right "#[bg=colour234]#[fg=blue]#(~/.bin/tmux/mail_count)\
 #[bg=colour234]#[fg=black] \
-#[bg=colour234]#[fg=cyan]#(~/.bin/tmux/msg_count)"
+#[bg=colour234]#[fg=red]#(~/.bin/tmux/msg_count)"

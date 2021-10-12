@@ -15,7 +15,7 @@ call plug#begin()
 call plug#end()
 
 " for gitgutter also
-set updatetime=500
+set updatetime=200
 "set statusline+=%F
 set enc=utf-8
 set fillchars=vert:\│
@@ -216,14 +216,14 @@ let g:quickr_cscope_db_file = "GTAGS"
 
 nmap <leader>v :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
 "au FileType c,cpp,h nmap <buffer> <leader>s <plug>(quickr_cscope_symbols)
-nmap <leader>s <plug>(quickr_cscope_symbols)
-nmap <leader>g <plug>(quickr_cscope_global)
-nmap <leader>c <plug>(quickr_cscope_callers)
-nmap <leader>f <plug>(quickr_cscope_files)
-nmap <leader>i <plug>(quickr_cscope_includes)
-nmap <leader>t <plug>(quickr_cscope_text)
-nmap <leader>d <plug>(quickr_cscope_functions)
-nmap <leader>a <plug>(quickr_cscope_assignments)
+nmap <leader>cs <plug>(quickr_cscope_symbols)
+nmap <leader>cg <plug>(quickr_cscope_global)
+nmap <leader>cc <plug>(quickr_cscope_callers)
+nmap <leader>cf <plug>(quickr_cscope_files)
+nmap <leader>ci <plug>(quickr_cscope_includes)
+nmap <leader>ct <plug>(quickr_cscope_text)
+nmap <leader>cd <plug>(quickr_cscope_functions)
+nmap <leader>ca <plug>(quickr_cscope_assignments)
 "<plug>(quickr_cscope_egrep)
 "<plug>(quickr_cscope_global_split)
 "<plug>(quickr_cscope_global_vert_split)
@@ -319,7 +319,14 @@ map Q <Nop>
 
 set csprg=gtags-cscope
 silent! cs add GTAGS
-"au BufEnter *.c,*.cpp,*.h,*py nmap <F9> :silent exec "!gtags -i" <bar> :silent! cs add GTAGS <bar> :silent cs reset<CR>
 
-nmap <leader>j :cn<CR>
-nmap <leader>k :cp<CR>
+nmap <leader>qj :cn<CR>
+nmap <leader>qk :cp<CR>
+
+nnoremap <leader>sd :SignifyDiff<cr>
+nnoremap <leader>sp :SignifyHunkDiff<cr>
+nnoremap <leader>su :SignifyHunkUndo<cr>
+
+" hunk jumping
+nmap <leader>j <plug>(signify-next-hunk)
+nmap <leader>k <plug>(signify-prev-hunk)

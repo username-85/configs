@@ -216,14 +216,14 @@ let g:quickr_cscope_db_file = "GTAGS"
 
 nmap <leader>v :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
 "au FileType c,cpp,h nmap <buffer> <leader>s <plug>(quickr_cscope_symbols)
-nmap <leader>cs <plug>(quickr_cscope_symbols)
-nmap <leader>cg <plug>(quickr_cscope_global)
-nmap <leader>cc <plug>(quickr_cscope_callers)
-nmap <leader>cf <plug>(quickr_cscope_files)
-nmap <leader>ci <plug>(quickr_cscope_includes)
-nmap <leader>ct <plug>(quickr_cscope_text)
-nmap <leader>cd <plug>(quickr_cscope_functions)
-nmap <leader>ca <plug>(quickr_cscope_assignments)
+nmap <leader>s <plug>(quickr_cscope_symbols)
+nmap <leader>g <plug>(quickr_cscope_global)
+nmap <leader>c <plug>(quickr_cscope_callers)
+nmap <leader>f <plug>(quickr_cscope_files)
+nmap <leader>i <plug>(quickr_cscope_includes)
+nmap <leader>t <plug>(quickr_cscope_text)
+"nmap <leader>cd <plug>(quickr_cscope_functions)
+nmap <leader>a <plug>(quickr_cscope_assignments)
 "<plug>(quickr_cscope_egrep)
 "<plug>(quickr_cscope_global_split)
 "<plug>(quickr_cscope_global_vert_split)
@@ -309,10 +309,10 @@ nnoremap  <leader>Y  "+yg_
 nnoremap  <leader>y  "+y
 
 " " Paste from clipboard
-nnoremap <leader>p "+p
-nnoremap <leader>P "+P
-vnoremap <leader>p "+p
-vnoremap <leader>P "+P
+"nnoremap <leader>p "+p
+"nnoremap <leader>P "+P
+"vnoremap <leader>p "+p
+"vnoremap <leader>P "+P
 
 " disable ex mode
 map Q <Nop>
@@ -320,12 +320,12 @@ map Q <Nop>
 set csprg=gtags-cscope
 silent! cs add GTAGS
 
-nmap <leader>qj :cn<CR>
-nmap <leader>qk :cp<CR>
+nmap <leader>n :cn<CR>
+nmap <leader>p :cp<CR>
 
-nnoremap <leader>sd :SignifyDiff<cr>
-nnoremap <leader>sp :SignifyHunkDiff<cr>
-nnoremap <leader>su :SignifyHunkUndo<cr>
+nnoremap <leader>d :SignifyDiff<cr>
+nnoremap <leader>p :SignifyHunkDiff<cr>
+nnoremap <leader>u :SignifyHunkUndo<cr>
 
 " hunk jumping
 nmap <leader>j <plug>(signify-next-hunk)

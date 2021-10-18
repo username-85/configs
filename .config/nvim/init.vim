@@ -325,7 +325,7 @@ nmap <leader>p :cp<CR>
 
 nnoremap <leader>d :SignifyDiff<cr>
 nnoremap <leader>p :SignifyHunkDiff<cr>
-nnoremap <leader>u :SignifyHunkUndo<cr>
+"nnoremap <leader>u :SignifyHunkUndo<cr>
 
 " hunk jumping
 nmap <leader>j <plug>(signify-next-hunk)

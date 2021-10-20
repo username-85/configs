@@ -324,7 +324,7 @@ nmap <leader>n :cn<CR>
 nmap <leader>p :cp<CR>
 
 nnoremap <leader>d :SignifyDiff<cr>
-nnoremap <leader>p :SignifyHunkDiff<cr>
+"nnoremap <leader>p :SignifyHunkDiff<cr>
 "nnoremap <leader>u :SignifyHunkUndo<cr>
 
 " hunk jumping

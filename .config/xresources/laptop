@@ -15,16 +15,7 @@ urxvt*boldFont:-*-terminus-bold-*-*-*-24-*-*-*-*-*-iso10646-*
 urxvt*italicFont:-*-terminus-bold-*-*-*-24-*-*-*-*-*-iso10646-*
 urxvt*boldItalicFont:-*-terminus-bold-*-*-*-24-*-*-*-*-*-iso10646-*
 
-
-!Xft.rgba: rgb
-!Xft.lcdfilter: lcddefault
-Xft.rgba: none
-Xft.lcdfilter: lcdnone
-Xft.autohint: false
-Xft.antialias: 0 
-Xft.hinting: 1 
-Xft.hintstyle: hintfull
-
+URxvt.internalBorder:  0
 uxvt*boldMode: false
 urxvt*termName: rxvt-256color
 urxvt*saveLines:0
@@ -34,7 +25,6 @@ urxvt.iso14755: false
 !urxvt.perl-ext-common:default,-searchable-scrollback
 urxvt.perl-ext-common:
 
-
 !urxvt colors
 
 !dark
@@ -42,7 +32,6 @@ urxvt*foreground:7
 urxvt*background:0
 urxvt*cursorColor:2
 urxvt*highlightColor:grey28
-
 
 !!black
 !*color0:       #000000
@@ -119,18 +108,16 @@ urxvt*highlightColor:grey28
 *color7:       #c6c6c6
 *color15:      #c6c6c6
 
-URxvt.lineSpace: 1
+URxvt.lineSpace: 0
 URxvt.letterSpace: 0
 
 Sxiv.foreground: #000000
 Sxiv.background: #586151
 Sxiv.font: Terminus
 
-
 Xft.autohint: 0
 Xft.lcdfilter:  lcddefault
-Xft.hintstyle:  hintfull
+Xft.hintstyle:  hintslight
 Xft.hinting: 1
-Xft.antialias: 1
-Xft.rgba: rgb
-
+Xft.antialias: 0
+Xft.rgba: none

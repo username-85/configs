@@ -91,7 +91,7 @@ XF86AudioLowerVolume
 {Print,Menu}
     xkb-switch -s us
 
-shift+{Print,Menu}
+ctrl + {Print,Menu}
     xkb-switch -s "ru(winkeys)"
 
 # laptop
@@ -107,5 +107,5 @@ XF86MonBrightnessDown
     xte "mousemove 0 0"
 
 # scratchpad
-alt + minus
-    ~/.bin/misc/toggle_hidden scratchpad
+#alt + minus
+#    ~/.bin/misc/toggle_hidden scratchpad

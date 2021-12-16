@@ -106,7 +106,7 @@ urxvt*highlightColor:grey28
 *color7:       #c6c6c6
 *color15:      #c6c6c6
 
-!URxvt.lineSpace: 1
+URxvt.lineSpace: 0
 !URxvt.letterSpace: 1
 
 Sxiv.foreground: #000000

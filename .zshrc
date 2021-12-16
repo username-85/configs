@@ -154,8 +154,8 @@ else
     alias mpa="firejail --dns=77.88.8.7 mpv --no-video"
     alias mpvns="\mpv"
     alias mpans="\mpv --no-video"
-    alias dyv='firejail youtube-dl --no-cache-dir -f 18 --no-playlist -o "/tmp/downloads/%(title)s-%(id)s.%(ext)s"'
-    alias dya="firejail youtube-dl --no-cache-dir -f bestaudio --no-playlist -o '/tmp/downloads/%(title)s-%(id)s.%(ext)s'"
+    alias dyv='firejail yt-dlp --no-cache-dir -f 18 --no-playlist -o "/tmp/downloads/%(title)s-%(id)s.%(ext)s"'
+    alias dya="firejail yt-dlp --no-cache-dir -f bestaudio --no-playlist -o '/tmp/downloads/%(title)s-%(id)s.%(ext)s'"
     #alias album_art_update="~/.local/bin/sacad_r ~/data/music 600 cover.jpg"
     alias dual_monitor='xrandr --output eDP1 --auto --output HDMI1 --auto --right-of eDP1'
 

@@ -26,7 +26,11 @@ mkdir -p /tmp/mutt
 autocutsel -fork &
 autocutsel -selection PRIMARY -fork &
 dunst &
-#picom -b --fade-in-step=1 --fade-out-step=1 --fade-delta=0 --no-fading-openclose --backend glx --vsync --config /dev/null
+
+if [ $HOSTNAME = "pc" ]; then
+    picom -b --fade-in-step=1 --fade-out-step=1 --fade-delta=0 --no-fading-openclose --backend glx --vsync --config /dev/null
+fi
+
 hsetroot -solid "#001515" &
 xsetroot -cursor_name left_ptr &
 unclutter -root -idle 1 -jitter 3 &

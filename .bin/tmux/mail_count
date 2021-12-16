@@ -1,6 +1,6 @@
 #!/bin/bash
 MAX_UNREAD=7
-MAX_SHOW=4
+MAX_SHOW=7
 
 # Set maildirs
 mdir="$HOME/data/Mail"
@@ -11,7 +11,7 @@ counter=$(find $mboxes -type f | wc -l)
 symbol="░"
 
 if [ $counter -ge $MAX_UNREAD ]; then
-    symbol="▒"
+    symbol="▓"
 fi
 
 if [ $counter -ge $MAX_SHOW ]; then

@@ -28,7 +28,8 @@ autocutsel -selection PRIMARY -fork &
 dunst &
 
 if [ $HOSTNAME = "pc" ]; then
-    picom -b --fade-in-step=1 --fade-out-step=1 --fade-delta=0 --no-fading-openclose --backend glx --vsync --config /dev/null
+    xcompmgr -c &
+#    picom -b --fade-in-step=1 --fade-out-step=1 --fade-delta=0 --no-fading-openclose --backend glx --vsync --config /dev/null
 fi
 
 hsetroot -solid "#001515" &

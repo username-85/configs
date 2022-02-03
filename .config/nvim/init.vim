@@ -133,7 +133,7 @@ let g:tagbar_autoclose = 1
 let g:tagbar_autofocus = 1
 let g:tagbar_compact = 1
 "let g:tagbar_show_data_type = 1
-"let g:tagbar_iconchars = ['+', '-']
+let g:tagbar_iconchars = ['+', '-']
 "let g:tagbar_autoshowtag = 1
 
 set pastetoggle=<F12>

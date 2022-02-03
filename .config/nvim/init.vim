@@ -1,5 +1,6 @@
-call plug#begin()
-    Plug 'mhinz/vim-signify'
+call plug#begin('~/.config/nvim/plugged')
+"    Plug 'mhinz/vim-signify'
+    Plug 'airblade/vim-gitgutter'
     Plug 'bsdelf/bufferhint'
     Plug 'easymotion/vim-easymotion'
     Plug 'junegunn/fzf.vim'
@@ -9,7 +10,8 @@ call plug#begin()
     Plug 'ronakg/quickr-cscope.vim'
     Plug 'roxma/vim-tmux-clipboard'
     Plug 'scrooloose/nerdtree'
-    Plug 'vim-scripts/taglist.vim'
+"    Plug 'vim-scripts/taglist.vim'
+    Plug 'majutsushi/tagbar'
     Plug 'stefandtw/quickfix-reflector.vim'
     Plug 'tpope/vim-fugitive'
 call plug#end()
@@ -124,25 +126,9 @@ nnoremap <C-w>a :Buffers<CR>
 nnoremap <F5> :call bufferhint#Popup()<CR>
 "let g:bufferhint_SortMode = 1
 
-" taglist
-au FileType c,cpp,h,python nmap <F11> :TlistToggle<CR>
-au BufEnter *.h,*py nmap <F11> :TlistToggle<CR>
-let Tlist_Compact_Format = 1
-let Tlist_Display_Prototype = 0
-let Tlist_Display_Tag_Scope = 0
-let Tlist_Enable_Fold_Column = 0
-let Tlist_File_Fold_Auto_Close = 1
-let Tlist_Process_File_Always = 1
-let Tlist_Auto_Update = 1
-let Tlist_Show_One_File = 1
-let Tlist_Inc_Winwidth = 0
-let Tlist_Use_Right_Window = 1
-let Tlist_WinWidth = 60
-let Tlist_Close_On_Select = 1
-let Tlist_Exit_OnlyWindow = 1
-let Tlist_GainFocus_On_ToggleOpen = 1
-let tlist_c_settings = 'c;f:functions'
-let tlist_cpp_settings = 'c++;c:class;f:function'
+" tagbar
+au FileType c,cpp,h,python nmap <F11> :TagbarToggle<CR>
+au BufEnter *.h,*py nmap <F11> :TagbarToggle<CR>
 
 set pastetoggle=<F12>
 
@@ -323,10 +309,10 @@ silent! cs add GTAGS
 nmap <leader>n :cn<CR>
 nmap <leader>p :cp<CR>
 
-nnoremap <leader>d :SignifyDiff<cr>
+" gitgutter
+"let g:gitgutter_map_keys = 0
+nmap <leader>d <Plug>(GitGutterPreviewHunk)
 "nnoremap <leader>p :SignifyHunkDiff<cr>
 "nnoremap <leader>u :SignifyHunkUndo<cr>
-
-" hunk jumping
-nmap <leader>j <plug>(signify-next-hunk)
-nmap <leader>k <plug>(signify-prev-hunk)
+nmap <leader>j <Plug>(GitGutterNextHunk)
+nmap <leader>k <Plug>(GitGutterPrevHunk)

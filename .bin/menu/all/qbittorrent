@@ -1,3 +1,4 @@
 #!/bin/sh
 
+export QT_QPA_PLATFORMTHEME=qt6gtk2
 firejail qbittorrent

@@ -146,7 +146,7 @@ if [ $HOSTNAME = "work" ]; then
     alias rebuild_tags='gtags -i'
     alias clear_tags="find . -type f '(' -name GPATH -o -name GRTAGS -o -name GTAGS -o -name gtags.files ')' -exec rm -v {} \;"
     alias clear_formatter_backups='find . -name "*unc-backup*~*" -exec rm -v {} \;'
-    export BOARD_IP="192.168.1.2"
+    export BOARD_IP="192.168.11.1"
 else
     export WINEARCH="win32"
     export WINEPREFIX="/home/user/data/wine"

@@ -1,0 +1,85 @@
+set header_cache = ~/.mutt/cache
+#   keymap
+set alias_file= ~/.mutt/aliases
+set sort_alias= alias
+set reverse_alias=yes
+source $alias_file
+source ~/.mutt/keybindings.conf
+
+set mark_old=no
+set folder_format="%N %f"
+set date_format="%Y-%m-%d"
+
+set sidebar_visible = yes
+set sidebar_short_path = yes
+set sidebar_width = 15
+set sidebar_new_mail_only = yes
+set sidebar_divider_char = '│'
+color sidebar_divider color240 black
+color sidebar_new yellow black
+
+set mbox_type=Maildir
+set folder="~/data/Mail"
+
+mailboxes       =inbox =sent =draft =trash =redmine =gitlab =inbox-ext =sent-ext =xpon
+
+# local
+source "~/.mutt/profiles/local"
+# Here we use the $folder variable that has just been set in the sourced file.
+# We must set it right now otherwise the 'folder' variable will change in the next sourced file.
+folder-hook $folder 'source ~/.mutt/profiles/local'
+folder-hook $folder 'set index_format="%Z│ %s"'
+
+# external
+source "~/.mutt/profiles/external"
+folder-hook "inbox-ext" 'source ~/.mutt/profiles/external'
+folder-hook "sent-ext" 'source ~/.mutt/profiles/external'
+# this will work both for inbox and inbox-ext?
+folder-hook inbox 'set index_format="%Z│ %-20u │ %s"'
+
+#html view
+set mailcap_path = ~/.mutt/mailcap
+auto_view text/html
+alternative_order text/plain text/html
+
+#disable artifitial pauses
+set sleep_time = 0
+
+# confirmation skipping
+set fast_reply=yes        # when replying, don't prompt for address
+set include=yes           # include original text on reply?
+set forward_quote=yes     # include original text on forward?
+set delete=yes            # don't ask for delete confirmation
+
+#?
+
+set editor = vim
+#set sort = reverse-threads
+#set sort_aux = last-date-received
+set sort = reverse-date
+
+set smart_wrap
+set pager=w3m
+set prompt_after=no
+
+# -*-muttrc-*-
+color status blue color234
+color indicator white color237
+color index yellow black "~N|~O"
+
+set mail_check=2
+set pop_checkinterval=5
+set timeout=5
+
+
+#set wait_key=no
+macro index <Return> "<display-message><sync-mailbox>"
+# only work for one mailbox
+#set new_mail_command="notify-send @ && echo %n > ~/.mutt/unread_counter"
+#set new_mail_command="notify-send @"
+
+#set arrow_cursor
+# change quatation in reply messages
+set attribution="On %d, %n:"
+
+#set auto_tag=yes

@@ -27,10 +27,7 @@ autocutsel -fork &
 autocutsel -selection PRIMARY -fork &
 dunst &
 
-if [ $HOSTNAME = "pc" ]; then
-    xcompmgr -a &
-#    picom -b --fade-in-step=1 --fade-out-step=1 --fade-delta=0 --no-fading-openclose --backend glx --vsync --config /dev/null
-fi
+xcompmgr -a &
 
 hsetroot -solid "#001515" &
 xsetroot -cursor_name left_ptr &

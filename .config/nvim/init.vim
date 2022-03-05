@@ -322,3 +322,4 @@ nmap <leader>d <Plug>(GitGutterPreviewHunk)
 "nnoremap <leader>u :SignifyHunkUndo<cr>
 nmap <leader>j <Plug>(GitGutterNextHunk)
 nmap <leader>k <Plug>(GitGutterPrevHunk)
+nmap <leader>h <Plug>(GitGutterStageHunk)

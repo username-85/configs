@@ -41,30 +41,10 @@ bspc desktop ^1 -l monocle
 bspc desktop ^2 -l monocle
 bspc desktop ^3 -l monocle
 
-#bspc rule -a URxvt border=off
-#bspc rule -a 'Pale moon' state=tiled
-bspc rule -a kdesvn state=tiled
-bspc rule -a libreoffice state=tiled
-#bspc rule -a Pidgin state=tiled desktop=^4
-#bspc rule -a Zathura state=tiled
-#bspc rule -a "*" split_dir=south
-bspc rule -a nwmain desktop=^2 state=floating border=off
-bspc rule -a Wine desktop=^2 state=floating border=off
-bspc rule -a explorer.exe desktop=^2 state=floating border=off
-
-#bspc rule -a rdesktop desktop=^2 state=tiled
-#bspc rule -a llpp desktop=^2
-#bspc rule -a 'Pale moon' desktop=^3 
-#bspc rule -a mpv state=floating sticky=on
-#bspc rule -a libreoffice state=floating
-#bspc rule -a libreoffice-impress state=floating
-
-#setxkbmap -layout us,ru -option altwin:ctrl_alt_win,grp:menu_toggle,grp_led:caps,caps:escape -variant ,winkeys
-
 # for java gui
-bspc rule -a "window-MainFrame" state=floating
-export _JAVA_AWT_WM_NONREPARENTING=1
-export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
+#bspc rule -a "window-MainFrame" state=floating
+#export _JAVA_AWT_WM_NONREPARENTING=1
+#export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
 
 # scratchpad
 #bspc rule -a scratchpad state=floating hidden=on sticky=on

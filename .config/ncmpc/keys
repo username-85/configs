@@ -66,10 +66,10 @@ key seek-forward = 'f'
 key seek-backward = 'b'
 
 ## Increase volume
-key volume-up = 0
+key volume-up = '0'
 
 ## Decrease volume
-key volume-down = 0
+key volume-down = '9'
 
 ## Select/deselect song in playlist
 key select = 32

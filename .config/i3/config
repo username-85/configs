@@ -155,6 +155,7 @@ bar {
     font pango:DejaVu Sans Mono 0
     position          top
     tray_output       none
+    workspace_min_width 40
 
 ##   slate
     colors {

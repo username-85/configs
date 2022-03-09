@@ -148,6 +148,7 @@ key screen-search = 0
 key screen-lyrics = 0
 key screen-outputs = 0
 key screen-artist = 0
+key screen-chat = 0
 
 
 key crop = 0

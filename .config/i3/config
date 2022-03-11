@@ -143,9 +143,9 @@ bindsym $mod+Shift+r mode "resize"
 # Slate theme by Jody Ribton <jody@ribton.me>
 # $i3-theme-window
 # class                 border  backgr. text    indicator
-client.focused          #38474a #38474a #38474a #227dbd
-client.focused_inactive #00222b #00222b #00222b #00222b
-client.unfocused        #00222b #00222b #00222b #00222b
+client.focused          #4b595c #4b595c #4b595c #227dbd
+client.focused_inactive #193840 #193840 #193840 #193840
+client.unfocused        #193840 #193840 #193840 #193840
 client.urgent           #6F2518 #6F2518 #6F2518 #6F2518
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -162,9 +162,9 @@ bar {
         separator          #000000
         background         #000000
         statusline         #000000
-        focused_workspace  #38474a #38474a #38474a
+        focused_workspace  #4b595c #4b595c #4b595c
         active_workspace   #000000 #000000 #000000
-        inactive_workspace #00222b #00222b #00222b
+        inactive_workspace #193840 #193840 #193840
         urgent_workspace   #77216f #77216f #77216f
     }
 

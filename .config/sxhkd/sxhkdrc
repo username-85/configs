@@ -32,9 +32,6 @@ super + shift + f
 	bspc node -t \~floating
 
 alt + Tab
-    bspc desktop ^1.!focused -f || bspc desktop -f ^2
-
-alt + ctrl + Tab
 	bspc desktop -f last
 
 alt + {space,semicolon}
@@ -68,11 +65,9 @@ super + ctrl + {Left,Down,Up,Right}
 alt + {_,shift + }{1-2,0}
 	bspc {desktop -f,node -d} ^{1-2,3}
 
-# use 0 (same as ^4) desktop as some kind of i3wm scratchpad
-alt + shift + minus
+# move to trash desktop
+alt + shift + d
 	bspc node -d ^4
-alt + minus
-    bspc desktop ^4.!focused -f || bspc desktop last -f
 
 alt + {h,j,k,l}
 	bspc node -f {west,south,north,east}

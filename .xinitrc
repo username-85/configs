@@ -34,4 +34,4 @@ xsetroot -cursor_name left_ptr &
 unclutter -root -idle 1 -jitter 3 &
 xte "mousemove 0 0" &
 
-exec i3
+exec bspwm

@@ -62,8 +62,12 @@ super + ctrl + {Left,Down,Up,Right}
 	bspc node -p {\~west,\~south,\~north,\~east}
 
 # focus or send to the given desktop
-alt + {_,shift + }{1-2,0}
-	bspc {desktop -f,node -d} ^{1-2,3}
+alt + {_,shift + }{1-2,9,0}
+	bspc {desktop -f,node -d} ^{1-2,3,4}
+
+# use 0 desktop as some kind of i3wm scratchpad
+alt + minus
+    bspc desktop ^0.-f || bspc desktop last -f
 
 alt + {h,j,k,l}
 	bspc node -f {west,south,north,east}

@@ -62,8 +62,14 @@ super + ctrl + {Left,Down,Up,Right}
 	bspc node -p {\~west,\~south,\~north,\~east}
 
 # focus or send to the given desktop
-alt + {_,shift + }{1-2,0}
-	bspc {desktop -f,node -d} ^{1-2,3}
+alt + {_,shift + }{1-2}
+	bspc {desktop -f,node -d} ^{1-2}
+
+# focus or send to the given desktop
+alt + 0
+    bspc desktop ^3.!focused -f || bspc desktop last -f
+alt + shift + 0
+	bspc desktop -f ^3
 
 # move to trash desktop
 alt + shift + d

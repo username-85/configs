@@ -38,9 +38,9 @@ bspc config click_to_focus no
 bspc monitor -d 1 2 tmp hidden
 
 bspc desktop ^1 -l monocle
-bspc desktop ^2 -l tiled
-bspc desktop ^0 -l tiled
-bspc desktop ^9 -l tiled
+bspc desktop ^2 -l monocle
+bspc desktop ^3 -l monocle
+bspc desktop ^4 -l monocle
 
 # for java gui
 #bspc rule -a "window-MainFrame" state=floating

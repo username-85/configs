@@ -35,12 +35,13 @@ bspc config pointer_action1 move
 bspc config pointer_action2 resize_corner
 bspc config click_to_focus no
 
-bspc monitor -d 1 2 tmp trash
+bspc monitor -d 1 2 3 tmp trash
 
 bspc desktop ^1 -l monocle
-bspc desktop ^2 -l monocle
-bspc desktop ^3 -l monocle
-bspc desktop ^4 -l monocle
+bspc desktop ^2 -l tiled
+bspc desktop ^3 -l tiled
+bspc desktop ^4 -l tiled
+bspc desktop ^5 -l tiled
 
 # for java gui
 #bspc rule -a "window-MainFrame" state=floating

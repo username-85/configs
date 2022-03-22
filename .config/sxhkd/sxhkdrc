@@ -19,7 +19,8 @@ super + shift + m
 	bspc desktop -l monocle
 
 super + m
-    bspc node -t \~fullscreen
+    bspc desktop -l next
+#    bspc node -t \~fullscreen
 
 XF86Mail
 	~/.bin/keys/XF86Mail
@@ -62,18 +63,18 @@ super + ctrl + {Left,Down,Up,Right}
 	bspc node -p {\~west,\~south,\~north,\~east}
 
 # focus or send to the given desktop
-alt + {_,shift + }{1-2}
-	bspc {desktop -f,node -d} ^{1-2}
+alt + {_,shift + }{1-3}
+	bspc {desktop -f,node -d} ^{1-3}
 
 # focus or send to the given desktop
 alt + 0
-    bspc desktop ^3.!focused -f || bspc desktop last -f
+    bspc desktop ^4.!focused -f || bspc desktop last -f
 alt + shift + 0
-	bspc desktop -f ^3
+	bspc node -d ^4
 
 # move to trash desktop
 alt + shift + d
-	bspc node -d ^4
+	bspc node -d ^5
 
 alt + {h,j,k,l}
 	bspc node -f {west,south,north,east}

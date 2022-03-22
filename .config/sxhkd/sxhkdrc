@@ -66,15 +66,16 @@ super + ctrl + {Left,Down,Up,Right}
 alt + {_,shift + }{1-3}
 	bspc {desktop -f,node -d} ^{1-3}
 
-# focus or send to the given desktop
+# toogle focus of tmp desktop
 alt + 0
-    bspc desktop ^4.!focused -f || bspc desktop last -f
+    bspc desktop ^0.!focused -f || bspc desktop last -f
+# send to tmp desktop
 alt + shift + 0
-	bspc node -d ^4
+	bspc node -d ^0
 
-# move to trash desktop
+# move to hidden desktop
 alt + shift + d
-	bspc node -d ^5
+	bspc node -d ^9
 
 alt + {h,j,k,l}
 	bspc node -f {west,south,north,east}

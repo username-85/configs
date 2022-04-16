@@ -74,7 +74,7 @@ alt + shift + 0
 	bspc node -d ^3
 
 # move to hidden desktop
-alt + shift + d
+alt + shift + h
 	bspc node -d ^4
 
 alt + {h,j,k,l}

@@ -1,6 +1,9 @@
 #!/bin/sh
 set -e
 
+TMPDIR="$HOME/data/tmp/gtags/"
+export TMPDIR
+
 file_list="gtags.files"
 echo -n -e "\nsearch for files"
 time find -L $@ -regex '.*\.\(c\|h\|cpp\|cxx\|hh\|hpp\|hxx\)$' > "$file_list"

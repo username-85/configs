@@ -1,6 +1,5 @@
 #!/bin/bash
-MAX_UNREAD=7
-MAX_SHOW=7
+MAX_UNREAD=5
 
 # Set maildirs
 mdir="$HOME/data/Mail"
@@ -12,10 +11,6 @@ symbol="░"
 
 if [ $counter -ge $MAX_UNREAD ]; then
     symbol="▓"
-fi
-
-if [ $counter -ge $MAX_SHOW ]; then
-    counter=$MAX_SHOW
 fi
 
 for (( i=1; i<=$counter; i++ ))

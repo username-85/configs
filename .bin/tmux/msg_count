@@ -1,22 +1,18 @@
 #!/bin/bash
-MAX_COUNT=2
-JABBER_COUNTER=`echo $HOME/.mcabber/unread_counter`
+MAX_SHOW=3
 
-if ! [ -f $JABBER_COUNTER ]; then
-    exit 0
-fi
+# Set maildirs
+mdir="$HOME/data/Mail"
+mboxes="$mdir/mattermost/new/"
 
-counter=$(<$JABBER_COUNTER)
-# 4 numbers separated with space chars:
-# Nr of unread buffers, nr of unread buffers with attention sign,
-# nr of MUC unread buffers, nr of MUC unread buffers with attention sign.
-counter=$(echo $counter | cut -d ' ' -f 1)
+symbol="█"
 
-if [ $counter -ge $MAX_COUNT ]; then
-    counter=$MAX_COUNT
+counter=$(find $mboxes -type f | wc -l)
+if [ $counter -ge $MAX_SHOW ]; then
+    counter=$MAX_SHOW
 fi
 
 for (( i=1; i<=$counter; i++ ))
 do
-   echo -ne "▒▒"
+    echo -ne "$symbol"
 done

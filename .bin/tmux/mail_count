@@ -11,6 +11,7 @@ symbol="░"
 
 if [ $counter -ge $MAX_UNREAD ]; then
     symbol="▓"
+    counter=$MAX_UNREAD
 fi
 
 for (( i=1; i<=$counter; i++ ))

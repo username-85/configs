@@ -96,7 +96,7 @@ bindsym $mod+Shift+f floating toggle
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1"
 set $ws2 "2"
-set $ws3 "trash"
+set $ws3 "hidden"
 set $ws0 "tmp"
 #workspace $ws0 output HDMI1
 
@@ -112,7 +112,7 @@ bindsym Mod1+0 workspace $ws0
 # move focused container to workspace
 bindsym Mod1+Shift+1 move container to workspace number $ws1
 bindsym Mod1+Shift+2 move container to workspace number $ws2
-bindsym Mod1+Shift+d move container to workspace $ws3
+bindsym Mod1+Shift+h move container to workspace $ws3
 bindsym Mod1+Shift+0 move container to workspace $ws0
 
 # reload the configuration file

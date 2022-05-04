@@ -10,6 +10,7 @@ set mark_old=no
 set folder_format="%N %f"
 set date_format="%Y-%m-%d"
 
+set nohelp
 set sidebar_visible = yes
 set sidebar_short_path = yes
 set sidebar_width = 15

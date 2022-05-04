@@ -12,7 +12,7 @@ set date_format="%Y-%m-%d"
 
 set sidebar_visible = yes
 set sidebar_short_path = yes
-set sidebar_width = 10
+set sidebar_width = 12
 set sidebar_new_mail_only = yes
 set sidebar_divider_char = '│'
 color sidebar_divider color240 black
@@ -21,7 +21,7 @@ color sidebar_new yellow black
 set mbox_type=Maildir
 set folder="~/data/Mail"
 
-mailboxes       =inbox =sent =draft =trash =redmine =gitlab =inbox-ext =sent-ext =xpon =mattermost
+mailboxes       =inbox =sent =draft =trash =redmine =gitlab =inbox-ext =sent-ext =xpon =mattermost =notification
 
 # local
 source "~/.mutt/profiles/local"

@@ -152,27 +152,27 @@ client.urgent           #501A10 #501A10 #501A10 #501A10
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-#bar {
+bar {
 ##pc
-#    font pango:DejaVu Sans Mono 0
-#    position          top
-#    tray_output       none
-#    workspace_min_width 40
-#
-###   slate
-#    colors {
-#        separator          #000000
-#        background         #000000
-#        statusline         #000000
-#        focused_workspace  #4b595c #4b595c #4b595c
-#        active_workspace   #000000 #000000 #000000
-#        inactive_workspace #193840 #193840 #193840
-#        urgent_workspace   #77216f #77216f #77216f
-#    }
-#
-#    wheel_up_cmd nop
-#    wheel_down_cmd nop
-#}
+    font pango:DejaVu Sans Mono 0
+    position          bottom
+    tray_output       none
+    workspace_min_width 40
+
+##   slate
+    colors {
+        separator          #000000
+        background         #000000
+        statusline         #000000
+        focused_workspace  #3C4848 #3C4848 #3C4848
+        active_workspace   #000000 #000000 #000000
+        inactive_workspace #11282D #11282D #11282D
+        urgent_workspace   #501A10 #501A10 #501A10
+    }
+
+    wheel_up_cmd nop
+    wheel_down_cmd nop
+}
 
 # move the currently focused window to the scratchpad
 bindsym $mod+Shift+minus move scratchpad

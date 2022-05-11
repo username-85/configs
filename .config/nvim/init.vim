@@ -317,6 +317,7 @@ nmap <leader>p :cp<CR>
 
 " gitgutter
 "let g:gitgutter_map_keys = 0
+let g:gitgutter_preview_win_floating = 0
 nmap <leader>d <Plug>(GitGutterPreviewHunk)
 "nnoremap <leader>p :SignifyHunkDiff<cr>
 "nnoremap <leader>u :SignifyHunkUndo<cr>

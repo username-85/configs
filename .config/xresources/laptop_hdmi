@@ -1,9 +1,9 @@
 ! pc
 Xft.dpi: 96
-urxvt*font:-*-terminus-medium-*-*-*-14-*-*-*-*-*-iso10646-*
-urxvt*boldFont:-*-terminus-medium-*-*-*-14-*-*-*-*-*-iso10646-*
-urxvt*italicFont:-*-terminus-medium-*-*-*-14-*-*-*-*-*-iso10646-*
-urxvt*boldItalicFont:-*-terminus-medium-*-*-*-14-*-*-*-*-*-iso10646-*
+urxvt*font:-*-terminus-medium-*-*-*-16-*-*-*-*-*-iso10646-*
+urxvt*boldFont:-*-terminus-medium-*-*-*-16-*-*-*-*-*-iso10646-*
+urxvt*italicFont:-*-terminus-medium-*-*-*-16-*-*-*-*-*-iso10646-*
+urxvt*boldItalicFont:-*-terminus-medium-*-*-*-16-*-*-*-*-*-iso10646-*
 ! right DPI for work
 ! 1920x1080  21.5
 !Xft.dpi: 102
@@ -108,7 +108,7 @@ urxvt*highlightColor:grey28
 *color7:       #c6c6c6
 *color15:      #c6c6c6
 
-URxvt.lineSpace: 1
+URxvt.lineSpace: 0
 URxvt.letterSpace: 0
 
 Sxiv.foreground: #000000

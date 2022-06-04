@@ -29,6 +29,11 @@ dunst &
 
 xcompmgr -a &
 
+if [ $HOSTNAME = "pc" ]; then
+    pkill redshift
+    redshift&
+fi
+
 hsetroot -solid "#001515" &
 xsetroot -cursor_name left_ptr &
 unclutter -root -idle 1 -jitter 3 &

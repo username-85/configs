@@ -9,8 +9,7 @@ noblacklist ${HOME}/.cache/transmission
 noblacklist ${HOME}/.config/transmission
 whitelist  ${DOWNLOADS}
 whitelist /tmp/downloads/
-whitelist /home/user/data/tmp/downloads/
-whitelist /mnt/downloads/
+whitelist /home/user/tmp/downloads/
 
 caps.drop all
 machine-id

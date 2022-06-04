@@ -7,7 +7,7 @@ noblacklist ${HOME}/.aria2
 mkdir ${HOME}/.aria2
 whitelist ${HOME}/.aria2
 whitelist /tmp/downloads/
-whitelist /home/user/misc/tmp/downloads/
+whitelist /home/user/tmp/downloads/
 
 caps.drop all
 machine-id

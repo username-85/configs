@@ -26,7 +26,7 @@ mkdir ${HOME}/.config/qBittorrent
 mkdir ${HOME}/.local/share/data/qBittorrent
 whitelist  ${DOWNLOADS}
 whitelist /tmp/downloads/
-whitelist /home/user/data/tmp/downloads/
+whitelist /home/user/tmp/downloads/
 whitelist ${HOME}/.cache/qBittorrent
 whitelist ${HOME}/.config/qBittorrent
 whitelist ${HOME}/.config/qBittorrentrc

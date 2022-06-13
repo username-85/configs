@@ -77,6 +77,7 @@ hi Define		ctermfg=3 ctermbg=0
 hi Preproc		ctermfg=3
 hi Macro		ctermfg=3 ctermbg=0 
 
+hi SpellCap     ctermfg=5 ctermbg=0
 
 "from zenburn 
 hi StatusLine		ctermfg=235   ctermbg=3

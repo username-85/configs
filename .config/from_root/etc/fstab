@@ -6,6 +6,6 @@ LABEL=ROOT	/         	ext4      	rw,noatime,discard	0 1
 
 LABEL=BOOT	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro	0 2
 
-LABEL=DATA	/home/user/data	ext4      	rw,noatime	0 2
+LABEL=DATA	/home/user/data	ext4      	rw,noatime,discard	0 2
 
 tmpfs   /tmp         tmpfs   rw,nodev,nosuid,size=14G          0  0

@@ -67,7 +67,9 @@ fi
 
 if [ $HOSTNAME = "pc" ]; then
     # power management for disk, to disable noise, turn it back if you'be moving laptop
-    /usr/bin/hdparm -B 254 -S 0 /dev/disk/by-label/DATA
+    #/usr/bin/hdparm -B 254 -S 0 /dev/disk/by-label/DATA
+    # for wine?
+    sysctl dev.i915.perf_stream_paranoid=0
 fi
 
 systemctl disable systemd-tmpfiles-clean.timer

@@ -1,0 +1,5 @@
+#!/bin/sh
+set -e
+
+hdparm -B 255 /dev/disk/by-label/EXTERNAL
+mount /dev/disk/by-label/EXTERNAL /home/user/tmp

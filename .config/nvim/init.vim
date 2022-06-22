@@ -123,8 +123,10 @@ nnoremap <F3> <C-^>
 "select buffer
 nnoremap <F4> :Buffers<CR>
 nnoremap <C-w>a :Buffers<CR>
-nnoremap <F5> :call bufferhint#Popup()<CR>
+nnoremap <F6> :call bufferhint#Popup()<CR>
 "let g:bufferhint_SortMode = 1
+
+nnoremap <F5> :GFiles<CR>
 
 " tagbar
 au FileType c,cpp,h,python nmap <F11> :TagbarToggle<CR>

@@ -20,7 +20,7 @@ export LS_COLORS
 
 export BROWSER=w3m
 export EDITOR=nvim
-export MPD_HOST=/tmp/mpd
+export MPD_HOST=localhost
 export PAGER=w3m
 export SYSTEMD_PAGER=
 export QT_QPA_PLATFORMTHEME=gtk2

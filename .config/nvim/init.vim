@@ -5,9 +5,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'easymotion/vim-easymotion'
     Plug 'junegunn/fzf.vim'
     Plug 'junegunn/vim-easy-align'
-"    Plug 'lyokha/vim-xkbswitch'
     Plug 'ntpeters/vim-better-whitespace'
-    Plug 'ronakg/quickr-cscope.vim'
     Plug 'roxma/vim-tmux-clipboard'
     Plug 'scrooloose/nerdtree'
 "    Plug 'vim-scripts/taglist.vim'
@@ -199,7 +197,7 @@ endif
 
 "------ plugins settings ------
 
-let g:quickr_cscope_use_qf_g = 1
+let g:quickr_cscope_use_qf_g = 0
 let g:quickr_cscope_autoload_db = 0
 let g:quickr_cscope_keymaps = 0
 let g:quickr_cscope_program = "gtags-cscope"
@@ -314,8 +312,12 @@ map Q <Nop>
 set csprg=gtags-cscope
 silent! cs add GTAGS
 
-nmap <leader>n :cn<CR>
-nmap <leader>p :cp<CR>
+nmap <leader>n :lne<CR>
+nmap <leader>p :lp<CR>
+" TODO: change it later
+"nmap <leader><Right> :cn<CR>
+"nmap <leader><Left> :cp<CR>
+
 
 " gitgutter
 "let g:gitgutter_map_keys = 0

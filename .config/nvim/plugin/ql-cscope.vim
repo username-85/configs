@@ -77,7 +77,7 @@ function! s:quickr_cscope(str, query, vert, cmd)
     " Mark this position
     execute "normal! mY"
     " Close any open quickfix windows
-    cclose
+    lclose
 
     if g:quickr_cscope_prompt_length > 0
         if strlen(a:str) <= g:quickr_cscope_prompt_length
@@ -88,7 +88,7 @@ function! s:quickr_cscope(str, query, vert, cmd)
     endif
 
     " Clear existing quickfix list
-    call setqflist([])
+    call setloclist(0, [])
 
     let cur_file_name=@%
     let view = winsaveview()
@@ -149,8 +149,8 @@ if g:quickr_cscope_use_qf_g
     nnoremap <silent> <plug>(quickr_cscope_global) :call <SID>quickr_cscope(expand("<cword>"), "g", "", "lcs")<CR>
     vnoremap <silent> <plug>(quickr_cscope_global) :call <SID>quickr_cscope(<SID>get_visual_selection(), "g", "", "lcs")<CR>
 else
-    nnoremap <silent> <plug>(quickr_cscope_global) :cs find g <C-R>=expand("<cword>")<CR><CR>
-    vnoremap <silent> <plug>(quickr_cscope_global) :<C-U>cs find g <C-R>=<SID>get_visual_selection()<CR><CR>
+    nnoremap <silent> <plug>(quickr_cscope_global) :lcs find g <C-R>=expand("<cword>")<CR><CR>
+    vnoremap <silent> <plug>(quickr_cscope_global) :<C-U>lcs find g <C-R>=<SID>get_visual_selection()<CR><CR>
 endif
 
 nnoremap <silent> <plug>(quickr_cscope_symbols)         :call <SID>quickr_cscope(expand("<cword>"), "s", "", "lcs")<CR>

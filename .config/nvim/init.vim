@@ -315,8 +315,8 @@ silent! cs add GTAGS
 nmap <leader>n :lne<CR>
 nmap <leader>p :lp<CR>
 " TODO: change it later
-"nmap <leader><Right> :cn<CR>
-"nmap <leader><Left> :cp<CR>
+nmap <leader><DOWN> :cn<CR>
+nmap <leader><UP> :cp<CR>
 
 
 " gitgutter

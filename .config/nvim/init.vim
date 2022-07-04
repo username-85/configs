@@ -35,7 +35,7 @@ set nofoldenable
 "set foldnestmax=1
 "nnoremap z<space> zA
 
-set switchbuf=useopen,usetab
+"set switchbuf=useopen,usetab
 set complete=.,w,b,u,t
 set timeoutlen=500
 set ttimeoutlen=100

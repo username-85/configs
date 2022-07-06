@@ -6,7 +6,19 @@
 
 HOSTNAME=$(uname -n)
 
-xrdb -load ~/.config/xresources/config
+cfg_file="${HOSTNAME}"
+
+if [ $HOSTNAME = "laptop" ]; then
+    output_hdmi=$(xrandr | awk '/connected/ && /HDMI1/ { print; }' | cut -d " " -f1)
+
+    if [ -n "$output_hdmi" ]; then
+        xrandr --output eDP1 --off --output HDMI1 --auto
+        cfg_file="${cfg_file}_hdmi"
+    fi
+fi
+
+xrdb -load "${HOME}/.config/xresources/${cfg_file}"
+ln -sf "${HOME}/.config/rofi/${cfg_file}" "${HOME}/.config/rofi/config.rasi"
 
 if [ $HOSTNAME = "work" ]; then
     locker="${HOME}/.bin/misc/slock"

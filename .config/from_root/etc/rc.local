@@ -61,7 +61,7 @@ echo 'auto' > '/sys/bus/pci/devices/0000:00:00.0/power/control'
 
 if [ $HOSTNAME = "laptop" ]; then
     # Runtime PM for PCI Device Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller
-    echo 'auto' > '/sys/bus/pci/devices/0000:04:00.0/power/control'
+    echo 'on' > '/sys/bus/pci/devices/0000:04:00.0/power/control';
     echo "1" | tee /sys/devices/system/cpu/intel_pstate/no_turbo
 fi
 

@@ -137,7 +137,8 @@ if [ $HOSTNAME = "work" ]; then
     # jabber
     alias mcabber='firejail mcabber'
     # mail
-    alias mutt='cd /tmp/mutt && firejail mutt && cd -'
+#    alias mutt='cd /tmp/mutt && firejail mutt && cd -'
+    alias mutt='cd /tmp/mutt && mutt && cd -'
     alias fetch_mail="fdm fetch"
 
     alias picocom='picocom -b 115200'

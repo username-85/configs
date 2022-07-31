@@ -16,48 +16,8 @@ echo '1500' > '/proc/sys/vm/dirty_writeback_centisecs'
 # NMI watchdog should be turned off 
 echo '0' > '/proc/sys/kernel/nmi_watchdog'
 
-# Enable Audio codec power management
-# echo '1' > '/sys/module/snd_hda_intel/parameters/power_save'
-
-
 # limit max freq for powersave
 cpupower frequency-set -g powersave
-#cpupower frequency-set -u 1800MHz
-
-## from powertop
-
-# Runtime PM for I2C Adapter i2c-0 (i915 gmbus dpb)
-echo 'auto' > '/sys/bus/i2c/devices/i2c-0/device/power/control'
-
-# Runtime PM for PCI Device Intel Corporation Cannon Point-LP LPC Controller
-echo 'auto' > '/sys/bus/pci/devices/0000:00:1f.0/power/control'
-
-# Runtime PM for port ataN of PCI device: Intel Corporation Cannon Point-LP SATA Controller [AHCI Mode]
-echo 'auto' > '/sys/bus/pci/devices/0000:00:17.0/ata1/power/control'
-echo 'auto' > '/sys/bus/pci/devices/0000:00:17.0/ata2/power/control';
-echo 'auto' > '/sys/bus/pci/devices/0000:00:17.0/ata3/power/control'
-
-# Runtime PM for PCI Device Intel Corporation Cannon Point-LP Shared SRAM
-echo 'auto' > '/sys/bus/pci/devices/0000:00:14.2/power/control';
-
-# Runtime PM for PCI Device Intel Corporation Ethernet Connection (6) I219-V 
-#echo 'auto' > '/sys/bus/pci/devices/0000:00:1f.6/power/control'
-
-# sdX power management
-echo 'auto' > '/sys/block/sda/device/power/control'
-echo 'auto' > '/sys/block/sdb/device/power/control'
-
-# Runtime PM for PCI Device Intel Corporation Cannon Point-LP SPI Controller
-echo 'auto' > '/sys/bus/pci/devices/0000:00:1f.5/power/control'
-
-# Runtime PM for PCI Device Intel Corporation Cannon Point-LP SATA Controller [AHCI Mode] 
-echo 'auto' > '/sys/bus/pci/devices/0000:00:17.0/power/control'
-
-# Runtime PM for PCI Device Intel Corporation Cannon Point-LP Thermal Controller
-echo 'auto' > '/sys/bus/pci/devices/0000:00:12.0/power/control'
-
-# Runtime PM for PCI Device Intel Corporation Device 3ecc
-echo 'auto' > '/sys/bus/pci/devices/0000:00:00.0/power/control'
 
 if [ $HOSTNAME = "laptop" ]; then
     # Runtime PM for PCI Device Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller
@@ -65,7 +25,34 @@ if [ $HOSTNAME = "laptop" ]; then
     echo "1" | tee /sys/devices/system/cpu/intel_pstate/no_turbo
 fi
 
-if [ $HOSTNAME = "pc" ]; then
+if [ $HOSTNAME = "pc0" ]; then
+    #Runtime PM for PCI Device Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller
+    echo 'auto' > '/sys/bus/pci/devices/0000:01:00.0/power/control';
+    #Runtime PM for disk sda
+    echo 'auto' > '/sys/block/sda/device/power/control';
+    #Runtime PM for PCI Device Intel Corporation Celeron/Pentium Silver Processor LPC Controller
+    echo 'auto' > '/sys/bus/pci/devices/0000:00:1f.0/power/control';
+    #Runtime PM for PCI Device Intel Corporation Gemini Lake Host Bridge
+    echo 'auto' > '/sys/bus/pci/devices/0000:00:00.0/power/control';
+    #Enable SATA link power management for host0
+    echo 'med_power_with_dipm' > '/sys/class/scsi_host/host0/link_power_management_policy';
+    #Enable SATA link power management for host1
+    echo 'med_power_with_dipm' > '/sys/class/scsi_host/host1/link_power_management_policy';
+    #Runtime PM for port ata1 of PCI device: Intel Corporation Celeron/Pentium Silver Processor SATA Controller
+    echo 'auto' > '/sys/bus/pci/devices/0000:00:12.0/ata1/power/control'
+    #Runtime PM for PCI Device Intel Corporation Gemini Lake PCH CNVi WiFi
+    echo 'auto' > '/sys/bus/pci/devices/0000:00:0c.0/power/control';
+    #Runtime PM for PCI Device Intel Corporation Celeron/Pentium Silver Processor USB 3.0 xHCI Controller
+    echo 'auto' > '/sys/bus/pci/devices/0000:00:15.0/power/control';
+    #Runtime PM for PCI Device Intel Corporation Celeron/Pentium Silver Processor SATA Controller
+    echo 'auto' > '/sys/bus/pci/devices/0000:00:12.0/power/control';
+    #Runtime PM for PCI Device Intel Corporation GeminiLake [UHD Graphics 605]
+    echo 'auto' > '/sys/bus/pci/devices/0000:00:02.0/power/control';
+    #Runtime PM for port ata2 of PCI device: Intel Corporation Celeron/Pentium Silver Processor SATA Controller
+    echo 'auto' > '/sys/bus/pci/devices/0000:00:12.0/ata2/power/control';
+fi
+
+if [ $HOSTNAME = "pc1" ]; then
     # power management for disk, to disable noise, turn it back if you'be moving laptop
     #/usr/bin/hdparm -B 254 -S 0 /dev/disk/by-label/DATA
     # for wine?

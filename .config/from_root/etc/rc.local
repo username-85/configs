@@ -23,9 +23,7 @@ if [ $HOSTNAME = "laptop" ]; then
     # Runtime PM for PCI Device Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller
     echo 'on' > '/sys/bus/pci/devices/0000:04:00.0/power/control';
     echo "1" | tee /sys/devices/system/cpu/intel_pstate/no_turbo
-fi
-
-if [ $HOSTNAME = "pc0" ]; then
+elif [ $HOSTNAME = "pc0" ]; then
     #Runtime PM for PCI Device Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller
     echo 'auto' > '/sys/bus/pci/devices/0000:01:00.0/power/control';
     #Runtime PM for disk sda
@@ -50,13 +48,34 @@ if [ $HOSTNAME = "pc0" ]; then
     echo 'auto' > '/sys/bus/pci/devices/0000:00:02.0/power/control';
     #Runtime PM for port ata2 of PCI device: Intel Corporation Celeron/Pentium Silver Processor SATA Controller
     echo 'auto' > '/sys/bus/pci/devices/0000:00:12.0/ata2/power/control';
-fi
-
-if [ $HOSTNAME = "pc1" ]; then
-    # power management for disk, to disable noise, turn it back if you'be moving laptop
-    #/usr/bin/hdparm -B 254 -S 0 /dev/disk/by-label/DATA
+elif [ $HOSTNAME = "pc1" ]; then
     # for wine?
     sysctl dev.i915.perf_stream_paranoid=0
+    #Runtime PM for port ata1 of PCI device: Intel Corporation Cannon Point-LP SATA Controller [AHCI Mode]
+    echo 'auto' > '/sys/bus/pci/devices/0000:00:17.0/ata1/power/control';
+    #Runtime PM for PCI Device Intel Corporation Cannon Point-LP SPI Controller
+    echo 'auto' > '/sys/bus/pci/devices/0000:00:1f.5/power/control';
+    #Runtime PM for PCI Device Intel Corporation Cannon Point-LP LPC Controller
+    echo 'auto' > '/sys/bus/pci/devices/0000:00:1f.0/power/control';
+    #Runtime PM for disks sd..
+    echo 'auto' > '/sys/block/sda/device/power/control';
+    echo 'auto' > '/sys/block/sdb/device/power/control';
+    #Runtime PM for port ata3 of PCI device: Intel Corporation Cannon Point-LP SATA Controller [AHCI Mode]
+    echo 'auto' > '/sys/bus/pci/devices/0000:00:17.0/ata3/power/control';
+    #Runtime PM for port ata2 of PCI device: Intel Corporation Cannon Point-LP SATA Controller [AHCI Mode]
+    echo 'auto' > '/sys/bus/pci/devices/0000:00:17.0/ata2/power/control';
+    #Runtime PM for PCI Device Intel Corporation Device 3ecc
+    echo 'auto' > '/sys/bus/pci/devices/0000:00:00.0/power/control';
+    #Runtime PM for PCI Device Intel Corporation Cannon Point-LP Thermal Controller
+    echo 'auto' > '/sys/bus/pci/devices/0000:00:12.0/power/control';
+    #Runtime PM for PCI Device Intel Corporation Cannon Point-LP SATA Controller [AHCI Mode]
+    echo 'auto' > '/sys/bus/pci/devices/0000:00:17.0/power/control';
+    #Runtime PM for PCI Device Intel Corporation Cannon Point-LP Shared SRAM
+    echo 'auto' > '/sys/bus/pci/devices/0000:00:14.2/power/control';
+    #Runtime PM for PCI Device Intel Corporation CoffeeLake-U GT3e [Iris Plus Graphics 655]
+    echo 'auto' > '/sys/bus/pci/devices/0000:00:02.0/power/control';
+    #Runtime PM for PCI Device Intel Corporation Ethernet Connection (6) I219-V
+    echo 'auto' > '/sys/bus/pci/devices/0000:00:1f.6/power/control';
 fi
 
 systemctl disable systemd-tmpfiles-clean.timer

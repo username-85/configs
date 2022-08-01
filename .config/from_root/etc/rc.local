@@ -16,14 +16,13 @@ echo '1500' > '/proc/sys/vm/dirty_writeback_centisecs'
 # NMI watchdog should be turned off 
 echo '0' > '/proc/sys/kernel/nmi_watchdog'
 
-# limit max freq for powersave
-cpupower frequency-set -g powersave
-
 if [ $HOSTNAME = "laptop" ]; then
+    cpupower frequency-set -g powersave
     # Runtime PM for PCI Device Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller
     echo 'on' > '/sys/bus/pci/devices/0000:04:00.0/power/control';
     echo "1" | tee /sys/devices/system/cpu/intel_pstate/no_turbo
 elif [ $HOSTNAME = "pc0" ]; then
+    cpupower frequency-set -g schedutil
     #Runtime PM for PCI Device Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller
     echo 'auto' > '/sys/bus/pci/devices/0000:01:00.0/power/control';
     #Runtime PM for disk sda
@@ -49,6 +48,7 @@ elif [ $HOSTNAME = "pc0" ]; then
     #Runtime PM for port ata2 of PCI device: Intel Corporation Celeron/Pentium Silver Processor SATA Controller
     echo 'auto' > '/sys/bus/pci/devices/0000:00:12.0/ata2/power/control';
 elif [ $HOSTNAME = "pc1" ]; then
+    cpupower frequency-set -g powersave
     # for wine?
     sysctl dev.i915.perf_stream_paranoid=0
     #Runtime PM for port ata1 of PCI device: Intel Corporation Cannon Point-LP SATA Controller [AHCI Mode]

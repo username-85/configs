@@ -14,6 +14,10 @@ if [ $HOSTNAME = "work" ]; then
     xss-lock --ignore-sleep $locker &
 fi
 
+if [ $HOSTNAME = "pc1" ]; then
+    redshift -o &
+fi
+
 xset +dpms # enable dpms
 xset dpms 900 1200 1500 #blank, suspend,poweroff
 

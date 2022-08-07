@@ -78,7 +78,7 @@ elif [ $HOSTNAME = "pc1" ]; then
     #Runtime PM for PCI Device Intel Corporation CoffeeLake-U GT3e [Iris Plus Graphics 655]
     echo 'auto' > '/sys/bus/pci/devices/0000:00:02.0/power/control';
     #Runtime PM for PCI Device Intel Corporation Ethernet Connection (6) I219-V
-    echo 'auto' > '/sys/bus/pci/devices/0000:00:1f.6/power/control';
+    #echo 'auto' > '/sys/bus/pci/devices/0000:00:1f.6/power/control';
 fi
 
 systemctl disable systemd-tmpfiles-clean.timer

@@ -25,7 +25,7 @@ if [ $HOSTNAME = "laptop" ]; then
 elif [ $HOSTNAME = "pc0" ]; then
     cpupower frequency-set -g schedutil
     #this slows CPU for powersave
-    echo 1 > /sys/devices/system/cpu/intel_pstate/no_turbo
+    #echo 1 > /sys/devices/system/cpu/intel_pstate/no_turbo
     #Runtime PM for PCI Device Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller
     echo 'auto' > '/sys/bus/pci/devices/0000:01:00.0/power/control';
     #Runtime PM for disk sda

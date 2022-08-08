@@ -15,7 +15,7 @@ if [ $HOSTNAME = "work" ]; then
 fi
 
 if [ $HOSTNAME = "pc1" ]; then
-    redshift -o &
+    redshift &
 fi
 
 xset +dpms # enable dpms

@@ -162,39 +162,6 @@ nmap <silent> <C-w><Space> :exe "tabn " . g:Lasttab<cr>
 " autocmd BufRead,BufNewFile {*.markdown,*.mdown,*.mkdn,*.md,*.mkd,*.mdwn,*.mdtxt,*.mdtext,*.text} set filetype=markdown
 autocmd FileType markdown setlocal syntax=off
 
-"------ functions ------
-
-" Save current view settings on a per-window, per-buffer basis.
-function! AutoSaveWinView()
-    if !exists("w:SavedBufView")
-        let w:SavedBufView = {}
-    endif
-    let w:SavedBufView[bufnr("%")] = winsaveview()
-endfunction
-
-" Restore current view settings.
-function! AutoRestoreWinView()
-    let buf = bufnr("%")
-    if exists("w:SavedBufView") && has_key(w:SavedBufView, buf)
-        let v = winsaveview()
-        let atStartOfFile = v.lnum == 1 && v.col == 0
-        if atStartOfFile && !&diff
-            call winrestview(w:SavedBufView[buf])
-        endif
-        unlet w:SavedBufView[buf]
-    endif
-endfunction
-
-" When switching buffers, preserve window view.
-if v:version >= 700
-    autocmd BufLeave * call AutoSaveWinView()
-    autocmd BufEnter * call AutoRestoreWinView()
-endif
-
-" toggle space or tabs identation
-"set noexpandtab
-"set expandtab
-
 "------ plugins settings ------
 
 let g:quickr_cscope_use_qf_g = 0
@@ -273,13 +240,6 @@ nmap <c-space> <Plug>(easymotion-bd-w)
 
 "let g:fzf_preview_window = []
 let g:fzf_preview_window = ['right:60%:hidden', 'ctrl-/']
-
-if $DISPLAY == ""
-	let g:XkbSwitchEnabled = 0
-else
-	let g:XkbSwitchEnabled = 1
-	let g:XkbSwitchIMappings = ['ru']
-endif
 
 command Spell setlocal spell! spelllang=ru,en
 

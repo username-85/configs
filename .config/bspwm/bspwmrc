@@ -18,7 +18,7 @@ bspc config ignore_ewmh_focus   true
 #bspc config auto_alternate      false
 
 #bspc config focused_border_color  "#587965"
-bspc config focused_border_color  "#4f6c5a"
+bspc config focused_border_color  "#003535"
 #bspc config focused_border_color  "#2f583f"
 #bspc config focused_border_color  "#222222"
 bspc config normal_border_color   "#222222"

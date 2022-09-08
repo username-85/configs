@@ -20,7 +20,7 @@ export LS_COLORS
 
 export BROWSER=w3m
 export EDITOR=nvim
-export MPD_HOST=localhost
+export MPD_HOST=/tmp/mpd
 export PAGER=w3m
 export SYSTEMD_PAGER=
 export QT_QPA_PLATFORMTHEME=gtk2
@@ -134,7 +134,6 @@ bindkey jj vi-cmd-mode
 #   shell settings
 
 if [ $HOSTNAME = "work" ]; then
-    export MPD_HOST=/tmp/mpd
     # mail
 #    alias mutt='cd /tmp/mutt && firejail mutt && cd -'
     alias mutt='cd /tmp/mutt && mutt && cd -'

@@ -66,6 +66,9 @@ super + ctrl + {Left,Down,Up,Right}
 alt + {_,shift + }{1-2,0}
     bspc {desktop -f,node -d} ^{1-2,3}
 
+alt + minus
+    bspc desktop -f ^4
+
 # move to hidden desktop
 alt + shift + h
 	bspc node -d ^4

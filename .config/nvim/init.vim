@@ -14,6 +14,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'tpope/vim-fugitive'
 call plug#end()
 
+set mouse=
 " for gitgutter also
 set updatetime=200
 "set statusline+=%F

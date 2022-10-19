@@ -21,10 +21,5 @@ HOSTNAME=$(uname -n)
 #[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec xinit -- :1 -nolisten tcp vt$XDG_VTNR
 [[ -z $DISPLAY && -z $SSH_CONNECTION && $XDG_VTNR -eq 1 ]] && exec startx
 
-if [ $HOSTNAME = "pc1" ]; then
-    [[ -z $DISPLAY && -z $SSH_CONNECTION && $XDG_VTNR -eq 2 ]] && exec xinit /home/user/.bin/misc/soulstorm -- :1 vt$XDG_VTNR
-fi
-
-
 # disable stop at ctrl-s (to quit that stop i need to pres ctrl-q)
 stty -ixon

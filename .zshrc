@@ -20,7 +20,6 @@ export LS_COLORS
 
 export BROWSER=w3m
 export EDITOR=nvim
-export MPD_HOST=/tmp/mpd
 export PAGER=w3m
 export SYSTEMD_PAGER=
 export QT_QPA_PLATFORMTHEME=gtk2
@@ -134,8 +133,9 @@ bindkey jj vi-cmd-mode
 #   shell settings
 
 if [ $HOSTNAME = "work" ]; then
+    export MPD_HOST=/tmp/mpd
     # mail
-#    alias mutt='cd /tmp/mutt && firejail mutt && cd -'
+    #alias mutt='cd /tmp/mutt && firejail mutt && cd -'
     alias mutt='cd /tmp/mutt && mutt && cd -'
     alias fetch_mail="fdm fetch"
 
@@ -147,6 +147,7 @@ if [ $HOSTNAME = "work" ]; then
     alias clear_formatter_backups='find . -name "*unc-backup*~*" -exec rm -v {} \;'
     export BOARD_IP="192.168.16.2"
 else
+    export MPD_HOST=localhost
     export GIT_SSH_COMMAND="ssh -i /mnt/auth/ssh/$HOSTNAME/id_rsa"
     alias gphoto="gphoto2 --get-all-files"
     alias mpv="firejail --dns=77.88.8.7 mpv"

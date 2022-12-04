@@ -147,7 +147,7 @@ if [ $HOSTNAME = "work" ]; then
     alias clear_formatter_backups='find . -name "*unc-backup*~*" -exec rm -v {} \;'
     export BOARD_IP="192.168.16.2"
 else
-    export MPD_HOST=localhost
+    export MPD_HOST="mute7@localhost"
     export GIT_SSH_COMMAND="ssh -i /mnt/auth/ssh/$HOSTNAME/id_rsa"
     alias gphoto="gphoto2 --get-all-files"
     alias mpv="firejail --dns=77.88.8.7 mpv"

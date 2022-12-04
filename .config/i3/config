@@ -22,10 +22,10 @@ bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 1
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 1
 #bindsym XF86HomePage exec --no-startup-id ~/.bin/keys/XF86HomePage
 #bindsym XF86Mail exec --no-startup-id ~/.bin/keys/XF86Mail
-bindsym XF86AudioMute exec --no-startup-id mpc --host /tmp/mpd toggle
-bindsym XF86AudioRaiseVolume exec --no-startup-id  mpc --host /tmp/mpd volume +5
-bindsym XF86AudioLowerVolume exec --no-startup-id mpc --host /tmp/mpd volume -5
-bindsym XF86AudioPlay exec --no-startup-id mpc --host /tmp/mpd toggle
+bindsym XF86AudioMute exec --no-startup-id "mpc --host mute7@localhost toggle; mpc --host /tmp/mpd toggle"
+bindsym XF86AudioRaiseVolume exec --no-startup-id  "mpc --host mute7@localhost volume +5; mpc --host /tmp/mpd volume +5"
+bindsym XF86AudioLowerVolume exec --no-startup-id "mpc --host mute7@localhost volume -5; mpc --host /tmp/mpd volume -5"
+bindsym XF86AudioPlay exec --no-startup-id "mpc --host mute7@localhost toggle; mpc --host /tmp/mpd toggle"
 
 # other hotkeys
 bindsym --release $mod+l exec --no-startup-id ~/.bin/misc/slock

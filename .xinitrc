@@ -16,6 +16,7 @@ fi
 
 if [ $HOSTNAME = "pc1" ]; then
     redshift &
+    xrandr -o right
 fi
 
 xset +dpms # enable dpms

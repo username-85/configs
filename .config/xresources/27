@@ -1,10 +1,10 @@
 ! pc
-urxvt*font:-*-terminus-bold-*-*-*-18-*-*-*-*-*-iso10646-*
-urxvt*boldFont:-*-terminus-bold-*-*-*-18-*-*-*-*-*-iso10646-*
-urxvt*italicFont:-*-terminus-bold-*-*-*-18-*-*-*-*-*-iso10646-*
-urxvt*boldItalicFont:-*-terminus-bold-*-*-*-18-*-*-*-*-*-iso10646-*
+urxvt*font:-*-terminus-medium-*-*-*-18-*-*-*-*-*-iso10646-*
+urxvt*boldFont:-*-terminus-medium-*-*-*-18-*-*-*-*-*-iso10646-*
+urxvt*italicFont:-*-terminus-medium-*-*-*-18-*-*-*-*-*-iso10646-*
+urxvt*boldItalicFont:-*-terminus-medium-*-*-*-18-*-*-*-*-*-iso10646-*
 ! 27" 1440x2560 is 108.79
-Xft.dpi: 108.79
+Xft.dpi: 96
 
 URxvt.internalBorder:  0
 uxvt*boldMode: false

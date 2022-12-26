@@ -114,8 +114,8 @@ Sxiv.background: #586151
 Sxiv.font: Terminus
 
 Xft.autohint: 0
-Xft.lcdfilter:  lcddefault
-Xft.hintstyle:  hintslight
-Xft.hinting: 1
+Xft.lcdfilter:  lcdlight
+Xft.hintstyle:  hintnone
+Xft.hinting: 0
 Xft.antialias: 0
 Xft.rgba: none

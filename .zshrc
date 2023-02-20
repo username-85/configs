@@ -145,7 +145,6 @@ if [ $HOSTNAME = "work" ]; then
     alias rebuild_tags='gtags -i'
     alias clear_tags="find . -type f '(' -name GPATH -o -name GRTAGS -o -name GTAGS -o -name gtags.files ')' -exec rm -v {} \;"
     alias clear_formatter_backups='find . -name "*unc-backup*~*" -exec rm -v {} \;'
-    export BOARD_IP="192.168.16.2"
 else
     export MPD_HOST="mute7@localhost"
     export GIT_SSH_COMMAND="ssh -i /mnt/auth/ssh/$HOSTNAME/id_rsa"

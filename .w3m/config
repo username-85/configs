@@ -75,7 +75,7 @@ index_file
 mime_types ~/.mime.types, /usr/etc/mime.types
 mailcap ~/.w3m/mailcap, /usr/etc/w3m/mailcap
 urimethodmap ~/.w3m/urimethodmap, /usr/etc/w3m/urimethodmap
-editor /usr/bin/nvim
+editor /usr/bin/vim
 mailto_options 1
 mailer /usr/bin/mail
 extbrowser sh -c 'printf %s "$0" | xsel'

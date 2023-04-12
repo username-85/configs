@@ -19,7 +19,7 @@ LS_COLORS='rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:c
 export LS_COLORS
 
 export BROWSER=w3m
-export EDITOR=nvim
+export EDITOR=vim
 export PAGER=w3m
 export SYSTEMD_PAGER=
 export QT_QPA_PLATFORMTHEME=gtk2
@@ -47,7 +47,7 @@ alias trg_ru='trans -t ru -e google -pager w3m -show-translation-phonetics=n -sh
 alias trg_en='trans -t en -e google -pager w3m -show-translation-phonetics=n -show-original-phonetics=n -show-prompt-message=n -show-languages=n'
 alias try_ru='trans -t ru -e yandex -pager w3m -show-translation-phonetics=n -show-original-phonetics=n -show-prompt-message=n -show-languages=n'
 alias try_en='trans -t en -e yandex -pager w3m -show-translation-phonetics=n -show-original-phonetics=n -show-prompt-message=n -show-languages=n'
-alias v=nvim
+alias v=vim
 alias weather='curl "wttr.in/Novosibirsk?TMQF"'
 alias less='less -M'
 alias newsboat='cd /tmp/downloads && newsboat --cache-file=~/.cache/newsboat_cache.db'

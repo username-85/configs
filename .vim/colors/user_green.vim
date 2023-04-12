@@ -88,8 +88,8 @@ hi ColorColumn		ctermbg=233   ctermfg=3
 "hi MyTagListFileName ctermfg=grey
 "hi TagListTagName ctermfg=2 ctermbg=0
 
-hi Pmenu		ctermfg=6 ctermbg=234 cterm=NONE term=NONE
-hi PmenuSel		ctermfg=3 ctermbg=0 cterm=NONE term=NONE
+hi Pmenu		ctermfg=251 ctermbg=235 cterm=NONE term=NONE
+hi PmenuSel		ctermfg=187 ctermbg=236 cterm=NONE term=NONE
 hi PmenuSbar		ctermfg=0 ctermbg=234 cterm=NONE term=NONE
 hi PmenuThumb		ctermfg=0 ctermbg=6 cterm=NONE term=NONE
 "PmenuSbar      
@@ -116,6 +116,3 @@ hi SignColumn    guibg=#181818                         ctermbg=233
 "hi DiffAdd ctermbg=23 cterm=NONE term=NONE
 
 hi MyTagListFileName ctermfg=6 ctermbg=0
-
-hi Pmenu         ctermfg=251 ctermbg=235
-hi PmenuSel      ctermfg=187 ctermbg=236 cterm=bold

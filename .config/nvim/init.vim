@@ -18,7 +18,6 @@ set mouse=
 " for gitgutter also
 set updatetime=200
 "set statusline+=%F
-set enc=utf-8
 set fillchars=vert:\│
 set nowrapscan
 set nofixendofline

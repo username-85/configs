@@ -12,6 +12,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'majutsushi/tagbar'
     Plug 'stefandtw/quickfix-reflector.vim'
     Plug 'tpope/vim-fugitive'
+    Plug 'farmergreg/vim-lastplace'
 call plug#end()
 
 " --- blinking cursor start
@@ -162,12 +163,6 @@ endif
 autocmd! TabLeave * let g:Lasttab_backup = g:Lasttab | let g:Lasttab = tabpagenr()
 autocmd! TabClosed * let g:Lasttab = g:Lasttab_backup
 nmap <silent> <C-w><Space> :exe "tabn " . g:Lasttab<cr>
-
-" remember position in buffer
-if v:version >= 700
-  au BufLeave * let b:winview = winsaveview()
-  au BufEnter * if(exists('b:winview')) | call winrestview(b:winview) | endif
-endif
 
 "------ disable syntax highlighting ------
 

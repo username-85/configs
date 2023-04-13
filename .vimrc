@@ -189,7 +189,8 @@ let g:quickr_cscope_db_file = "GTAGS"
 nmap <leader>v :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
 "au FileType c,cpp,h nmap <buffer> <leader>s <plug>(quickr_cscope_symbols)
 nmap <leader>s <plug>(quickr_cscope_symbols)
-nmap <leader>g <plug>(quickr_cscope_global)
+"nmap <leader>g <plug>(quickr_cscope_global)
+nmap <leader>g <C-]>
 nmap <leader>c <plug>(quickr_cscope_callers)
 nmap <leader>f <plug>(quickr_cscope_files)
 nmap <leader>i <plug>(quickr_cscope_includes)
@@ -283,6 +284,7 @@ nnoremap  <leader>y  "+y
 map Q <Nop>
 
 set csprg=gtags-cscope
+set cst
 silent! cs add GTAGS
 
 nmap <leader>n :lne<CR>

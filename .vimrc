@@ -247,7 +247,8 @@ let g:strip_whitespace_confirm=0
 " easymotion
 nmap ` <Plug>(easymotion-s2)
 " search 2 symbols
-nmap <c-space> <Plug>(easymotion-bd-w)
+" vim can't map <c-space>, using NUL instead
+nnoremap <NUL> <Plug>(easymotion-bd-w)
 " search 2 below
 "nmap t <Plug>(easymotion-f2)
 "nmap t <Plug>(easymotion-t2)

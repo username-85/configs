@@ -45,7 +45,7 @@ set autoread
 
 set foldmethod=manual
 set nofoldenable
-set switchbuf=useopen,usetab
+set switchbuf=uselast
 set complete=.,w,b,u,t
 set timeoutlen=500
 set ttimeoutlen=100

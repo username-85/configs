@@ -18,7 +18,7 @@ let g:colors_name="user_green"
 " 
 "grey fg
 hi Normal		ctermfg=7 ctermbg=0 
-hi MatchParen	ctermfg=0 ctermbg=4
+hi MatchParen	ctermfg=229 ctermbg=237
 hi Folded		ctermfg=4 ctermbg=233
 hi FoldColumn	ctermfg=4 ctermbg=233
 hi VisualNOS	ctermfg=7 ctermbg=8
@@ -46,7 +46,7 @@ hi IncSearch		ctermfg=3 ctermbg=238 cterm=NONE term=NONE guifg=NONE guibg=NONE
 "hi Search		ctermfg=0 ctermbg=2 cterm=NONE term=NONE guifg=NONE guibg=NONE
 "hi IncSearch		ctermfg=0 ctermbg=2 cterm=NONE term=NONE guifg=NONE guibg=NONE
 
-hi Error		ctermfg=0 ctermbg=1 cterm=NONE term=NONE guifg=NONE guibg=NONE
+hi Error        ctermfg=167 ctermbg=236
 
 "tmp
 hi Visual		ctermfg=7 ctermbg=238 cterm=NONE term=NONE

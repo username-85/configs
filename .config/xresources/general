@@ -28,7 +28,7 @@ urxvt.perl-ext-common:
 !dark
 urxvt*foreground:7
 urxvt*background:0
-urxvt*cursorColor:2
+urxvt*cursorColor:DarkSeaGreen4
 urxvt*highlightColor:grey28
 
 !!black

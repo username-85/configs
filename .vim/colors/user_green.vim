@@ -24,8 +24,6 @@ hi FoldColumn	ctermfg=4 ctermbg=233
 hi VisualNOS	ctermfg=7 ctermbg=8
 
 "dark cyan fg
-hi LineNr		ctermfg=6 ctermbg=0 
-"hi LineNr		ctermfg=238 ctermbg=0 
 hi Comment		ctermfg=6 ctermbg=0 
 hi TablineSel	ctermfg=6 ctermbg=0
 
@@ -38,7 +36,6 @@ hi vimError     ctermfg=1 ctermbg=0
 "magenta 5
 
 "black fg
-hi NonText		ctermfg=4 ctermbg=0
 hi WildMenu		ctermfg=3 ctermbg=0 cterm=NONE term=NONE
 hi TablineFill	ctermfg=234 ctermbg=234 cterm=NONE
 hi Search		ctermfg=3 ctermbg=238 cterm=NONE term=NONE guifg=NONE guibg=NONE
@@ -116,3 +113,5 @@ hi SignColumn    guibg=#181818                         ctermbg=233
 "hi DiffAdd ctermbg=23 cterm=NONE term=NONE
 
 hi MyTagListFileName ctermfg=6 ctermbg=0
+hi LineNr		ctermfg=238 ctermbg=0
+hi NonText		ctermfg=238 ctermbg=0

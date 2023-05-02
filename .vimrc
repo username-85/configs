@@ -7,6 +7,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'junegunn/vim-easy-align'
     Plug 'ntpeters/vim-better-whitespace'
     Plug 'roxma/vim-tmux-clipboard'
+    Plug 'tmux-plugins/vim-tmux-focus-events'
     Plug 'scrooloose/nerdtree'
 "    Plug 'vim-scripts/taglist.vim'
     Plug 'majutsushi/tagbar'

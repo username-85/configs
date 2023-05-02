@@ -142,7 +142,7 @@ if [ $HOSTNAME = "work" ]; then
     alias picocom='picocom -b 115200'
 
     # dev
-    alias rebuild_tags='gtags -i'
+    alias rebuild_tags='gtags -i; ctags -R'
     alias clear_tags="find . -type f '(' -name tags -o -name GPATH -o -name GRTAGS -o -name GTAGS -o -name gtags.files ')' -exec rm -v {} \;"
     alias clear_formatter_backups='find . -name "*unc-backup*~*" -exec rm -v {} \;'
 else

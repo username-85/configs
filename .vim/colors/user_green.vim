@@ -24,7 +24,7 @@ hi FoldColumn	ctermfg=4 ctermbg=233
 hi VisualNOS	ctermfg=7 ctermbg=8
 
 "dark cyan fg
-hi Comment		ctermfg=6 ctermbg=0 
+hi Comment		ctermfg=6 ctermbg=0
 hi TablineSel	ctermfg=6 ctermbg=0
 
 "dark red fg
@@ -35,6 +35,7 @@ hi vimError     ctermfg=1 ctermbg=0
 
 "magenta 5
 
+hi QuickFixLine ctermfg=3 ctermbg=236
 "black fg
 hi WildMenu		ctermfg=3 ctermbg=0 cterm=NONE term=NONE
 hi TablineFill	ctermfg=234 ctermbg=234 cterm=NONE
@@ -77,7 +78,7 @@ hi Macro		ctermfg=3 ctermbg=0
 hi SpellCap     ctermfg=5 ctermbg=0
 
 "from zenburn 
-hi StatusLine		ctermfg=235   ctermbg=3
+hi StatusLine	    ctermfg=234   ctermbg=3
 hi StatusLineNC		ctermfg=235   ctermbg=4
 hi VertSplit		ctermfg=234   ctermbg=235
 "hi VertSplit		ctermfg=0   ctermbg=242
@@ -113,5 +114,5 @@ hi SignColumn    guibg=#181818                         ctermbg=233
 "hi DiffAdd ctermbg=23 cterm=NONE term=NONE
 
 hi MyTagListFileName ctermfg=6 ctermbg=0
-hi LineNr		ctermfg=238 ctermbg=0
+hi LineNr		ctermfg=245 ctermbg=0
 hi NonText		ctermfg=238 ctermbg=0

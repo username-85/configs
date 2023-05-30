@@ -1,13 +1,12 @@
 call plug#begin('~/.vim/plugged')
-"    Plug 'mhinz/vim-signify'
     Plug 'airblade/vim-gitgutter'
     Plug 'bsdelf/bufferhint'
     Plug 'easymotion/vim-easymotion'
     Plug 'junegunn/fzf.vim'
     Plug 'junegunn/vim-easy-align'
     Plug 'ntpeters/vim-better-whitespace'
-    Plug 'roxma/vim-tmux-clipboard'
-    Plug 'tmux-plugins/vim-tmux-focus-events'
+"    Plug 'roxma/vim-tmux-clipboard'
+"    Plug 'tmux-plugins/vim-tmux-focus-events'
     Plug 'scrooloose/nerdtree'
 "    Plug 'vim-scripts/taglist.vim'
     Plug 'majutsushi/tagbar'
@@ -100,61 +99,54 @@ set expandtab
 filetype indent off
 set cino=(shiftwidth
 
-au Syntax c,cpp syn keyword cType uint ubyte ulong boolean_t
-au Syntax c,cpp syn keyword cType int64_t int32_t int16_t int8_t
-au Syntax c,cpp syn keyword cType uint64_t uint32_t uint16_t uint8_t
-au Syntax c,cpp syn keyword cType u_int64_t u_int32_t u_int16_t u_int8_t
-
 set listchars=tab:>·,trail:·
 
-" build help tags for manually installed plugins
-"helptag ~/.vim/doc/
+set grepprg=rg\ --vimgrep
+
+" disable some syntax highlighting
+autocmd FileType markdown setlocal syntax=off
+
+command Spell setlocal spell! spelllang=ru,en
+
+" status line only if 2 windows
+set laststatus=1
+
+au FileType gitcommit setlocal tw=90
 
 "----- keys -----
+
+inoremap jj <Esc>
+inoremap оо <Esc>
+
+" disable ex mode
+map Q <Nop>
 
 noremap tt :tab split<CR>
 "nnoremap Q <nop>
 "map q <Nop>
 imap <F1> <Nop>
 nmap <F1> <Nop>
-map <F2> :wall<CR>
-
-"switch layout
-"inoremap <C-@> <C-^>
-"noremap <C-@> <C-^>
-"cmap <C-@> <C-^>
-
 "switch to previous buffer
-nnoremap <F3> <C-^>
+nnoremap <F1> :GFiles!<CR>
+nnoremap <F2> :wall<CR>
+nnoremap <F3> :Buffers<CR>
+nnoremap <F4> :BLines!<CR>
+nnoremap <F5> :Lines!<CR>
 
-"select buffer
-nnoremap <F4> :Buffers<CR>
-nnoremap <C-w>a :Buffers<CR>
-nnoremap <F6> :call bufferhint#Popup()<CR>
-"let g:bufferhint_SortMode = 1
+nnoremap <F6> :set list! <bar> :ToggleWhitespace <CR>
+nnoremap <F7> :Commits!<CR>
+nnoremap <F8> :call bufferhint#Popup()<CR>
 
-nnoremap <F5> :GFiles<CR>
-
-"tagbar
+nnoremap <F9> :BTags!<CR>
+nnoremap <F10> :Tags!<CR>
 au FileType c,cpp,h,python nmap <F11> :TagbarToggle<CR>
-au BufEnter *.h,*py nmap <F11> :TagbarToggle<CR>
-let g:tagbar_autoclose = 1
-let g:tagbar_autofocus = 1
-let g:tagbar_compact = 1
-"let g:tagbar_show_data_type = 1
-let g:tagbar_iconchars = ['+', '-']
-"let g:tagbar_autoshowtag = 1
+nnoremap <F12> :NERDTreeToggle<CR>
 
-set pastetoggle=<F12>
+" switch to prev buffer
+nnoremap <C-w><Space> <C-^>
 
-" remap changing forux window
+" switch to prev window
 noremap <C-w>; <C-w>p
-
-nmap <F10> :set list! <bar> :ToggleWhitespace <CR>
-imap <F10> <Esc> :set list! <bar> :ToggleWhitespace <CR>
-
-nmap <F1> :NERDTreeToggle  <CR>
-imap <F1> <Esc> :NERDTreeToggle <CR>
 
 " Switch to last-active tab
 if !exists('g:Lasttab')
@@ -163,29 +155,23 @@ if !exists('g:Lasttab')
 endif
 autocmd! TabLeave * let g:Lasttab_backup = g:Lasttab | let g:Lasttab = tabpagenr()
 autocmd! TabClosed * let g:Lasttab = g:Lasttab_backup
-nmap <silent> <C-w><Space> :exe "tabn " . g:Lasttab<cr>
+nmap <silent> <C-w><Tab> :exe "tabn " . g:Lasttab<cr>
 
-"------ disable syntax highlighting ------
+"------ plugins settings and key mappings ------
 
-" turn of syntax highlight for some files
-" autocmd BufRead,BufNewFile {*.markdown,*.mdown,*.mkdn,*.md,*.mkd,*.mdwn,*.mdtxt,*.mdtext,*.text} set filetype=markdown
-autocmd FileType markdown setlocal syntax=off
-
-"------ disable syntax highlighting ------
-
-" turn of syntax highlight for some files
-" autocmd BufRead,BufNewFile {*.markdown,*.mdown,*.mkdn,*.md,*.mkd,*.mdwn,*.mdtxt,*.mdtext,*.text} set filetype=markdown
-autocmd FileType markdown setlocal syntax=off
-"------ plugins settings ------
+"tagbar
+let g:tagbar_autoclose = 1
+let g:tagbar_autofocus = 1
+let g:tagbar_compact = 1
+"let g:tagbar_show_data_type = 1
+let g:tagbar_iconchars = ['+', '-']
+"let g:tagbar_autoshowtag = 1
 
 let g:quickr_cscope_use_qf_g = 0
 let g:quickr_cscope_autoload_db = 0
 let g:quickr_cscope_keymaps = 0
 let g:quickr_cscope_program = "gtags-cscope"
 let g:quickr_cscope_db_file = "GTAGS"
-
-"nmap <buffer> <leader>s :Rg <C-R><C-W><CR>
-"au FileType python nmap <buffer> <leader>s :Rg -tpy <C-R><C-W><CR>
 
 nmap <leader>v :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
 "au FileType c,cpp,h nmap <buffer> <leader>s <plug>(quickr_cscope_symbols)
@@ -224,14 +210,7 @@ let g:easy_align_delimiters = {
 \ ':': { 'pattern': ':', 'left_margin': 1, 'right_margin': 1, 'stick_to_left': 0, 'ignore_groups':   [] },
 \ }
 
-" vim-ripgrep
-" don't search in tags or cscope
-"let g:rg_command='rg --vimgrep -g \!tags -g \!cscope.out -g \!cscope.po.out -g \!cscope.in.out'
-
-set grepprg=rg\ --vimgrep
-"set grepprg=lid\ --substring\ --result=grep\ '\\<$*\\>'\ \\\|\ sort
-
-" Similarly, we can apply it to fzf#vim#grep. To use ripgrep instead of ag:
+" redefine Rg for fzf to pass arguments
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
   \   'rg -L --column --line-number --no-heading --color=always --smart-case '.(<q-args>), 1,
@@ -257,33 +236,10 @@ nnoremap <NUL> <Plug>(easymotion-bd-w)
 "let g:fzf_preview_window = []
 let g:fzf_preview_window = ['right:60%:hidden', 'ctrl-/']
 
-command Spell setlocal spell! spelllang=ru,en
-
-" status line only if 2 windows
-set laststatus=1
-
-au FileType gitcommit setlocal tw=90
-au BufNewFile,BufRead Jenkinsfile setf groovy
-
-inoremap jj <Esc>
-inoremap оо <Esc>
-
-" use xorg clipboard
-"set clipboard+=unnamedplus
-
 " " Copy to clipboard
 vnoremap  <leader>y  "+y
 nnoremap  <leader>Y  "+yg_
 nnoremap  <leader>y  "+y
-
-" " Paste from clipboard
-"nnoremap <leader>p "+p
-"nnoremap <leader>P "+P
-"vnoremap <leader>p "+p
-"vnoremap <leader>P "+P
-
-" disable ex mode
-map Q <Nop>
 
 set csprg=gtags-cscope
 set cst
@@ -294,7 +250,6 @@ nmap <leader>p :lp<CR>
 " TODO: change it later
 nmap <leader><DOWN> :cn<CR>
 nmap <leader><UP> :cp<CR>
-
 
 " gitgutter
 "let g:gitgutter_map_keys = 0

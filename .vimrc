@@ -139,7 +139,7 @@ nnoremap <F8> :call bufferhint#Popup()<CR>
 
 nnoremap <F9> :BTags!<CR>
 nnoremap <F10> :Tags!<CR>
-au FileType c,cpp,h,python nmap <F11> :TagbarToggle<CR>
+nnoremap <F11> :TagbarToggle<CR>
 nnoremap <F12> :NERDTreeToggle<CR>
 
 " switch to prev buffer

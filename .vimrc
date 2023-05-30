@@ -234,7 +234,7 @@ set grepprg=rg\ --vimgrep
 " Similarly, we can apply it to fzf#vim#grep. To use ripgrep instead of ag:
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
-  \   'rg --column --line-number --no-heading --color=always --smart-case '.(<q-args>), 1,
+  \   'rg -L --column --line-number --no-heading --color=always --smart-case '.(<q-args>), 1,
   \   <bang>0 ? fzf#vim#with_preview('right:60%', 'ctrl-/')
   \           : fzf#vim#with_preview('right:60%', 'ctrl-/'),
   \   <bang>0)

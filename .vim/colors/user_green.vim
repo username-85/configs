@@ -116,3 +116,7 @@ hi SignColumn    guibg=#181818                         ctermbg=233
 hi MyTagListFileName ctermfg=6 ctermbg=0
 hi LineNr		ctermfg=245 ctermbg=0
 hi NonText		ctermfg=238 ctermbg=0
+
+au Syntax c,cpp syn keyword cType u64 u32 u16 u8
+au Syntax c,cpp syn keyword cType i64 i32 i16 i8
+au BufNewFile,BufRead Jenkinsfile setf groovy

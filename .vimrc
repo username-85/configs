@@ -127,7 +127,7 @@ noremap tt :tab split<CR>
 imap <F1> <Nop>
 nmap <F1> <Nop>
 "switch to previous buffer
-nnoremap <F1> :GFiles!<CR>
+nnoremap <F1> :NERDTreeToggle<CR>
 nnoremap <F2> :wall<CR>
 nnoremap <F3> :Buffers<CR>
 nnoremap <F4> :BLines!<CR>
@@ -140,7 +140,7 @@ nnoremap <F8> :call bufferhint#Popup()<CR>
 nnoremap <F9> :BTags!<CR>
 nnoremap <F10> :Tags!<CR>
 nnoremap <F11> :TagbarToggle<CR>
-nnoremap <F12> :NERDTreeToggle<CR>
+nnoremap <F12> :GFiles!<CR>
 
 " switch to prev buffer
 nnoremap <C-w><Space> <C-^>

@@ -137,8 +137,8 @@ nnoremap <F6> :set list! <bar> :ToggleWhitespace <CR>
 nnoremap <F7> :Commits!<CR>
 nnoremap <F8> :call bufferhint#Popup()<CR>
 
-nnoremap <F9> :BTags!<CR>
-nnoremap <F10> :Tags!<CR>
+nnoremap <F9> :Tags!<CR>
+nnoremap <F10> :BTags!<CR>
 nnoremap <F11> :TagbarToggle<CR>
 nnoremap <F12> :GFiles!<CR>
 

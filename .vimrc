@@ -134,7 +134,7 @@ nnoremap <F4> :BLines!<CR>
 nnoremap <F5> :Lines!<CR>
 
 nnoremap <F6> :set list! <bar> :ToggleWhitespace <CR>
-nnoremap <F7> :Commits!<CR>
+nnoremap <F7> :BCommits!<CR>
 nnoremap <F8> :call bufferhint#Popup()<CR>
 
 nnoremap <F9> :Tags!<CR>

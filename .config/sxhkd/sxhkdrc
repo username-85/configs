@@ -66,12 +66,13 @@ super + ctrl + {Left,Down,Up,Right}
 alt + {_,shift + }{1-2,0}
     bspc {desktop -f,node -d} ^{1-2,3}
 
-alt + minus
-    bspc desktop -f ^4
+# scratchpad desktop
+alt + minus + {_,shift + }
+    bspc {desktop -f,node -d} ^4
 
 # move to hidden desktop
 alt + shift + h
-	bspc node -d ^4
+	bspc node -d ^5
 
 alt + {h,j,k,l}
 	bspc node -f {west,south,north,east}

@@ -30,7 +30,7 @@
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
     # // - for right , + for left?
-    geometry = "x0+0+0"
+    #geometry = "x0+0+0"
 
 
     # Show how many messages are currently hidden (because of geometry).
@@ -48,7 +48,7 @@
     # The height of the entire notification.  If the height is smaller
     # than the font height and padding combined, it will be raised
     # to the font height and padding.
-    notification_height = 0
+    #notification_height = 0
 
     # Draw a line of "separator_height" pixel height between two
     # notifications.
@@ -164,7 +164,7 @@
     max_icon_size = 32
 
     # Paths to default icons.
-    icon_folders = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
+    #icon_folders = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
 
     ### History ###
 
@@ -195,7 +195,7 @@
     # Print a notification on startup.
     # This is mainly for error detection, since dbus (re-)starts dunst
     # automatically after a crash.
-    startup_notification = false
+    #startup_notification = false
 
     ### Legacy
 
@@ -227,19 +227,19 @@
     # Xev might be helpful to find names for keys.
 
     # Close notification.
-    close = mod4+space
+    #close = mod4+space
 
     # Close all notifications.
-    close_all = mod4+shift+space
+    #close_all = mod4+shift+space
 
     # Redisplay last message(s).
     # On the US keyboard layout "grave" is normally above TAB and left
     # of "1". Make sure this key actually exists on your keyboard layout,
     # e.g. check output of 'xmodmap -pke'
-    history = mod4+grave
+    #history = mod4+grave
 
     # Context menu.
-    context = mod4+shift+period
+    #context = mod4+shift+period
 
 [urgency_low]
     fullscreen = delay
@@ -267,19 +267,17 @@
     # Icon for notifications with critical urgency, uncomment to enable
     #icon = /path/to/icon
 
-[jabber]
+[ok]
     fullscreen = delay
-    appname = jabber
-    background = "#505d4a"
+    appname = ok
+    background = "#3C4849"
     foreground = "#f0f0f0"
-    timeout = 10
 
-[telegram]
+[err]
     fullscreen = delay
-    appname = telegram
-    background = "#505d4a"
+    appname = err
+    background = "#613027"
     foreground = "#f0f0f0"
-    timeout = 10
 
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.

@@ -8,16 +8,13 @@ HOSTNAME=$(uname -n)
 
 xrdb -load "${HOME}/.config/xresources/config"
 
-if [ $HOSTNAME = "work" ]; then
+if [ "$HOSTNAME" = "work" ]; then
     locker="${HOME}/.bin/misc/slock"
-    $locker
-    xss-lock --ignore-sleep $locker &
+    "$locker"
+    xss-lock --ignore-sleep "$locker" &
+    urxvt &
+    urxvt -e sh -c "cat issue; $SHELL" &
 fi
-
-#if [ $HOSTNAME = "pc1" ]; then
-#    redshift &
-#    xrandr -o right
-#fi
 
 xset +dpms # enable dpms
 xset dpms 900 1200 1500 #blank, suspend,poweroff

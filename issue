@@ -1,0 +1,12 @@
+    from root
+/home/user/dev/sh/net/run
+
+    from user
+
+~/dev/sh/tmux_start_sessions.sh
+
+docker run -t -i --rm --privileged --net=vlan100 local:stand
+ifconfig eth0 192.168.100.10 netmask 255.255.255.0 up
+
+docker run -t -i --rm --privileged --net=vlan200 local:stand
+ifconfig eth0 192.168.100.11 netmask 255.255.255.0 up

@@ -143,6 +143,7 @@ if [ $HOSTNAME = "work" ]; then
 
     # dev
     alias rebuild_tags='gtags -i; ctags -R'
+    alias rebuild_gtags='gtags -i'
     alias clear_tags="find . -type f '(' -name tags -o -name GPATH -o -name GRTAGS -o -name GTAGS -o -name gtags.files ')' -exec rm -v {} \;"
     alias clear_formatter_backups='find . -name "*unc-backup*~*" -exec rm -v {} \;'
 else

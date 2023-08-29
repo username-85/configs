@@ -60,6 +60,7 @@ alias w3ms="cd /tmp/downloads && firejail w3m -B && cd -"
 # media
 alias alsamixer='alsamixer -g'
 alias mp3norm='find . -iname "*.mp3" -exec mp3gain -s i {} \;'
+alias oggnorm='find . -iname "*.ogg" -exec vorbisgain {} \;'
 #alias aacnorm='find . -iname "*.m4a" -exec aacgain -s i {} \;'
 #alias mp3gain='mp3gain -s i'
 alias flacnorm='find . -iname "*.flac" -exec metaflac --add-replay-gain {} \;'

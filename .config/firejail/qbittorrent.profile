@@ -23,9 +23,10 @@ include /etc/firejail/disable-programs.inc
 mkdir ${HOME}/.cache/qBittorrent
 mkdir ${HOME}/.config/qBittorrent
 mkdir ${HOME}/.local/share/data/qBittorrent
+mkdir ${HOME}/data/tmp/downloads
 whitelist  ${DOWNLOADS}
 whitelist /tmp/downloads/
-whitelist /home/user/tmp/downloads/
+whitelist ${HOME}/data/tmp/downloads/
 whitelist ${HOME}/.cache/qBittorrent
 whitelist ${HOME}/.config/qBittorrent
 whitelist ${HOME}/.config/qBittorrentrc

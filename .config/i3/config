@@ -1,4 +1,4 @@
-exec_always --no-startup-id ~/.bin/i3/swap-focus
+#exec_always --no-startup-id ~/.bin/i3/swap-focus
 
 #workspace_auto_back_and_forth yes
 hide_edge_borders smart
@@ -32,10 +32,10 @@ bindsym --release $mod+l exec --no-startup-id ~/.bin/misc/slock
 bindsym Mod1+a exec --no-startup-id "rofi -modi window,windowcd -show windowcd"
 bindsym Mod1+r exec --no-startup-id ~/.bin/menu/static
 #bindsym Mod1+Shift+Return exec --no-startup-id ~/.bin/urxvt_tmux
-bindsym Mod1+Shift+Return [title=tmux workspace=__focused__] focus
+#bindsym Mod1+Shift+Return [title=tmux workspace=__focused__] focus
 bindsym Mod1+Tab workspace back_and_forth
-bindsym Mod1+semicolon exec pkill -USR1 -F "${XDG_RUNTIME_DIR}/swap_focus.pid"
-bindsym Mod1+space exec exec pkill -USR1 -F "${XDG_RUNTIME_DIR}/swap_focus.pid"
+#bindsym Mod1+semicolon exec pkill -USR1 -F "${XDG_RUNTIME_DIR}/swap_focus.pid"
+#bindsym Mod1+space exec exec pkill -USR1 -F "${XDG_RUNTIME_DIR}/swap_focus.pid"
 bindsym Mod1+p focus parent;
 bindsym Mod1+i focus child;
 bindsym Mod1+w focus next

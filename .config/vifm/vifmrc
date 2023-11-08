@@ -171,12 +171,12 @@ command! reload :write | restart
 " program.
 
 " Pdf
-filextype *.pdf llpp %c &
+filextype *.pdf mupdf -C AAAAAA %c &
 "filextype *.pdf zathura %c %i &, apvlv %c, xpdf %c
 "fileviewer *.pdf pdftotext -nopgbrk %c -
 
 " epub
-filextype *.epub llpp %c &
+filextype *.epub mupdf -C AAAAAA %c &
 
 " PostScript
 "filextype *.ps,*.eps,*.ps.gz

@@ -4,8 +4,6 @@
 hide_edge_borders smart
 default_border pixel 1
 default_floating_border pixel 1
-workspace_layout tabbed
-default_orientation vertical
 focus_follows_mouse no
 focus_wrapping force
 

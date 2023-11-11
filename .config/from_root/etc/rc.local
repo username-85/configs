@@ -52,8 +52,6 @@ elif [ $HOSTNAME = "pc0" ]; then
     echo 'auto' > '/sys/bus/pci/devices/0000:00:12.0/ata2/power/control';
 elif [ $HOSTNAME = "pc1" ]; then
     cpupower frequency-set -g powersave
-    # for wine?
-    sysctl dev.i915.perf_stream_paranoid=0
     #Runtime PM for port ata1 of PCI device: Intel Corporation Cannon Point-LP SATA Controller [AHCI Mode]
     echo 'auto' > '/sys/bus/pci/devices/0000:00:17.0/ata1/power/control';
     #Runtime PM for PCI Device Intel Corporation Cannon Point-LP SPI Controller
@@ -81,6 +79,6 @@ elif [ $HOSTNAME = "pc1" ]; then
     #echo 'auto' > '/sys/bus/pci/devices/0000:00:1f.6/power/control';
 fi
 
-systemctl disable systemd-tmpfiles-clean.timer
+systemctl stop systemd-tmpfiles-clean.timer
 
 exit 0

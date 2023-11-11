@@ -10,5 +10,5 @@ if [ ! -f "$img_cache" ]; then
     convert "$img_lock" -contrast -resize "$resolution"\! "$img_cache"
 fi
 
-xkb-switch -s us
+setxkbmap us
 i3lock -u -i "$img_cache"

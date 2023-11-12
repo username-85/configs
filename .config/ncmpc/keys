@@ -146,7 +146,7 @@ key screen-keyedit = 0
 
 key screen-search = 0
 key screen-lyrics = 0
-key screen-outputs = 0
+key screen-outputs = 'o'
 key screen-artist = 0
 key screen-chat = 0
 

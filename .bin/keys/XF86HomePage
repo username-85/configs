@@ -1,3 +1,0 @@
-#!/bin/sh
-
-xte "mousemove 1920 1080"

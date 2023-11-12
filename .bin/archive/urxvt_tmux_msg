@@ -1,4 +1,0 @@
-#!/bin/sh
-
-urxvt -title tmux-msg -e sh -c "if (tmux has-session -t msg); then exec tmux attach-session -d -t msg; else exec tmux new-session -c /tmp/misc -s msg; fi"
-

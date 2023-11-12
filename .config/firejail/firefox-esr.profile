@@ -12,5 +12,4 @@ whitelist /usr/share/firefox-esr
 include firefox.profile
 
 nosound
-whitelist ${DOWNLOADS}
 whitelist /tmp/downloads/

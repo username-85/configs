@@ -25,8 +25,8 @@ mkdir -p /tmp/misc
 mkdir -p /tmp/music
 mkdir -p /tmp/mutt
 
-#autocutsel -fork &
-#autocutsel -selection PRIMARY -fork &
+autocutsel -fork &
+autocutsel -selection PRIMARY -fork &
 dunst &
 
 xcompmgr -a &

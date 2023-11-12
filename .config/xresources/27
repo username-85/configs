@@ -1,8 +1,9 @@
 ! pc
-urxvt*font:-*-terminus-medium-*-*-*-18-*-*-*-*-*-iso10646-*
-urxvt*boldFont:-*-terminus-medium-*-*-*-18-*-*-*-*-*-iso10646-*
-urxvt*italicFont:-*-terminus-medium-*-*-*-18-*-*-*-*-*-iso10646-*
-urxvt*boldItalicFont:-*-terminus-medium-*-*-*-18-*-*-*-*-*-iso10646-*
+urxvt*font:             xft:xos4 Terminus:style=Regular:pixelsize=18
+urxvt*boldFont:         xft:xos4 Terminus:style=Regular:pixelsize=18
+urxvt*italicFont:       xft:xos4 Terminus:style=Regular:pixelsize=18
+urxvt*boldItalicFont:   xft:xos4 Terminus:style=Regular:pixelsize=18
+
 ! 27" 1440x2560 is 108.79
 Xft.dpi: 96
 

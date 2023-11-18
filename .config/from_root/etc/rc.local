@@ -43,13 +43,19 @@ elif [ $HOSTNAME = "pc0" ]; then
     #Runtime PM for PCI Device Intel Corporation Gemini Lake PCH CNVi WiFi
     echo 'auto' > '/sys/bus/pci/devices/0000:00:0c.0/power/control';
     #Runtime PM for PCI Device Intel Corporation Celeron/Pentium Silver Processor USB 3.0 xHCI Controller
-    echo 'auto' > '/sys/bus/pci/devices/0000:00:15.0/power/control';
+    echo 'on' > '/sys/bus/pci/devices/0000:00:15.0/power/control';
     #Runtime PM for PCI Device Intel Corporation Celeron/Pentium Silver Processor SATA Controller
     echo 'auto' > '/sys/bus/pci/devices/0000:00:12.0/power/control';
     #Runtime PM for PCI Device Intel Corporation GeminiLake [UHD Graphics 605]
     echo 'auto' > '/sys/bus/pci/devices/0000:00:02.0/power/control';
     #Runtime PM for port ata2 of PCI device: Intel Corporation Celeron/Pentium Silver Processor SATA Controller
     echo 'auto' > '/sys/bus/pci/devices/0000:00:12.0/ata2/power/control';
+    #Autosuspend for USB device xHCI Host Controller [usb1]
+    echo 'on' > '/sys/bus/usb/devices/usb1/power/control';
+    #Autosuspend for unknown USB device 1-3 (04b4:6560)
+    echo 'on' > '/sys/bus/usb/devices/1-3/power/control';
+    #Autosuspend for USB device xHCI Host Controller [usb2]
+    echo 'on' > '/sys/bus/usb/devices/usb2/power/control';
 elif [ $HOSTNAME = "pc1" ]; then
     cpupower frequency-set -g powersave
     #Runtime PM for port ata1 of PCI device: Intel Corporation Cannon Point-LP SATA Controller [AHCI Mode]

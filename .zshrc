@@ -165,6 +165,4 @@ else
     alias aria2cs='firejail aria2c'
     alias transmission-clis='firejail transmission-cli -w . -v '
     alias dmagnet='cd /tmp/downloads && firejail aria2c --bt-metadata-only --bt-save-metadata '
-
-    alias yandex-disk="yandex-disk -a /mnt/auth/yd/$HOSTNAME/p"
 fi

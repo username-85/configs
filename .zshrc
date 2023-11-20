@@ -1,7 +1,6 @@
 #------------------------------------------------------------------------------
 #   export
 
-#export FZF_DEFAULT_COMMAND="fd . $HOME"
 export FZF_DEFAULT_COMMAND="fd -L . "
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd -L -t d . "
@@ -30,10 +29,6 @@ export BAT_THEME="zenburn"
 
 # disable ugly ffmpeg colors
 export AV_LOG_FORCE_NOCOLOR=1
-
-# java gui
-#export _JAVA_AWT_WM_NONREPARENTING=1
-#export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
 
 #------------------------------------------------------------------------------
 #   alias
@@ -66,11 +61,6 @@ alias oggnorm='find . -iname "*.ogg" -exec vorbisgain {} \;'
 #alias mp3gain='mp3gain -s i'
 alias flacnorm='find . -iname "*.flac" -exec metaflac --add-replay-gain {} \;'
 
-# archive
-#dsite='wget -r -p -np -nc -E'
-#alias keymap_def='setxkbmap -option;setxkbmap -layout us,ru -option grp:menu_toggle,grp_led:caps,caps:escape -variant ,winkeys'
-#alias keymap_my='setxkbmap -layout us,ru -option altwin:ctrl_alt_win,grp:menu_toggle,grp_led:caps,caps:escape -variant ,winkeys'
-
 #------------------------------------------------------------------------------
 #   shell settings
 
@@ -99,21 +89,8 @@ bindkey -v
 source /usr/share/fzf/key-bindings.zsh
 bindkey jj vi-cmd-mode
 
-#SAVEHIST=10
-#HISTFILE=~/.zsh_history
-#setopt hist_expire_dups_first
-#setopt hist_find_no_dups
-#setopt hist_ignore_all_dups
-#setopt hist_ignore_dups
-#setopt hist_ignore_space
-#setopt hist_no_store
-#setopt hist_reduce_blanks
-#setopt hist_save_no_dups
-#setopt hist_verify
-#setopt inc_append_history
-#setopt no_hist_allow_clobber
-#setopt no_hist_beep
-#setopt share_history
+autoload -Uz compinit
+compinit
 
 # gen auto complete only once a day
 #autoload -Uz compinit
@@ -121,15 +98,6 @@ bindkey jj vi-cmd-mode
 #  compinit
 #done
 #compinit -C
-
-#zstyle ':completion:*' menu select
-#zmodload zsh/complist
-## use the vi navigation keys in menu completion
-#bindkey -M menuselect 'h' vi-backward-char
-#bindkey -M menuselect 'k' vi-up-line-or-history
-#bindkey -M menuselect 'l' vi-forward-char
-#bindkey -M menuselect 'j' vi-down-line-or-history
-
 
 #------------------------------------------------------------------------------
 #   shell settings
@@ -158,7 +126,6 @@ else
     alias mpans="\mpv --no-video"
     alias dyv='firejail yt-dlp --no-cache-dir -f 18 --no-playlist -o "/tmp/downloads/%(title)s-%(id)s.%(ext)s"'
     alias dya="firejail yt-dlp --no-cache-dir -f bestaudio --no-playlist -o '/tmp/downloads/%(title)s-%(id)s.%(ext)s'"
-    #alias album_art_update="~/.local/bin/sacad_r ~/data/music 600 cover.jpg"
     alias dual_monitor='xrandr --output eDP1 --auto --output HDMI1 --auto --right-of eDP1'
 
     # torrent

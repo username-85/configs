@@ -83,6 +83,14 @@ elif [ $HOSTNAME = "pc1" ]; then
     echo 'auto' > '/sys/bus/pci/devices/0000:00:02.0/power/control';
     #Runtime PM for PCI Device Intel Corporation Ethernet Connection (6) I219-V
     #echo 'auto' > '/sys/bus/pci/devices/0000:00:1f.6/power/control';
+    #Autosuspend for USB device xHCI Host Controller [usb1]
+    echo 'on' > '/sys/bus/usb/devices/usb1/power/control';
+    #Autosuspend for unknown USB device 1-4 (04b4:6560)
+    echo 'on' > '/sys/bus/usb/devices/1-4/power/control';
+    #Autosuspend for USB device xHCI Host Controller [usb2]
+    echo 'on' > '/sys/bus/usb/devices/1-4/power/control';
+    #Runtime PM for PCI Device Intel Corporation Cannon Point-LP USB 3.1 xHCI Controller
+    echo 'on' > '/sys/bus/pci/devices/0000:00:14.0/power/control';
 fi
 
 systemctl stop systemd-tmpfiles-clean.timer

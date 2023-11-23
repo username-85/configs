@@ -88,7 +88,7 @@ elif [ $HOSTNAME = "pc1" ]; then
     #Autosuspend for unknown USB device 1-4 (04b4:6560)
     echo 'on' > '/sys/bus/usb/devices/1-4/power/control';
     #Autosuspend for USB device xHCI Host Controller [usb2]
-    echo 'on' > '/sys/bus/usb/devices/1-4/power/control';
+    echo 'on' > '/sys/bus/usb/devices/usb2/power/control';
     #Runtime PM for PCI Device Intel Corporation Cannon Point-LP USB 3.1 xHCI Controller
     echo 'on' > '/sys/bus/pci/devices/0000:00:14.0/power/control';
 fi

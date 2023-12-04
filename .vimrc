@@ -219,21 +219,16 @@ let g:strip_only_modified_lines=1
 let g:strip_whitespace_confirm=0
 
 " easymotion
-nmap ` <Plug>(easymotion-s2)
 " search 2 symbols
 " vim can't map <c-space>, using NUL instead
 nnoremap <NUL> <Plug>(easymotion-bd-w)
 " search 2 below
-"nmap t <Plug>(easymotion-f2)
-"nmap t <Plug>(easymotion-t2)
 
 "let g:fzf_preview_window = []
 let g:fzf_preview_window = ['right:60%:hidden', 'ctrl-/']
 
 " " Copy to clipboard
-vnoremap  <leader>y  "+y
-nnoremap  <leader>Y  "+yg_
-nnoremap  <leader>y  "+y
+vmap <leader>y "+ygv"zy`>
 
 set csprg=gtags-cscope
 set cst

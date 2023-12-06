@@ -30,6 +30,7 @@ autocutsel -selection PRIMARY -fork &
 dunst &
 
 xcompmgr -a &
+xmousepasteblock &
 
 hsetroot -solid "#001515" &
 xsetroot -cursor_name left_ptr &

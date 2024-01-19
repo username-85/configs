@@ -120,7 +120,6 @@ noremap tt :tab split<CR>
 "map q <Nop>
 imap <F1> <Nop>
 nmap <F1> <Nop>
-"switch to previous buffer
 nnoremap <F1> :NERDTreeToggle<CR>
 nnoremap <F2> :wall<CR>
 nnoremap <F3> :Buffers<CR>

@@ -107,7 +107,7 @@ if [ $HOSTNAME = "work" ]; then
     # mail
     #alias mutt='cd /tmp/mutt && firejail mutt && cd -'
     alias mutt='cd /tmp/mutt && mutt && cd -'
-    alias fetch_mail="fdm fetch"
+    alias fetch_mail="OPENSSL_CONF=/home/user/.fdm_openssl.conf fdm fetch"
 
     alias picocom='picocom -b 115200'
 

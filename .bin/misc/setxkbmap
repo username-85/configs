@@ -1,0 +1,5 @@
+#!/bin/sh
+set -e
+
+setxkbmap -layout us,ru -option altwin:ctrl_alt_win,grp_led:caps,caps:escape
+xkb-switch -s us

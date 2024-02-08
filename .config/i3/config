@@ -113,8 +113,8 @@ bindsym Mod1+Shift+0 move container to workspace $ws0
 bindsym $mod+Shift+i reload
 
 # layout
-bindsym Print exec --no-startup-id "xkb-switch -s us"
-bindsym --release Control+Print exec --no-startup-id "xkb-switch -s ru"
+bindsym Print exec --no-startup-id "~/.bin/misc/set_keymap_en"
+bindsym --release Control+Print exec --no-startup-id "~/.bin/misc/set_keymap_ru"
 
 #bindsym Mod1+F4 exec --no-startup-id "rofi -modi window -show window"
 

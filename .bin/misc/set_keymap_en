@@ -1,0 +1,4 @@
+#!/bin/sh
+set -e
+
+xkb-switch -s us

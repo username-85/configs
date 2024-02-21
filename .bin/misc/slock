@@ -10,6 +10,6 @@ if [ ! -f "$img_cache" ]; then
     convert "$img_lock" -contrast -resize "$resolution"\! "$img_cache"
 fi
 
-"${HOME}/.bin/misc/setxkbmap"
+"${HOME}/.bin/misc/set_layout_en"
 
 i3lock -u -i "$img_cache"

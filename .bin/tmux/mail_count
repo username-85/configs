@@ -1,5 +1,6 @@
 #!/bin/bash
-MAX_UNREAD=5
+MAX_UNREAD=10
+MAX_SHOW=5
 
 # Set maildirs
 mdir="$HOME/data/Mail"
@@ -9,12 +10,15 @@ mboxes="$mdir/gitlab/new/ $mdir/inbox/new/ $mdir/inbox-ext/new/ \
 counter=$(find $mboxes -type f | wc -l)
 symbol="░"
 
-if [ $counter -ge $MAX_UNREAD ]; then
+if [ "$counter" -ge $MAX_UNREAD ]; then
     symbol="▓"
-    counter=$MAX_UNREAD
 fi
 
-for (( i=1; i<=$counter; i++ ))
+if [ "$counter" -ge $MAX_SHOW ]; then
+    counter=$MAX_SHOW
+fi
+
+for (( i=1; i<="$counter"; i++ ))
 do
     echo -ne "$symbol"
 done

@@ -1,6 +1,6 @@
 call plug#begin('~/.vim/plugged')
     Plug 'airblade/vim-gitgutter'
-    Plug 'bsdelf/bufferhint'
+"    Plug 'bsdelf/bufferhint'
     Plug 'easymotion/vim-easymotion'
     Plug 'junegunn/fzf.vim'
     Plug 'junegunn/vim-easy-align'
@@ -121,14 +121,11 @@ noremap tt :tab split<CR>
 imap <F1> <Nop>
 nmap <F1> <Nop>
 nnoremap <F1> :NERDTreeToggle<CR>
-nnoremap <F2> :wall<CR>
-nnoremap <F3> :Buffers<CR>
-nnoremap <F4> :BLines!<CR>
-nnoremap <F5> :Lines!<CR>
+nnoremap <F2> :Buffers<CR>
+nnoremap <F3> :BLines!<CR>
 
-nnoremap <F6> :set list! <bar> :ToggleWhitespace <CR>
-nnoremap <F7> :BCommits!<CR>
-nnoremap <F8> :call bufferhint#Popup()<CR>
+nnoremap <F5> :set list! <bar> :ToggleWhitespace <CR>
+nnoremap <F6> :BCommits!<CR>
 
 nnoremap <F9> :Tags!<CR>
 nnoremap <F10> :BTags!<CR>
@@ -166,7 +163,9 @@ let g:quickr_cscope_keymaps = 0
 let g:quickr_cscope_program = "gtags-cscope"
 let g:quickr_cscope_db_file = "GTAGS"
 
-nmap <leader>v :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
+noremap <Leader>w :wa<CR>
+
+"nmap <leader>v :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
 "au FileType c,cpp,h nmap <buffer> <leader>s <plug>(quickr_cscope_symbols)
 nmap <leader>s <plug>(quickr_cscope_symbols)
 "nmap <leader>g <plug>(quickr_cscope_global)

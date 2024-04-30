@@ -121,8 +121,9 @@ noremap tt :tab split<CR>
 imap <F1> <Nop>
 nmap <F1> <Nop>
 nnoremap <F1> :NERDTreeToggle<CR>
-nnoremap <F2> :Buffers<CR>
-nnoremap <F3> :BLines!<CR>
+nnoremap <F2> :GFiles!<CR>
+nnoremap <F3> :Buffers<CR>
+nnoremap <F4> :BLines!<CR>
 
 nnoremap <F5> :set list! <bar> :ToggleWhitespace <CR>
 nnoremap <F6> :BCommits!<CR>
@@ -130,7 +131,6 @@ nnoremap <F6> :BCommits!<CR>
 nnoremap <F9> :Tags!<CR>
 nnoremap <F10> :BTags!<CR>
 nnoremap <F11> :TagbarToggle<CR>
-nnoremap <F12> :GFiles!<CR>
 
 " switch to prev buffer
 nnoremap <C-w><Space> <C-^>

@@ -123,7 +123,7 @@ nmap <F1> <Nop>
 nnoremap <F1> :NERDTreeToggle<CR>
 nnoremap <F2> :GFiles!<CR>
 nnoremap <F3> :Buffers<CR>
-nnoremap <F4> :BLines!<CR>
+nnoremap <F4> :Lines!<CR>
 
 nnoremap <F5> :set list! <bar> :ToggleWhitespace <CR>
 nnoremap <F6> :BCommits!<CR>

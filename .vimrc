@@ -162,6 +162,7 @@ let g:quickr_cscope_autoload_db = 0
 let g:quickr_cscope_keymaps = 0
 let g:quickr_cscope_program = "gtags-cscope"
 let g:quickr_cscope_db_file = "GTAGS"
+let g:quickr_cscope_prompt_length = 1
 
 noremap <Leader>w :wa<CR>
 

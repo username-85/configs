@@ -20,6 +20,7 @@ let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
 " --- blinking cursor end
 
+set sessionoptions=buffers
 " for gitgutter also
 set updatetime=200
 "set statusline+=%F
@@ -131,6 +132,7 @@ nnoremap <F6> :BCommits!<CR>
 nnoremap <F9> :Tags!<CR>
 nnoremap <F10> :BTags!<CR>
 nnoremap <F11> :TagbarToggle<CR>
+nnoremap <F12> :checktime<CR>
 
 " switch to prev buffer
 nnoremap <C-w><Space> <C-^>

@@ -3,14 +3,14 @@ call plug#begin('~/.vim/plugged')
 "    Plug 'bsdelf/bufferhint'
     Plug 'easymotion/vim-easymotion'
     Plug 'junegunn/fzf.vim'
-    Plug 'junegunn/vim-easy-align'
+"    Plug 'junegunn/vim-easy-align'
     Plug 'ntpeters/vim-better-whitespace'
 "    Plug 'roxma/vim-tmux-clipboard'
 "    Plug 'tmux-plugins/vim-tmux-focus-events'
-    Plug 'scrooloose/nerdtree'
+"    Plug 'scrooloose/nerdtree'
 "    Plug 'vim-scripts/taglist.vim'
     Plug 'majutsushi/tagbar'
-    Plug 'stefandtw/quickfix-reflector.vim'
+"    Plug 'stefandtw/quickfix-reflector.vim'
     Plug 'tpope/vim-fugitive'
     Plug 'farmergreg/vim-lastplace'
 call plug#end()
@@ -28,6 +28,9 @@ set fillchars=vert:\│
 set nowrapscan
 set nofixendofline
 set ttyfast
+"https://github.com/vim/vim/issues/2790
+"set re=0
+"set redrawtime=10000
 set lazyredraw
 "se nostartofline
 "set tags=./tags,tags;
@@ -121,7 +124,6 @@ noremap tt :tab split<CR>
 "map q <Nop>
 imap <F1> <Nop>
 nmap <F1> <Nop>
-nnoremap <F1> :NERDTreeToggle<CR>
 nnoremap <F2> :GFiles!<CR>
 nnoremap <F3> :Buffers<CR>
 nnoremap <F4> :Lines!<CR>
@@ -185,25 +187,16 @@ nmap <leader>a <plug>(quickr_cscope_assignments)
 
 " disable plugin
 let loaded_netrwPlugin = 0
-"let NERDTreeHijackNetrw=1
 
-let g:NERDTreeDirArrows=0
-let g:NERDTreeMinimalUI=1
-let g:NERDTreeWinSize=50
-let g:NERDTreeDirArrowExpandable="+"
-let g:NERDTreeDirArrowCollapsible="~"
-let g:NERDTreeMapOpenVSplit="s"
-let g:NERDTreeMapOpenSplit="v"
-let g:NERDTreeBookmarksSort=0
 
 " easy - align
 " Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
-vmap <Enter> <Plug>(EasyAlign)
-let g:easy_align_delimiters = {
-\ '-': { 'pattern': '-', 'left_margin': 1, 'right_margin': 1, 'stick_to_left': 0, 'ignore_groups':   [] },
-\ '+': { 'pattern': '+', 'left_margin': 1, 'right_margin': 1, 'stick_to_left': 0, 'ignore_groups':   [] },
-\ ':': { 'pattern': ':', 'left_margin': 1, 'right_margin': 1, 'stick_to_left': 0, 'ignore_groups':   [] },
-\ }
+"vmap <Enter> <Plug>(EasyAlign)
+"let g:easy_align_delimiters = {
+"\ '-': { 'pattern': '-', 'left_margin': 1, 'right_margin': 1, 'stick_to_left': 0, 'ignore_groups':   [] },
+"\ '+': { 'pattern': '+', 'left_margin': 1, 'right_margin': 1, 'stick_to_left': 0, 'ignore_groups':   [] },
+"\ ':': { 'pattern': ':', 'left_margin': 1, 'right_margin': 1, 'stick_to_left': 0, 'ignore_groups':   [] },
+"\ }
 
 " redefine Rg for fzf to pass arguments
 command! -bang -nargs=* Rg

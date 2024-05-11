@@ -218,8 +218,13 @@ let g:strip_whitespace_confirm=0
 nnoremap <NUL> <Plug>(easymotion-bd-w)
 " search 2 below
 
+let g:fzf_vim = {}
 "let g:fzf_preview_window = []
 let g:fzf_preview_window = ['right:60%:hidden', 'ctrl-/']
+" Use location list instead of quickfix list
+let g:fzf_vim.listproc = { list -> fzf#vim#listproc#location(list) }
+" [Tags] Command to generate tags file
+let g:fzf_vim.tags_command = 'ctags -R'
 
 " " Copy to clipboard
 vmap <leader>y "+ygv"zy`>

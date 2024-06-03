@@ -76,7 +76,7 @@ zstyle ':vcs_info:git:*' formats ' | %F{magenta}%b%f'
 setopt PROMPT_SUBST
 
 export PROMPT='
-┌[%F{blue}%{%}%~%f$vcs_info_msg_0_]
+┌[ %F{blue}%{%}%~%f$vcs_info_msg_0_ ]
 └■%f '
 #export RPROMPT='%F{yellow}$vcs_info_msg_0_%f'
 

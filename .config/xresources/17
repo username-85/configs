@@ -1,8 +1,8 @@
 Xft.dpi: 96
-urxvt*font:             xft:xos4 Terminus:style=Regular:pixelsize=16
-urxvt*boldFont:         xft:xos4 Terminus:style=Regular:pixelsize=16
-urxvt*italicFont:       xft:xos4 Terminus:style=Regular:pixelsize=16
-urxvt*boldItalicFont:   xft:xos4 Terminus:style=Regular:pixelsize=16
+urxvt*font:             xft:xos4 Terminus:style=Regular:pixelsize=14
+urxvt*boldFont:         xft:xos4 Terminus:style=Regular:pixelsize=14
+urxvt*italicFont:       xft:xos4 Terminus:style=Regular:pixelsize=14
+urxvt*boldItalicFont:   xft:xos4 Terminus:style=Regular:pixelsize=14
 ! right DPI for work
 ! 1920x1080  21.5
 !Xft.dpi: 102

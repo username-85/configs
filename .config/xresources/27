@@ -1,4 +1,3 @@
-! pc
 urxvt*font:             xft:xos4 Terminus:style=Regular:pixelsize=18
 urxvt*boldFont:         xft:xos4 Terminus:style=Regular:pixelsize=18
 urxvt*italicFont:       xft:xos4 Terminus:style=Regular:pixelsize=18
@@ -101,7 +100,6 @@ urxvt*highlightColor:grey28
 *color15:      #c6c6c6
 
 URxvt.lineSpace: 1
-URxvt.letterSpace: 0
 
 Sxiv.foreground: #000000
 Sxiv.background: #586151

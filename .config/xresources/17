@@ -1,17 +1,9 @@
-Xft.dpi: 96
 urxvt*font:             xft:xos4 Terminus:style=Regular:pixelsize=14
 urxvt*boldFont:         xft:xos4 Terminus:style=Regular:pixelsize=14
 urxvt*italicFont:       xft:xos4 Terminus:style=Regular:pixelsize=14
 urxvt*boldItalicFont:   xft:xos4 Terminus:style=Regular:pixelsize=14
-! right DPI for work
-! 1920x1080  21.5
-!Xft.dpi: 102
-!--Laptop--
-!Xft.dpi:130
-!urxvt*font:-*-terminus-bold-*-*-*-28-*-*-*-*-*-iso10646-*
-!urxvt*boldFont:-*-terminus-bold-*-*-*-28-*-*-*-*-*-iso10646-*
-!urxvt*italicFont:-*-terminus-bold-*-*-*-28-*-*-*-*-*-iso10646-*
-!urxvt*boldItalicFont:-*-terminus-bold-*-*-*-28-*-*-*-*-*-iso10646-*
+
+Xft.dpi: 96
 
 URxvt.internalBorder:  0
 uxvt*boldMode: false
@@ -107,7 +99,6 @@ urxvt*highlightColor:grey28
 *color15:      #c6c6c6
 
 URxvt.lineSpace: 0
-!URxvt.letterSpace: 1
 
 Sxiv.foreground: #000000
 Sxiv.background: #586151

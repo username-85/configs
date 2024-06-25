@@ -13,6 +13,7 @@ call plug#begin('~/.vim/plugged')
 "    Plug 'stefandtw/quickfix-reflector.vim'
     Plug 'tpope/vim-fugitive'
     Plug 'farmergreg/vim-lastplace'
+    Plug 'vifm/vifm.vim'
 call plug#end()
 
 " --- blinking cursor start
@@ -124,10 +125,9 @@ noremap tt :tab split<CR>
 "map q <Nop>
 imap <F1> <Nop>
 nmap <F1> <Nop>
-nnoremap <F1> :Lines!<CR>
-nnoremap <F2> :BLines!<CR>
+nnoremap <F1> :Vifm <CR>
+nnoremap <F2> :GFiles!<CR>
 nnoremap <F3> :Buffers<CR>
-nnoremap <F4> :GFiles!<CR>
 
 nnoremap <F5> :set list! <bar> :ToggleWhitespace <CR>
 

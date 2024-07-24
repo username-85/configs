@@ -480,3 +480,12 @@ nnoremap <f8> :delete<cr>
 "set millerview
 only
 set milleroptions=lsize:1,csize:2,rsize:2,rpreview:dirs
+
+mark h ~/
+
+command! FZFfind : set noquickview
+                \| let $FZF_PICK = term('find | fzf --height 10 2>/dev/tty')
+                \| if $FZF_PICK != ''
+                \|     execute 'goto' fnameescape($FZF_PICK)
+                \| endif
+nnoremap <c-g> :FZFfind<cr>

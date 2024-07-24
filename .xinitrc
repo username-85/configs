@@ -12,8 +12,8 @@ if [ "$HOSTNAME" = "work" ]; then
     locker="${HOME}/.bin/misc/slock"
     "$locker"
     xss-lock --ignore-sleep "$locker" &
-    urxvt &
-    urxvt -e sh -c "cat ${HOME}/.config/issue; $SHELL" &
+    st &
+    st -e sh -c "cat ${HOME}/.config/issue; $SHELL" &
 fi
 
 xset +dpms # enable dpms

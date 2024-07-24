@@ -1,4 +1,4 @@
 #!/bin/sh
 
-systemctl --user restart pipewire
+#systemctl --user restart pipewire
 firejail discord

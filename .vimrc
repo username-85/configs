@@ -14,6 +14,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-fugitive'
     Plug 'farmergreg/vim-lastplace'
     Plug 'vifm/vifm.vim'
+    Plug 'kshenoy/vim-signature'
 call plug#end()
 
 " --- blinking cursor start
@@ -100,8 +101,6 @@ set cino=(shiftwidth
 
 set listchars=tab:>·,trail:·
 
-set grepprg=rg\ --vimgrep
-
 " disable some syntax highlighting
 autocmd FileType markdown setlocal syntax=off
 
@@ -126,15 +125,18 @@ noremap tt :tab split<CR>
 imap <F1> <Nop>
 nmap <F1> <Nop>
 nnoremap <F1> :Vifm <CR>
-nnoremap <F2> :GFiles!<CR>
+nnoremap <expr> <F2> empty(filter(getwininfo(), 'v:val.loclist')) ? ':lopen<CR>' : ':lclose<CR>'
 nnoremap <F3> :Buffers<CR>
 
-nnoremap <F5> :set list! <bar> :ToggleWhitespace <CR>
+nnoremap <F4> :Lines!<CR>
+nnoremap <F5> :BLines!<CR>
+
+nnoremap <F6> :set list! <bar> :ToggleWhitespace <CR>
 
 nnoremap <F9> :Tags!<CR>
 nnoremap <F10> :BTags!<CR>
 nnoremap <F11> :TagbarToggle<CR>
-nnoremap <F12> :checktime<CR>
+"nnoremap <F12> :checktime<CR>
 
 " switch to prev buffer
 nnoremap <C-w><Space> <C-^>
@@ -151,7 +153,17 @@ autocmd! TabLeave * let g:Lasttab_backup = g:Lasttab | let g:Lasttab = tabpagenr
 autocmd! TabClosed * let g:Lasttab = g:Lasttab_backup
 nmap <silent> <C-w><Tab> :exe "tabn " . g:Lasttab<cr>
 
-"------ plugins settings and key mappings ------
+" copy to clipboard
+vmap <leader>y "+ygv"zy`>
+
+" save
+noremap <Leader>w :wa<CR>
+
+" grep
+set grepprg=rg\ --vimgrep
+nnoremap <silent> <Leader>r :Rg! <C-R>=expand("<cword>")<CR><CR>
+
+"------ plugins settings ------
 
 "tagbar
 let g:tagbar_autoclose = 1
@@ -161,33 +173,23 @@ let g:tagbar_compact = 1
 let g:tagbar_iconchars = ['+', '-']
 "let g:tagbar_autoshowtag = 1
 
-let g:quickr_cscope_use_qf_g = 0
-let g:quickr_cscope_autoload_db = 0
-let g:quickr_cscope_keymaps = 0
-let g:quickr_cscope_program = "gtags-cscope"
-let g:quickr_cscope_db_file = "GTAGS"
-let g:quickr_cscope_prompt_length = 1
-
-noremap <Leader>w :wa<CR>
-
-"nmap <leader>v :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
-"au FileType c,cpp,h nmap <buffer> <leader>s <plug>(quickr_cscope_symbols)
-nmap <leader>s <plug>(quickr_cscope_symbols)
-"nmap <leader>g <plug>(quickr_cscope_global)
-nmap <leader>g <C-]>
-nmap <leader>c <plug>(quickr_cscope_callers)
-nmap <leader>f <plug>(quickr_cscope_files)
-nmap <leader>i <plug>(quickr_cscope_includes)
-nmap <leader>t <plug>(quickr_cscope_text)
-"nmap <leader>cd <plug>(quickr_cscope_functions)
-nmap <leader>a <plug>(quickr_cscope_assignments)
-"<plug>(quickr_cscope_egrep)
-"<plug>(quickr_cscope_global_split)
-"<plug>(quickr_cscope_global_vert_split)
+" cscope and ctags
+set csprg=gtags-cscope
+set cscopetag
+silent! cs add GTAGS
+nmap <silent><leader>g <C-]>
+nmap <silent><leader>c :lcs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <silent><leader>a :lcs find a <C-R>=expand("<cword>")<CR><CR>
+nmap <silent><leader>s :lcs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <silent><leader>t :lcs find t <C-R>=expand("<cword>")<CR><CR>
+nmap <silent><leader>f :lcs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap <silent><leader>i :lcs find i <C-R>=expand("<cfile>")<CR><CR>
+nmap <silent><leader>e :lcs find e <C-R>=expand("<cword>")<CR><CR>
+set cscopequickfix=g-,c-,a-,s-,t-,f-,i-,a-,e-
+"set cscopequickfix=s-,t-,e-,i-
 
 " disable plugin
 let loaded_netrwPlugin = 0
-
 
 " easy - align
 " Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
@@ -226,13 +228,6 @@ let g:fzf_vim.listproc = { list -> fzf#vim#listproc#location(list) }
 " [Tags] Command to generate tags file
 let g:fzf_vim.tags_command = 'ctags -R'
 
-" " Copy to clipboard
-vmap <leader>y "+ygv"zy`>
-
-set csprg=gtags-cscope
-set cst
-silent! cs add GTAGS
-
 nmap <leader>n :lne<CR>
 nmap <leader>p :lp<CR>
 " TODO: change it later
@@ -249,3 +244,29 @@ nmap <leader>j <Plug>(GitGutterNextHunk)
 nmap <leader>k <Plug>(GitGutterPrevHunk)
 nmap <leader>h <Plug>(GitGutterStageHunk)
 nmap <leader>u <Plug>(GitGutterUndoHunk)
+
+" signature
+let g:SignatureMarkTextHLDynamic = 1
+let g:SignatureMap = {
+    \ 'Leader'             :  "m",
+    \ 'PlaceNextMark'      :  "",
+    \ 'ToggleMarkAtLine'   :  "m.",
+    \ 'PurgeMarksAtLine'   :  "m-",
+    \ 'DeleteMark'         :  "dm",
+    \ 'PurgeMarks'         :  "",
+    \ 'PurgeMarkers'       :  "",
+    \ 'GotoNextLineAlpha'  :  "']",
+    \ 'GotoPrevLineAlpha'  :  "'[",
+    \ 'GotoNextSpotAlpha'  :  "",
+    \ 'GotoPrevSpotAlpha'  :  "",
+    \ 'GotoNextLineByPos'  :  "",
+    \ 'GotoPrevLineByPos'  :  "",
+    \ 'GotoNextSpotByPos'  :  "",
+    \ 'GotoPrevSpotByPos'  :  "",
+    \ 'GotoNextMarker'     :  "",
+    \ 'GotoPrevMarker'     :  "",
+    \ 'GotoNextMarkerAny'  :  "",
+    \ 'GotoPrevMarkerAny'  :  "",
+    \ 'ListBufferMarks'    :  "",
+    \ 'ListBufferMarkers'  :  ""
+    \ }

@@ -1,4 +1,5 @@
 #!/bin/sh
 
 #systemctl --user restart pipewire
-firejail discord
+#firejail discord
+flatpak run com.discordapp.Discord

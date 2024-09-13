@@ -15,6 +15,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'farmergreg/vim-lastplace'
     Plug 'vifm/vifm.vim'
     Plug 'kshenoy/vim-signature'
+    Plug 'milkypostman/vim-togglelist'
 call plug#end()
 
 " --- blinking cursor start
@@ -57,7 +58,8 @@ set viminfo="NONE"
 set nobackup
 set noswapfile
 set nowritebackup
-set ignorecase
+"turn it off, because it's also affects ctags case search
+"set ignorecase
 set wildmode=list:longest,full
 set wildmenu
 set synmaxcol=4000
@@ -125,7 +127,7 @@ noremap tt :tab split<CR>
 imap <F1> <Nop>
 nmap <F1> <Nop>
 nnoremap <F1> :Vifm <CR>
-nnoremap <expr> <F2> empty(filter(getwininfo(), 'v:val.loclist')) ? ':lopen<CR>' : ':lclose<CR>'
+nmap <silent><F2> :ltag<CR>
 nnoremap <F3> :Buffers<CR>
 
 nnoremap <F4> :Lines!<CR>
@@ -176,8 +178,11 @@ let g:tagbar_iconchars = ['+', '-']
 " cscope and ctags
 set csprg=gtags-cscope
 set cscopetag
+" if set to 0 cscopequickfix settings are applied
+set csto=1
 silent! cs add GTAGS
 nmap <silent><leader>g <C-]>
+"nmap <silent><leader>g :silent! tag <C-R>=expand("<cword>")<CR><CR> <bar> :silent! ltag <CR>
 nmap <silent><leader>c :lcs find c <C-R>=expand("<cword>")<CR><CR>
 nmap <silent><leader>a :lcs find a <C-R>=expand("<cword>")<CR><CR>
 nmap <silent><leader>s :lcs find s <C-R>=expand("<cword>")<CR><CR>

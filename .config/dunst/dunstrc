@@ -70,10 +70,7 @@
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
-    frame_width = 3
-
-    # Defines color of the frame around the notification window.
-    frame_color = "#555555"
+    frame_width = 0
 
     # Size of gap to display between notifications - requires a compositor.
     # If value is greater than 0, separator_height will be ignored and a border
@@ -214,14 +211,7 @@
     # corners.
     # The radius will be automatically lowered if it exceeds half of the
     # notification height to avoid clipping text and/or icons.
-    corner_radius = 5
-
-    # Define which corners to round when drawing the window. If the corner radius
-    # is set to 0 this option will be ignored.
-    #
-    # Comma-separated list of the corners. The accepted corner values are bottom-right,
-    # bottom-left, top-right, top-left, top, bottom, left, right or all.
-    corners = all
+    corner_radius = 0
 
     # Ignore the dbus closeNotification message.
     # Useful to enforce the timeout set by dunst configuration. Without this

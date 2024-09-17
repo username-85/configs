@@ -1,0 +1,7 @@
+[Unit]
+Description=show time notification
+
+[Service]
+Type=oneshot
+ExecStart=%h/.bin/misc/show_time.sh
+RemainAfterExit=no

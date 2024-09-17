@@ -1,0 +1,8 @@
+[Unit]
+Description=show time notification
+
+[Timer]
+OnCalendar=*:0/30
+
+[Install]
+WantedBy=timers.target

@@ -127,7 +127,7 @@ noremap tt :tab split<CR>
 imap <F1> <Nop>
 nmap <F1> <Nop>
 nnoremap <F1> :Vifm <CR>
-nnoremap <F2> :BLines<CR>
+nnoremap <F2> :GFiles<CR>
 nnoremap <F3> :Buffers<CR>
 
 nnoremap <F4> :Lines!<CR>

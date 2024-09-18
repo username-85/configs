@@ -167,6 +167,9 @@ nnoremap <silent> <Leader>r :Rg! <C-R>=expand("<cword>")<CR><CR>
 
 "------ plugins settings ------
 
+" fugitive
+let g:fugitive_no_maps = 1
+
 "tagbar
 let g:tagbar_autoclose = 1
 let g:tagbar_autofocus = 1

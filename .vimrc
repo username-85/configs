@@ -138,7 +138,7 @@ nnoremap <F6> :set list! <bar> :ToggleWhitespace <CR>
 nnoremap <F9> :Tags!<CR>
 nnoremap <F10> :BTags!<CR>
 nnoremap <F11> :TagbarToggle<CR>
-"nnoremap <F12> :checktime<CR>
+nnoremap <F12> :GitGutterQuickFix<CR>
 
 " switch to prev buffer
 nnoremap <C-w><Space> <C-^>

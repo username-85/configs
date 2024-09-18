@@ -22,7 +22,7 @@ color sidebar_new yellow black
 set mbox_type=Maildir
 set folder="~/data/Mail"
 
-mailboxes       =inbox =sent =draft =trash =redmine =gitlab =inbox-ext =sent-ext =xpon =mattermost =notification =tg
+mailboxes       =inbox =sent =draft =trash =redmine =gitlab =inbox-ext =sent-ext =xpon =mattermost =notification =telegram
 
 # local
 source "~/.mutt/profiles/local"

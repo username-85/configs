@@ -1,0 +1,7 @@
+[Unit]
+Description=Meeting time notification
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/notify-send -u critical "meeting"
+RemainAfterExit=no

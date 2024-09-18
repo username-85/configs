@@ -1,0 +1,8 @@
+[Unit]
+Description=Meeting time
+
+[Timer]
+OnCalendar=Mon..Fri 13:50
+
+[Install]
+WantedBy=timers.target

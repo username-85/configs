@@ -243,11 +243,10 @@ nmap <leader><DOWN> :cn<CR>
 nmap <leader><UP> :cp<CR>
 
 " gitgutter
-"let g:gitgutter_map_keys = 0
+let g:gitgutter_map_keys = 0
 let g:gitgutter_preview_win_floating = 0
+let g:gitgutter_use_location_list = 1
 nmap <leader>d <Plug>(GitGutterPreviewHunk)
-"nnoremap <leader>p :SignifyHunkDiff<cr>
-"nnoremap <leader>u :SignifyHunkUndo<cr>
 nmap <leader>j <Plug>(GitGutterNextHunk)
 nmap <leader>k <Plug>(GitGutterPrevHunk)
 nmap <leader>h <Plug>(GitGutterStageHunk)

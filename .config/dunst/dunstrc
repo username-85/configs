@@ -303,7 +303,7 @@
 [time]
     timeout = 20
     appname = time
-    background = "#0E493A"
+    background = "#265B4D"
     foreground = "#c6c6c6"
 
 [telegram]

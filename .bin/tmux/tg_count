@@ -1,0 +1,8 @@
+#!/bin/bash
+
+mbox="$HOME/data/Mail/tg/new/"
+if [ -z "$( ls -A "$mbox" )" ]; then
+    echo -n " "
+else
+    echo -n "█"
+fi

@@ -24,7 +24,7 @@
     # dynamic width from 0 to 300
     # width = (0, 300)
     # constant width of 300
-    width = (300, 300)
+    width = (300, 500)
 
     # The maximum height of a single notification, excluding the frame.
     # height = 100
@@ -301,9 +301,15 @@
     foreground = "#c6c6c6"
 
 [time]
+    timeout = 20
     appname = time
     background = "#0E493A"
     foreground = "#c6c6c6"
+
+[telegram]
+    appname = "*elegram*"
+    format = "telegram"
+    script = ~/.config/dunst/tg.sh
 
 # fullscreen values
 # show: show the notifications, regardless if there is a fullscreen window opened

@@ -236,8 +236,8 @@ let g:fzf_vim.listproc = { list -> fzf#vim#listproc#location(list) }
 " [Tags] Command to generate tags file
 let g:fzf_vim.tags_command = 'ctags -R'
 
-nmap <leader>n :lne<CR>
-nmap <leader>p :lp<CR>
+nmap <leader>j :lne<CR>
+nmap <leader>k :lp<CR>
 " TODO: change it later
 nmap <leader><DOWN> :cn<CR>
 nmap <leader><UP> :cp<CR>
@@ -247,8 +247,8 @@ let g:gitgutter_map_keys = 0
 let g:gitgutter_preview_win_floating = 0
 let g:gitgutter_use_location_list = 1
 nmap <leader>d <Plug>(GitGutterPreviewHunk)
-nmap <leader>j <Plug>(GitGutterNextHunk)
-nmap <leader>k <Plug>(GitGutterPrevHunk)
+nmap <leader>n <Plug>(GitGutterNextHunk)
+nmap <leader>p <Plug>(GitGutterPrevHunk)
 nmap <leader>h <Plug>(GitGutterStageHunk)
 nmap <leader>u <Plug>(GitGutterUndoHunk)
 
@@ -259,11 +259,11 @@ let g:SignatureMap = {
     \ 'PlaceNextMark'      :  "",
     \ 'ToggleMarkAtLine'   :  "m.",
     \ 'PurgeMarksAtLine'   :  "m-",
-    \ 'DeleteMark'         :  "dm",
+    \ 'DeleteMark'         :  "",
     \ 'PurgeMarks'         :  "",
-    \ 'PurgeMarkers'       :  "",
-    \ 'GotoNextLineAlpha'  :  "']",
-    \ 'GotoPrevLineAlpha'  :  "'[",
+    \ 'PurgeMarkers'       :  "m<BS>",
+    \ 'GotoNextLineAlpha'  :  "",
+    \ 'GotoPrevLineAlpha'  :  "",
     \ 'GotoNextSpotAlpha'  :  "",
     \ 'GotoPrevSpotAlpha'  :  "",
     \ 'GotoNextLineByPos'  :  "",
@@ -274,6 +274,6 @@ let g:SignatureMap = {
     \ 'GotoPrevMarker'     :  "",
     \ 'GotoNextMarkerAny'  :  "",
     \ 'GotoPrevMarkerAny'  :  "",
-    \ 'ListBufferMarks'    :  "",
-    \ 'ListBufferMarkers'  :  ""
+    \ 'ListBufferMarks'    :  "m/",
+    \ 'ListBufferMarkers'  :  "m?"
     \ }

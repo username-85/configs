@@ -1,21 +1,15 @@
 call plug#begin('~/.vim/plugged')
-    Plug 'airblade/vim-gitgutter'
-"    Plug 'bsdelf/bufferhint'
-    Plug 'easymotion/vim-easymotion'
-    Plug 'junegunn/fzf.vim'
+    Plug 'airblade/vim-gitgutter' , { 'commit': '44dbd57d' }
+    Plug 'easymotion/vim-easymotion', { 'commit': 'b3cfab2a' }
+    Plug 'junegunn/fzf.vim', { 'commit': 'c5ce7908' }
 "    Plug 'junegunn/vim-easy-align'
-    Plug 'ntpeters/vim-better-whitespace'
-"    Plug 'roxma/vim-tmux-clipboard'
-"    Plug 'tmux-plugins/vim-tmux-focus-events'
-"    Plug 'scrooloose/nerdtree'
-"    Plug 'vim-scripts/taglist.vim'
-    Plug 'majutsushi/tagbar'
-"    Plug 'stefandtw/quickfix-reflector.vim'
-    Plug 'tpope/vim-fugitive'
-    Plug 'farmergreg/vim-lastplace'
-    Plug 'vifm/vifm.vim'
-    Plug 'kshenoy/vim-signature'
-    Plug 'milkypostman/vim-togglelist'
+    Plug 'ntpeters/vim-better-whitespace', { 'commit': '86a0579b' }
+    Plug 'majutsushi/tagbar', { 'commit': 'd55d454b' }
+    Plug 'tpope/vim-fugitive', { 'commit': 'd4877e54' }
+    Plug 'farmergreg/vim-lastplace', { 'commit': 'e58cb0df' }
+    Plug 'vifm/vifm.vim', { 'commit': 'b1fe33e5' }
+    Plug 'kshenoy/vim-signature', { 'commit': '6bc3dd12' }
+    Plug 'milkypostman/vim-togglelist', { 'commit': '48f0d302' }
 call plug#end()
 
 " --- blinking cursor start

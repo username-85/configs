@@ -24,7 +24,7 @@
     # dynamic width from 0 to 300
     # width = (0, 300)
     # constant width of 300
-    width = (300, 500)
+    width = (500, 500)
 
     # The maximum height of a single notification, excluding the frame.
     # height = 100
@@ -301,7 +301,7 @@
     foreground = "#c6c6c6"
 
 [time]
-    timeout = 20
+    timeout = 30
     appname = time
     background = "#265B4D"
     foreground = "#c6c6c6"

@@ -10,6 +10,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'vifm/vifm.vim', { 'commit': 'b1fe33e5' }
     Plug 'kshenoy/vim-signature', { 'commit': '6bc3dd12' }
     Plug 'milkypostman/vim-togglelist', { 'commit': '48f0d302' }
+    Plug 'will133/vim-dirdiff', { 'commit': '84bc8999' }
 call plug#end()
 
 " --- blinking cursor start

@@ -7,4 +7,4 @@ tmux capture-pane -pS -32768 > $file
 # to open at the begining of file
 #tmux new-window -n:pane_output "nvim '+ normal $' $file"
 # to open at the end of file
-tmux new-window -n:mywindow "vim '+ normal G $' $file"
+tmux new-window -n:vim-tmux-pane "vim '+ normal G $' $file"

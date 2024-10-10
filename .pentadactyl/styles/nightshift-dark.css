@@ -1,27 +1,3 @@
-/* AGENT_SHEET */
-/* ▓▓ NIGHTSHIFT - eye care:                  ▓▓
-
-   ▓▓ A darkening style for all websites.     ▓▓
-
-   ▓▓ by vetinari - 2009                      ▓▓
-
-   ▓▓ contact: vetinari.userstyles@inode.at   ▓▓
-
-   ▓▓ --------------------------------------- ▓▓
-
-   ▓▓ last modified: 13.06.2012               ▓▓
-
-   ▓▓_________________________________________▓▓ */
-
-/* text color is #c6c6c6
-   link color is #b1c3a2
-*/
-
-
-@namespace url(http://www.w3.org/1999/xhtml);
-
-@-moz-document url-prefix(http://), url-prefix(https://),url-prefix(about:blank),url-prefix(file://),url-prefix(ftp://) {
-
 body,html {min-height: 100%!important; }
 
 
@@ -93,8 +69,3 @@ body select *{background-color:transparent !important; color: #bbb!important; bo
 
 
 pre:not(:empty), code:not(:empty) , cite:not(:empty), pre:not(:empty) *, code:not(:empty) *, cite:not(:empty) *{background-image:url(data:image/gif;base64,R0lGODlhBAAEAIAAABERESIiIiH5BAAAAAAALAAAAAAEAAQAAAIGTACXaHkFADs=)!important; color: #bcc8dc!important;}
-
-}
-
-
-

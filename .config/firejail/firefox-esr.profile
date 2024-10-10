@@ -11,5 +11,5 @@ whitelist /usr/share/firefox-esr
 # Redirect
 include firefox.profile
 
-nosound
+#nosound
 whitelist /tmp/downloads/

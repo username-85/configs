@@ -309,7 +309,7 @@
 [telegram]
     timeout = 0
     appname = "*elegram*"
-    format = "telegram"
+#   format = "telegram"
 #   script = ~/.config/dunst/telegram.sh
 
 # fullscreen values

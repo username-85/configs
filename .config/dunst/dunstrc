@@ -307,9 +307,10 @@
     foreground = "#c6c6c6"
 
 [telegram]
+    timeout = 0
     appname = "*elegram*"
     format = "telegram"
-    script = ~/.config/dunst/telegram.sh
+#   script = ~/.config/dunst/telegram.sh
 
 # fullscreen values
 # show: show the notifications, regardless if there is a fullscreen window opened

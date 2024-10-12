@@ -13,3 +13,6 @@ include firefox.profile
 
 #nosound
 whitelist /tmp/downloads/
+
+#for native notification
+dbus-user.talk org.freedesktop.Notifications

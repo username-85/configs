@@ -312,6 +312,10 @@
 #   format = "telegram"
 #   script = ~/.config/dunst/telegram.sh
 
+[firefox]
+    timeout = 0
+    appname = "Firefox"
+
 # fullscreen values
 # show: show the notifications, regardless if there is a fullscreen window opened
 # delay: displays the new notification, if there is no fullscreen window active

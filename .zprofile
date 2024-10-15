@@ -15,7 +15,7 @@ export GTK_THEME=Arc-Dark
 
 # Uncomment and configure below
 #export FREETYPE_PROPERTIES="truetype:interpreter-version=40"
-export  FREETYPE_PROPERTIES="truetype:interpreter-version=35 cff:no-stem-darkening=1 autofitter:warping=1"
+#export FREETYPE_PROPERTIES="truetype:interpreter-version=35 cff:no-stem-darkening=1 autofitter:warping=1"
 
 # disable stop at ctrl-s (to quit that stop i need to pres ctrl-q)
 stty -ixon

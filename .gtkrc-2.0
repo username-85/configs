@@ -1,6 +1,6 @@
-gtk-theme-name="Arc-Dark-solid"
-gtk-icon-theme-name = "default"
-#gtk-icon-theme-name = "Adwaita"
-#include "/usr/share/themes/Arc-Dark-solid/gtk-2.0/gtkrc"
-#include "/home/user/.gtkrc.mine"
+# -- THEME AUTO-WRITTEN DO NOT EDIT
+include "/usr/share/themes/Arc-Dark/gtk-2.0/gtkrc"
 
+include "/home/user/.gtkrc.mine"
+
+# -- THEME AUTO-WRITTEN DO NOT EDIT

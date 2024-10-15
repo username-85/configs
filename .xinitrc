@@ -19,7 +19,6 @@ fi
 xset +dpms # enable dpms
 xset dpms 900 1200 1500 #blank, suspend,poweroff
 
-export QT_QPA_PLATFORMTHEME=gtk2
 mkdir -p /tmp/downloads
 mkdir -p /tmp/misc
 mkdir -p /tmp/music

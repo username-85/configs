@@ -123,9 +123,9 @@ imap <F1> <Nop>
 nmap <F1> <Nop>
 nnoremap <F1> :Vifm <CR>
 nnoremap <F2> :GFiles<CR>
-nnoremap <F3> :Buffers<CR>
+nnoremap <F4> :Buffers<CR>
 
-nnoremap <F4> :BLines!<CR>
+nnoremap <F3> :BLines!<CR>
 nnoremap <F5> :Lines!<CR>
 
 nnoremap <F6> :set list! <bar> :ToggleWhitespace <CR>

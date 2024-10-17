@@ -36,7 +36,7 @@ hi vimError     ctermfg=1 ctermbg=0
 
 hi QuickFixLine ctermfg=3 ctermbg=236
 "black fg
-hi WildMenu		ctermfg=3 ctermbg=0 cterm=NONE term=NONE
+hi WildMenu		ctermfg=3 ctermbg=234 cterm=underline term=NONE
 hi TablineFill	ctermfg=234 ctermbg=234 cterm=NONE
 hi Search		ctermfg=3 ctermbg=238 cterm=NONE term=NONE guifg=NONE guibg=NONE
 hi IncSearch		ctermfg=3 ctermbg=238 cterm=NONE term=NONE guifg=NONE guibg=NONE

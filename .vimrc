@@ -123,15 +123,14 @@ imap <F1> <Nop>
 nmap <F1> <Nop>
 nnoremap <F1> :Vifm <CR>
 nnoremap <F2> :GFiles<CR>
-nnoremap <F3> :GitGutterQuickFix<CR>
-nnoremap <F4> :TagbarToggle<CR>
-nnoremap <F12> :set list! <bar> :ToggleWhitespace <CR>
+nnoremap <F3> :BTags!<CR>
+nnoremap <F4> :GitGutterQuickFix<CR>
+nnoremap <F6> :set list! <bar> :ToggleWhitespace <CR>
+nnoremap <F12> :TagbarToggle<CR>
 
-nnoremap <leader>fb :Buffers!<CR>
-nnoremap <leader>fl :BLines!<CR>
-nnoremap <leader>fL :Lines!<CR>
-nnoremap <leader>ft :BTags!<CR>
-nnoremap <leader>fT :Tags!<CR>
+nnoremap <leader>b :Buffers!<CR>
+nnoremap <leader>l :BLines!<CR>
+nnoremap <leader>L :Lines!<CR>
 
 " switch to prev buffer
 nnoremap <C-w><Space> <C-^>
@@ -264,3 +263,7 @@ let g:SignatureMap = {
     \ 'ListBufferMarks'    :  "m/",
     \ 'ListBufferMarkers'  :  "m?"
     \ }
+
+let g:toggle_list_no_mappings=0
+nmap <script> <silent> <leader>tl :call ToggleLocationList()<CR>
+nmap <script> <silent> <leader>tq :call ToggleQuickfixList()<CR>

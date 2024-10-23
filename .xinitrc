@@ -29,4 +29,7 @@ autocutsel -selection PRIMARY -fork &
 dunst &
 xmousepasteblock &
 
+#TODO apply xmodmap later because of altwin:ctrl_alt_win in xorg conf
+(sleep 2; xmodmap "$HOME/.config/Xmodmap") &
+
 exec i3

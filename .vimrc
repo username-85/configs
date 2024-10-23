@@ -2,7 +2,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'airblade/vim-gitgutter' , { 'commit': '44dbd57d' }
     Plug 'easymotion/vim-easymotion', { 'commit': 'b3cfab2a' }
     Plug 'junegunn/fzf.vim', { 'commit': 'c5ce7908' }
-"    Plug 'junegunn/vim-easy-align'
+    Plug 'junegunn/vim-easy-align' , { 'commit': '9815a55d' }
     Plug 'ntpeters/vim-better-whitespace', { 'commit': '86a0579b' }
     Plug 'majutsushi/tagbar', { 'commit': 'd55d454b' }
     Plug 'tpope/vim-fugitive', { 'commit': 'd4877e54' }

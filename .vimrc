@@ -123,17 +123,15 @@ imap <F1> <Nop>
 nmap <F1> <Nop>
 nnoremap <F1> :Vifm <CR>
 nnoremap <F2> :GFiles<CR>
-nnoremap <F4> :Buffers<CR>
+nnoremap <F3> :GitGutterQuickFix<CR>
+nnoremap <F4> :TagbarToggle<CR>
+nnoremap <F12> :set list! <bar> :ToggleWhitespace <CR>
 
-nnoremap <F3> :BLines!<CR>
-nnoremap <F5> :Lines!<CR>
-
-nnoremap <F6> :set list! <bar> :ToggleWhitespace <CR>
-
-nnoremap <F9> :Tags!<CR>
-nnoremap <F10> :BTags!<CR>
-nnoremap <F11> :TagbarToggle<CR>
-nnoremap <F12> :GitGutterQuickFix<CR>
+nnoremap <leader>fb :Buffers!<CR>
+nnoremap <leader>fl :BLines!<CR>
+nnoremap <leader>fL :Lines!<CR>
+nnoremap <leader>ft :BTags!<CR>
+nnoremap <leader>fT :Tags!<CR>
 
 " switch to prev buffer
 nnoremap <C-w><Space> <C-^>
@@ -158,7 +156,7 @@ noremap <Leader>w :wa<CR>
 
 " grep
 set grepprg=rg\ --vimgrep
-nnoremap <silent> <Leader>r :Rg! <C-R>=expand("<cword>")<CR><CR>
+nnoremap <silent> <C-@>r :Rg! <C-R>=expand("<cword>")<CR><CR>
 
 "------ plugins settings ------
 
@@ -179,15 +177,15 @@ set cscopetag
 " if set to 0 cscopequickfix settings are applied
 set csto=1
 silent! cs add GTAGS
-nmap <silent><leader>g <C-]>
+nmap <silent><C-@>g <C-]>
 "nmap <silent><leader>g :silent! tag <C-R>=expand("<cword>")<CR><CR> <bar> :silent! ltag <CR>
-nmap <silent><leader>c :lcs find c <C-R>=expand("<cword>")<CR><CR>
-nmap <silent><leader>a :lcs find a <C-R>=expand("<cword>")<CR><CR>
-nmap <silent><leader>s :lcs find s <C-R>=expand("<cword>")<CR><CR>
-nmap <silent><leader>t :lcs find t <C-R>=expand("<cword>")<CR><CR>
-nmap <silent><leader>f :lcs find f <C-R>=expand("<cfile>")<CR><CR>
-nmap <silent><leader>i :lcs find i <C-R>=expand("<cfile>")<CR><CR>
-nmap <silent><leader>e :lcs find e <C-R>=expand("<cword>")<CR><CR>
+nmap <silent><C-@>c :lcs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <silent><C-@>a :lcs find a <C-R>=expand("<cword>")<CR><CR>
+nmap <silent><C-@>s :lcs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <silent><C-@>t :lcs find t "<C-R>=expand("<cword>")"<CR><CR>
+nmap <silent><C-@>f :lcs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap <silent><C-@>i :lcs find i <C-R>=expand("<cfile>")<CR><CR>
+nmap <silent><C-@>e :lcs find e <C-R>=expand("<cword>")<CR><CR>
 set cscopequickfix=g-,c-,a-,s-,t-,f-,i-,a-,e-
 "set cscopequickfix=s-,t-,e-,i-
 
@@ -196,12 +194,12 @@ let loaded_netrwPlugin = 0
 
 " easy - align
 " Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
-"vmap <Enter> <Plug>(EasyAlign)
-"let g:easy_align_delimiters = {
-"\ '-': { 'pattern': '-', 'left_margin': 1, 'right_margin': 1, 'stick_to_left': 0, 'ignore_groups':   [] },
-"\ '+': { 'pattern': '+', 'left_margin': 1, 'right_margin': 1, 'stick_to_left': 0, 'ignore_groups':   [] },
-"\ ':': { 'pattern': ':', 'left_margin': 1, 'right_margin': 1, 'stick_to_left': 0, 'ignore_groups':   [] },
-"\ }
+vmap <Enter> <Plug>(EasyAlign)
+let g:easy_align_delimiters = {
+\ '-': { 'pattern': '-', 'left_margin': 1, 'right_margin': 1, 'stick_to_left': 0, 'ignore_groups':   [] },
+\ '+': { 'pattern': '+', 'left_margin': 1, 'right_margin': 1, 'stick_to_left': 0, 'ignore_groups':   [] },
+\ ':': { 'pattern': ':', 'left_margin': 1, 'right_margin': 1, 'stick_to_left': 0, 'ignore_groups':   [] },
+\ }
 
 " redefine Rg for fzf to pass arguments
 command! -bang -nargs=* Rg
@@ -217,12 +215,6 @@ let g:strip_whitespace_on_save=1
 let g:strip_only_modified_lines=1
 let g:strip_whitespace_confirm=0
 
-" easymotion
-" search 2 symbols
-" vim can't map <c-space>, using NUL instead
-nnoremap <NUL> <Plug>(easymotion-bd-w)
-" search 2 below
-
 let g:fzf_vim = {}
 "let g:fzf_preview_window = []
 let g:fzf_preview_window = ['right:60%:hidden', 'ctrl-/']
@@ -234,16 +226,16 @@ let g:fzf_vim.tags_command = 'ctags -R'
 nmap <leader>j :lne<CR>
 nmap <leader>k :lp<CR>
 " TODO: change it later
-nmap <leader>n :cn<CR>
-nmap <leader>p :cp<CR>
+"nmap <leader>n :cn<CR>
+"nmap <leader>p :cp<CR>
 
 " gitgutter
 let g:gitgutter_map_keys = 0
 let g:gitgutter_preview_win_floating = 0
 let g:gitgutter_use_location_list = 1
 nmap <leader>hv <Plug>(GitGutterPreviewHunk)
-nmap <leader>hn <Plug>(GitGutterNextHunk)
-nmap <leader>hp <Plug>(GitGutterPrevHunk)
+nmap <leader>hj <Plug>(GitGutterNextHunk)
+nmap <leader>hk <Plug>(GitGutterPrevHunk)
 nmap <leader>hs <Plug>(GitGutterStageHunk)
 nmap <leader>hu <Plug>(GitGutterUndoHunk)
 

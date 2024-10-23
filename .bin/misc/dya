@@ -1,3 +1,0 @@
-#!/bin/sh
-
-yt-dlp --proxy socks5://127.0.0.1:1080  -f 139 -o "%(upload_date>%Y-%m-%d)s %(title)+.100U.m4a" "$1"

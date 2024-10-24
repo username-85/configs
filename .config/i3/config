@@ -12,7 +12,7 @@ focus_follows_mouse no
 focus_wrapping force
 
 set $mod1 Mod3
-set $mod2 Mod4
+set $mod2 Mod1
 
 # set minimal font to disable titles
 font pango:DejaVu Sans Mono 0

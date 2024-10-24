@@ -90,7 +90,7 @@ set $ws0 "tmp"
 #workspace $ws0 output HDMI1
 
 # center floating window
-bindsym $mod2+c move absolute position center
+bindsym Mod4+c move absolute position center
 
 # switch to workspace
 bindsym $mod1+1 workspace number $ws1

@@ -128,8 +128,8 @@ nnoremap <F4> :GitGutterQuickFix<CR>
 nnoremap <F6> :set list! <bar> :ToggleWhitespace <CR>
 nnoremap <F12> :TagbarToggle<CR>
 
-nnoremap <leader>b :Buffers!<CR>
-nnoremap <leader>l :BLines!<CR>
+nnoremap <leader>b :Buffers<CR>
+nnoremap <leader>l :BLines<CR>
 nnoremap <leader>L :Lines!<CR>
 
 " switch to prev buffer

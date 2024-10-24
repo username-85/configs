@@ -46,7 +46,7 @@ bindsym button2 nop
 bindsym button3 nop
 
 # Use Mouse + this mod to drag floating windows to their wanted position
-floating_modifier $mod2
+floating_modifier Mod4
 
 # kill focused window
 bindsym $mod1+Shift+c kill

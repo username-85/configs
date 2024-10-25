@@ -49,6 +49,7 @@ alias weather='curl "wttr.in/Novosibirsk?TMQF"'
 alias less='less -M'
 alias newsboat='cd /tmp/downloads && newsboat --cache-file=~/.cache/newsboat_cache.db'
 alias mupdf='mupdf -C AAAAAA'
+alias redshift="redshift -P -O"
 
 # web
 alias w3m='w3m -B'

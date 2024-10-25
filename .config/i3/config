@@ -33,7 +33,7 @@ bindsym XF86AudioLowerVolume exec --no-startup-id "mpc --host mute7@localhost vo
 bindsym XF86AudioPlay exec --no-startup-id "mpc --host mute7@localhost toggle; mpc --host /tmp/mpd toggle"
 
 # other hotkeys
-bindsym --release $mod3+l exec --no-startup-id ~/.bin/misc/slock
+bindsym --release $mod3+l exec --no-startup-id slock
 bindsym $mod1+a exec --no-startup-id "rofi -modi window,windowcd -show windowcd"
 bindsym $mod1+r exec --no-startup-id ~/.bin/menu/static
 bindsym $mod1+Tab workspace back_and_forth

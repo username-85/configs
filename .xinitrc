@@ -9,9 +9,8 @@ HOSTNAME=$(uname -n)
 xrdb -load "${HOME}/.config/xresources/config"
 
 if [ "$HOSTNAME" = "work" ]; then
-    locker="${HOME}/.bin/misc/slock"
-    "$locker"
-    xss-lock --ignore-sleep "$locker" &
+    slock
+    xss-lock --ignore-sleep "slock" &
     st &
     st -e sh -c "cat ${HOME}/.issue; $SHELL" &
 fi
@@ -29,7 +28,7 @@ autocutsel -selection PRIMARY -fork &
 dunst &
 xmousepasteblock &
 
-setxkbmap -layout us,ru -option "altwin:ctrl_alt_win,grp_led:caps,caps:escape,grp:shifts_toggle"
+setxkbmap -layout us,ru -option "altwin:ctrl_alt_win,grp_led:caps,caps:escape"
 xmodmap ~/.config/Xmodmap
 
 exec i3

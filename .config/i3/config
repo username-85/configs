@@ -102,10 +102,10 @@ bindsym $mod1+2 workspace number $ws2
 bindsym $mod1+0 workspace $ws0
 
 # move focused container to workspace
-bindsym $mod1+Shift+1 move container to workspace number $ws1
-bindsym $mod1+Shift+2 move container to workspace number $ws2
-bindsym $mod1+Shift+h move container to workspace $ws3
-bindsym $mod1+Shift+0 move container to workspace $ws0
+bindsym $mod2+Shift+1 move container to workspace number $ws1
+bindsym $mod2+Shift+2 move container to workspace number $ws2
+bindsym $mod2+Shift+h move container to workspace $ws3
+bindsym $mod2+Shift+0 move container to workspace $ws0
 
 # reload the configuration file
 bindsym $mod3+Shift+i reload

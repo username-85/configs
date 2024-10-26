@@ -105,7 +105,7 @@ compinit
 #------------------------------------------------------------------------------
 #   shell settings
 
-export MPD_HOST=/tmp/mpd
+export MPD_HOST="mute7@localhost"
 if [ $HOSTNAME = "work" ]; then
     # mail
     #alias mutt='cd /tmp/mutt && firejail mutt && cd -'

@@ -28,7 +28,6 @@ autocutsel -selection PRIMARY -fork &
 dunst &
 xmousepasteblock &
 
-setxkbmap -layout us,ru -option "altwin:ctrl_alt_win,grp_led:caps,caps:escape"
-xmodmap ~/.config/Xmodmap
+"$HOME/.bin/misc/init_kbd.sh"
 
 exec i3

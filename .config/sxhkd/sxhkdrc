@@ -3,7 +3,7 @@
 ###############################################################################
 
 #rotate horiz
-super + shift + r
+alt + shift + r
 	bspc node @focused:/ -R 90
 
 #close window
@@ -11,43 +11,37 @@ alt + shift + c
 	bspc node -c
 
 #layout tiled
-super + shift + t
+alt + shift + t
 	bspc desktop -l tiled
 
 #layout monocle
-super + shift + m
+alt + shift + m
 	bspc desktop -l monocle
 
 super + m
     bspc desktop -l next
 #    bspc node -t \~fullscreen
 
-XF86Mail
-	~/.bin/keys/XF86Mail
-
-XF86HomePage
-    ~/.bin/keys/XF86HomePage
-
 #toggle floating
-super + shift + f
+alt + shift + f
 	bspc node -t \~floating
 
-alt + Tab
+mod3 + Tab
 	bspc desktop -f last
 
-alt + {space,semicolon}
+mod3 + {p,space,semicolon}
 	bspc node -f last.local
 
-alt + {n, w}
+mod3 + {w, t}
     bspc node -f next.local.!hidden.window
 
-alt + p
+mod3 + T
     bspc node -f prev.local.!hidden.window
 
-alt + a
+mod3 + a
     rofi -modi window,windowcd -show windowcd
 
-alt + r
+mod3 + r
 	~/.bin/menu/static
 
 # move win
@@ -63,58 +57,40 @@ super + ctrl + {Left,Down,Up,Right}
 	bspc node -p {\~west,\~south,\~north,\~east}
 
 # focus or send to the given desktop
-alt + {_,shift + }{1-2,0}
-    bspc {desktop -f,node -d} ^{1-2,3}
-
-# scratchpad desktop
-alt + minus + {_,shift + }
-    bspc {desktop -f,node -d} ^4
+alt + shift + {1-2,0}
+    bspc node -d ^{1-2,3}
+mod3 + {1-2,0}
+    bspc desktop -f ^{1-2,3}
 
 # move to hidden desktop
 alt + shift + h
-	bspc node -d ^5
+	bspc node -d ^4
 
-alt + {h,j,k,l}
+mod3 + {h,j,k,l}
 	bspc node -f {west,south,north,east}
 
-###############################################################################
-#   other
-###############################################################################
-#alt + shift + Return
-#	urxvt -e bash -c "if (tmux has-session); then exec tmux attach-session -d -t $(tmux ls |  grep -m 1 -v attached | cut -d ':' -f 1); else exec tmux new-session -c /tmp/misc; fi"
-
 super + l
-	~/.bin/misc/slock
+    slock
 
 # audio
 {XF86AudioPlay,XF86AudioMute}
-	mpc --host /tmp/mpd toggle
-
-XF86AudioRaiseVolume
-	mpc --host /tmp/mpd volume +5
-
-XF86AudioLowerVolume
-	mpc --host /tmp/mpd volume -5
+    ~/.bin/misc/mpc_toggle.sh
 
 # layout
 {Print,Menu}
-    xkb-switch -s us
+    ~/.bin/misc/set_layout_en
 
 ctrl + {Print,Menu}
-    xkb-switch -s "ru(winkeys)"
+    ~/.bin/misc/set_layout_ru
 
 # laptop
 
-XF86MonBrightnessUp
-    xbacklight -inc 1
+#XF86MonBrightnessUp
+#    xbacklight -inc 1
 
-XF86MonBrightnessDown
-    xbacklight -dec 1
+#XF86MonBrightnessDown
+#    xbacklight -dec 1
 
 # other multimedia keys
-{XF86Display,XF86Bluetooth,}
-    xte "mousemove 0 0"
-
-# scratchpad
-#alt + minus
-#    ~/.bin/misc/toggle_hidden scratchpad
+#{XF86Display,XF86Bluetooth,}
+#    xte "mousemove 0 0"

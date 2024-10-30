@@ -30,5 +30,5 @@ xmousepasteblock &
 
 "$HOME/.bin/misc/init_kbd.sh"
 
-#exec i3
-exec bspwm
+exec i3
+#exec bspwm

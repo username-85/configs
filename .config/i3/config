@@ -12,6 +12,7 @@ focus_follows_mouse no
 focus_wrapping force
 
 # with xmodmap settings it's Control_R, with setxkb it's right alt
+# mod1 + control not always works
 set $mod1 Mod3
 # alt mod, with setxkb settings it's window key
 set $mod2 Mod1
@@ -22,9 +23,6 @@ set $mod3 Mod4
 font pango:DejaVu Sans Mono 0
 
 # xf86 hotkeys
-#bindsym XF86Display exec --no-startup-id xte "mousemove 0 0"
-#bindsym XF86Bluetooth exec --no-startup-id xte "mousemove 0 0"
-#bindsym XF86WLAN exec --no-startup-id xte "mousemove 0 0"
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 1
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 1
 bindsym XF86AudioMute exec --no-startup-id "mpc --host mute7@localhost toggle; mpc --host /tmp/mpd toggle"
@@ -33,14 +31,14 @@ bindsym XF86AudioLowerVolume exec --no-startup-id "mpc --host mute7@localhost vo
 bindsym XF86AudioPlay exec --no-startup-id "mpc --host mute7@localhost toggle; mpc --host /tmp/mpd toggle"
 
 # other hotkeys
-bindsym --release $mod3+l exec --no-startup-id slock
+bindsym --release $mod1+$mod2+l exec --no-startup-id slock
 bindsym $mod1+b exec --no-startup-id "rofi -modi window,windowcd -show windowcd"
 bindsym $mod1+r exec --no-startup-id ~/.bin/menu/static
 bindsym $mod1+Tab workspace back_and_forth
+bindsym $mod1+space workspace back_and_forth
 bindsym $mod1+p focus parent;
 bindsym $mod1+i focus child;
 bindsym $mod1+w focus next
-bindsym $mod1+t focus next
 
 # no mouse scroll
 bindsym button4 nop
@@ -54,7 +52,7 @@ bindsym button3 nop
 floating_modifier $mod3
 
 # kill focused window
-bindsym $mod2+Shift+c kill
+bindsym $mod3+Shift+c kill
 
 # change focus
 bindsym $mod1+j focus down
@@ -63,37 +61,35 @@ bindsym $mod1+l focus right
 bindsym $mod1+h focus left
 
 # move window/container
-bindsym $mod2+Shift+Left move left
-bindsym $mod2+Shift+Down move down
-bindsym $mod2+Shift+Up move up
-bindsym $mod2+Shift+Right move right
+bindsym $mod1+$mod2+h move left
+bindsym $mod1+$mod2+j move down
+bindsym $mod1+$mod2+k move up
+bindsym $mod1+$mod2+l move right
 
 # split in vertical orientation
-bindsym $mod2+Shift+v split h
+bindsym $mod1+$mod2+v split h
 
 # split in horizontal orientation
-bindsym $mod2+Shift+s split v
+bindsym $mod1+$mod2+s split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod3+m fullscreen toggle
+bindsym $mod1+$mod2+m fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod2+Shift+t layout stacking
-bindsym $mod2+Shift+w layout tabbed
-bindsym $mod2+Shift+e layout toggle split
-bindsym $mod2+Shift+f floating toggle
+bindsym $mod1+$mod2+t layout stacking
+bindsym $mod1+$mod2+w layout tabbed
+bindsym $mod1+$mod2+e layout toggle split
+bindsym $mod1+$mod2+f floating toggle
 
 # change focus between tiling / floating windows
-#bindsym $mod2+space focus mode_toggle
+bindsym $mod3+space focus mode_toggle
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1"
 set $ws2 "2"
-set $ws2 "3"
-set $ws9 "hidden"
-set $ws0 "tmp"
-#workspace $ws0 output HDMI1
+set $ws3 "3"
+set $ws0 "0"
 
 # center floating window
 bindsym $mod3+c move absolute position center
@@ -105,11 +101,10 @@ bindsym $mod1+3 workspace number $ws3
 bindsym $mod1+0 workspace $ws0
 
 # move focused container to workspace
-bindsym $mod3+1 move container to workspace number $ws1
-bindsym $mod3+2 move container to workspace number $ws2
-bindsym $mod3+3 move container to workspace number $ws3
-bindsym $mod3+h move container to workspace $ws3
-bindsym $mod3+0 move container to workspace $ws0
+bindsym $mod1+$mod2+1 move container to workspace number $ws1
+bindsym $mod1+$mod2+2 move container to workspace number $ws2
+bindsym $mod1+$mod2+3 move container to workspace number $ws3
+bindsym $mod1+$mod2+0 move container to workspace number $ws0
 
 # reload the configuration file
 bindsym $mod3+i reload
@@ -131,7 +126,7 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-bindsym $mod2+Shift+r mode "resize"
+bindsym $mod1+$mod2+r mode "resize"
 
 # Slate theme by Jody Ribton <jody@ribton.me>
 # $i3-theme-window
@@ -165,21 +160,13 @@ client.urgent           #501A10 #501A10 #501A10 #501A10
 #    wheel_down_cmd nop
 #}
 
-# move the currently focused window to the scratchpad
-bindsym $mod2+Shift+space mark "space",move scratchpad
-
-# Show the next scratchpad window or hide the focused scratchpad window.
-# If there are multiple scratchpad windows, this command cycles through them.
-bindsym $mod1+space [con_mark="space"] scratchpad show
-
-bindsym $mod3+t exec --no-startup-id "~/.bin/misc/show_time.sh"
-
-#bindsym $mod3+a mark a
-#bindsym $mod1+a [con_mark="a"] focus
-
-bindsym $mod3+a mark "a", move scratchpad
-bindsym $mod1+a [con_mark="a"] scratchpad show
-
+bindsym $mod1+t exec --no-startup-id "~/.bin/misc/show_time.sh"
 
 bindsym $mod3+s mark "s", move scratchpad
 bindsym $mod1+s [con_mark="s"] scratchpad show
+
+bindsym $mod3+d mark "d", move scratchpad
+bindsym $mod1+d [con_mark="d"] scratchpad show
+
+bindsym $mod3+f mark "f", move scratchpad
+bindsym $mod1+f [con_mark="f"] scratchpad show

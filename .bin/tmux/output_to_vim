@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rm /tmp/*.tmux_pane_for_vim
+rm -f /tmp/*.tmux_pane_for_vim
 
 file=`mktemp -u`.tmux_pane_for_vim
 tmux capture-pane -pS -32768 > $file

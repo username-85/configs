@@ -51,7 +51,7 @@ bindsym button3 nop
 floating_modifier $mod3
 
 # kill focused window
-bindsym $mod1+$mod2+c kill
+bindsym $mod1++c kill
 
 # change focus
 bindsym $mod1+j focus down
@@ -159,14 +159,21 @@ client.urgent           #501A10 #501A10 #501A10 #501A10
 
 bindsym $mod1+t exec --no-startup-id "~/.bin/misc/show_time.sh"
 
-# independent scratchpads
-bindsym $mod3+space mark "space", move scratchpad
-bindsym $mod1+space [con_mark="space"] scratchpad show
+for_window [class="__text_scratchpad"] floating enable, resize set width 1024, resize set height 1024, move absolute position center
+bindsym $mod1+v exec --no-startup-id "~/.bin/i3/vim.sh"
+
+# independent scratchpads, mark should be one symbol?
+bindsym $mod3+space mark "0", floating enable, resize set width 1280, resize set height 1000, move absolute position center, move scratchpad
+bindsym $mod1+space [con_mark="0"] scratchpad show
+
 bindsym $mod3+a mark "a", move scratchpad
 bindsym $mod1+a [con_mark="a"] scratchpad show
+
 bindsym $mod3+s mark "s", move scratchpad
 bindsym $mod1+s [con_mark="s"] scratchpad show
+
 bindsym $mod3+d mark "d", move scratchpad
 bindsym $mod1+d [con_mark="d"] scratchpad show
+
 bindsym $mod3+f mark "f", move scratchpad
 bindsym $mod1+f [con_mark="f"] scratchpad show

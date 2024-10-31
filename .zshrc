@@ -92,8 +92,8 @@ bindkey -v
 source /usr/share/fzf/key-bindings.zsh
 bindkey jj vi-cmd-mode
 
-autoload -Uz compinit
-compinit
+#autoload -Uz compinit
+#compinit
 
 # gen auto complete only once a day
 #autoload -Uz compinit

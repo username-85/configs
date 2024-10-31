@@ -168,9 +168,6 @@ bindsym $mod1+v exec --no-startup-id "~/.bin/i3/vim.sh"
 bindsym $mod3+space mark "0", move scratchpad
 bindsym $mod1+space [con_mark="0"] scratchpad show
 
-bindsym $mod3+a mark "a", move scratchpad
-bindsym $mod1+a [con_mark="a"] scratchpad show
-
 bindsym $mod3+s mark "s", move scratchpad
 bindsym $mod1+s [con_mark="s"] scratchpad show
 

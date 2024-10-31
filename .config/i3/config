@@ -51,7 +51,7 @@ bindsym button3 nop
 floating_modifier $mod3
 
 # kill focused window
-bindsym $mod1++c kill
+bindsym $mod1+c kill
 
 # change focus
 bindsym $mod1+j focus down

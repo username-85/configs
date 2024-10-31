@@ -121,11 +121,11 @@ noremap tt :tab split<CR>
 "map q <Nop>
 imap <F1> <Nop>
 nmap <F1> <Nop>
-nnoremap <F1> :Vifm <CR>
-nnoremap <F2> :GFiles<CR>
-nnoremap <F3> :BTags!<CR>
+nnoremap <F1> :Spell <CR>
+nnoremap <F2> :set list! <bar> :ToggleWhitespace <CR>
+nnoremap <F3> :Vifm <CR>
 nnoremap <F4> :GitGutterQuickFix<CR>
-nnoremap <F6> :set list! <bar> :ToggleWhitespace <CR>
+nnoremap <F11> :BTags!<CR>
 nnoremap <F12> :TagbarToggle<CR>
 
 nnoremap <leader>b :Buffers<CR>

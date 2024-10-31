@@ -31,7 +31,7 @@ bindsym XF86AudioLowerVolume exec --no-startup-id "mpc --host mute7@localhost vo
 bindsym XF86AudioPlay exec --no-startup-id "mpc --host mute7@localhost toggle; mpc --host /tmp/mpd toggle"
 
 # other hotkeys
-bindsym --release $mod1+$mod2+l exec --no-startup-id slock
+bindsym --release $mod3+l exec --no-startup-id slock
 bindsym $mod1+b exec --no-startup-id "rofi -modi window,windowcd -show windowcd"
 bindsym $mod1+r exec --no-startup-id ~/.bin/menu/static
 bindsym $mod1+Tab workspace back_and_forth
@@ -52,7 +52,7 @@ bindsym button3 nop
 floating_modifier $mod3
 
 # kill focused window
-bindsym $mod3+Shift+c kill
+bindsym $mod1+c kill
 
 # change focus
 bindsym $mod1+j focus down
@@ -82,7 +82,7 @@ bindsym $mod1+$mod2+e layout toggle split
 bindsym $mod1+$mod2+f floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod3+space focus mode_toggle
+bindsym $mod2+space focus mode_toggle
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -106,8 +106,6 @@ bindsym $mod1+$mod2+2 move container to workspace number $ws2
 bindsym $mod1+$mod2+3 move container to workspace number $ws3
 bindsym $mod1+$mod2+0 move container to workspace number $ws0
 
-# reload the configuration file
-bindsym $mod3+i reload
 
 # layout
 bindsym Print exec --no-startup-id "~/.bin/misc/set_layout_en"
@@ -162,11 +160,12 @@ client.urgent           #501A10 #501A10 #501A10 #501A10
 
 bindsym $mod1+t exec --no-startup-id "~/.bin/misc/show_time.sh"
 
+# independent scratchpads
+bindsym $mod3+a mark "a", move scratchpad
+bindsym $mod1+a [con_mark="a"] scratchpad show
 bindsym $mod3+s mark "s", move scratchpad
 bindsym $mod1+s [con_mark="s"] scratchpad show
-
 bindsym $mod3+d mark "d", move scratchpad
 bindsym $mod1+d [con_mark="d"] scratchpad show
-
 bindsym $mod3+f mark "f", move scratchpad
 bindsym $mod1+f [con_mark="f"] scratchpad show

@@ -92,8 +92,12 @@ bindkey -v
 source /usr/share/fzf/key-bindings.zsh
 bindkey jj vi-cmd-mode
 
-#autoload -Uz compinit
-#compinit
+autoload -Uz compinit
+compinit
+# only use local files for git
+__git_files () {
+    _wanted files expl 'local files' _files
+}
 
 # gen auto complete only once a day
 #autoload -Uz compinit

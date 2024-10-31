@@ -35,7 +35,6 @@ bindsym --release $mod3+l exec --no-startup-id slock
 bindsym $mod1+b exec --no-startup-id "rofi -modi window,windowcd -show windowcd"
 bindsym $mod1+r exec --no-startup-id ~/.bin/menu/static
 bindsym $mod1+Tab workspace back_and_forth
-bindsym $mod1+space workspace back_and_forth
 bindsym $mod1+p focus parent;
 bindsym $mod1+i focus child;
 bindsym $mod1+w focus next
@@ -52,7 +51,7 @@ bindsym button3 nop
 floating_modifier $mod3
 
 # kill focused window
-bindsym $mod1+c kill
+bindsym $mod1+$mod2+c kill
 
 # change focus
 bindsym $mod1+j focus down
@@ -161,6 +160,8 @@ client.urgent           #501A10 #501A10 #501A10 #501A10
 bindsym $mod1+t exec --no-startup-id "~/.bin/misc/show_time.sh"
 
 # independent scratchpads
+bindsym $mod3+space mark "space", move scratchpad
+bindsym $mod1+space [con_mark="space"] scratchpad show
 bindsym $mod3+a mark "a", move scratchpad
 bindsym $mod1+a [con_mark="a"] scratchpad show
 bindsym $mod3+s mark "s", move scratchpad

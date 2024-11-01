@@ -1,9 +1,9 @@
 #------------------------------------------------------------------------------
 #   export
 
-export FZF_DEFAULT_COMMAND="fd -L . "
+export FZF_DEFAULT_COMMAND="fd --type f --hidden --no-ignore -L"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_ALT_C_COMMAND="fd -L -t d . "
+export FZF_ALT_C_COMMAND="fd --hidden --no-ignore -L -t d"
 
 # --files: List files that would be searched but do not search
 # --no-ignore: Do not respect .gitignore, etc...

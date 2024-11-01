@@ -157,11 +157,12 @@ client.urgent           #501A10 #501A10 #501A10 #501A10
 #    wheel_down_cmd nop
 #}
 
-bindsym $mod3+r resize set width 1200, resize set height 1000, move absolute position center
+bindsym $mod3+Shift+r resize set 80 ppt 90 ppt, move absolute position center
+bindsym $mod3+r resize set 50 ppt 80 ppt, move absolute position center
 
 bindsym $mod1+t exec --no-startup-id "~/.bin/misc/show_time.sh"
 
-for_window [class="__text_scratchpad"] floating enable, resize set width 800, resize set height 600, move absolute position center
+for_window [class="__text_scratchpad"] floating enable, resize set 50 ppt 80 ppt, move absolute position center
 bindsym $mod1+v exec --no-startup-id "~/.bin/i3/vim.sh"
 
 # independent scratchpads, mark should be one symbol?

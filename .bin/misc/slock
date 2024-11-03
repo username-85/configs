@@ -1,15 +1,16 @@
 #!/bin/sh
 set -e
 
-img_cache="/tmp/lock.png"
-img_lock="${HOME}/.images/lock"
+#img_cache="/tmp/lock.png"
+#img_lock="${HOME}/.images/lock"
 
 
-if [ ! -f "$img_cache" ]; then
-    resolution=$(xdpyinfo | grep dimensions | sed -r 's/^[^0-9]*([0-9]+x[0-9]+).*$/\1/')
-    convert "$img_lock" -contrast -resize "$resolution"\! "$img_cache"
-fi
+#if [ ! -f "$img_cache" ]; then
+#    resolution=$(xdpyinfo | grep dimensions | sed -r 's/^[^0-9]*([0-9]+x[0-9]+).*$/\1/')
+#    convert "$img_lock" -contrast -resize "$resolution"\! "$img_cache"
+#fi
 
 "${HOME}/.bin/misc/set_layout_en"
 
-i3lock -u -i "$img_cache"
+#i3lock -u -i "$img_cache"
+slock

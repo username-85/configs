@@ -136,6 +136,9 @@ nnoremap <leader>L :Lines!<CR>
 " switch to prev buffer
 nnoremap <C-w><Space> <C-^>
 
+" switch layout in insert mode
+inoremap <C-l> <C-^>
+
 " switch to prev window
 noremap <C-w>; <C-w>p
 
@@ -152,7 +155,8 @@ nmap <silent> <C-w><Tab> :exe "tabn " . g:Lasttab<cr>
 vmap <leader>y "+ygv"zy`>
 
 " save
-noremap <Leader>w :wa<CR>
+inoremap <C-s> <C-o>:wa<CR>
+noremap <C-s> :wa<CR>
 
 " grep
 set grepprg=rg\ --vimgrep

@@ -10,6 +10,7 @@ default_floating_border pixel 1
 workspace_layout tabbed
 focus_follows_mouse no
 focus_wrapping force
+title_align center
 
 # with xmodmap settings it's Control_R, with setxkb it's right alt
 # mod1 + control not always works
@@ -20,7 +21,7 @@ set $mod2 Mod1
 set $mod3 Mod4
 
 # set minimal font to disable titles
-font pango:DejaVu Sans Mono 0
+font -*-terminus-medium-*-*-*-12-*-*-*-*-*-iso10646-*
 
 # xf86 hotkeys
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 1
@@ -128,10 +129,10 @@ bindsym $mod1+$mod2+r mode "resize"
 # Slate theme by Jody Ribton <jody@ribton.me>
 # $i3-theme-window
 # class                 border  backgr. text    indicator
-client.focused          #3C4849 #3C4849 #3C4849 #227dbd
-client.focused_inactive #2B3234 #2B3234 #2B3234 #2B3234
-client.unfocused        #11282D #11282D #11282D #11282D
-client.urgent           #501A10 #501A10 #501A10 #501A10
+client.focused          #2b3334 #2b3334 #9C9C9C #2b3334
+client.focused_inactive #2b3334 #2b3334 #9C9C9C #2b3334
+client.unfocused        #131617 #131617 #7C7C7C #131617
+client.urgent           #501A10 #501A10 #ACACAC #501A10
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)

@@ -5,7 +5,7 @@ exec_always --no-startup-id "hsetroot -solid '#001515'"
 
 #workspace_auto_back_and_forth yes
 hide_edge_borders both
-default_border pixel 1
+default_border pixel 5
 default_floating_border pixel 1
 workspace_layout tabbed
 focus_follows_mouse no
@@ -138,19 +138,18 @@ bindsym $mod3+r resize set 50 ppt 80 ppt, move absolute position center
 
 bindsym $mod1+t exec --no-startup-id "~/.bin/misc/show_time.sh"
 
-set $floating_border_size 3
-for_window [class="__text_scratchpad"] floating enable, border pixel $floating_border_size, resize set 50 ppt 80 ppt, move absolute position center
+for_window [class="__text_scratchpad"] floating enable, resize set 50 ppt 80 ppt, move absolute position center
 bindsym $mod1+v exec --no-startup-id "~/.bin/i3/vim.sh"
 
 # independent scratchpads, mark should be one symbol?
-bindsym $mod3+space mark "0", border pixel $floating_border_size, move scratchpad
+bindsym $mod3+space mark "0", move scratchpad
 bindsym $mod1+space [con_mark="0"] scratchpad show
 
-bindsym $mod3+s mark "s", border pixel $floating_border_size, move scratchpad
+bindsym $mod3+s mark "s", move scratchpad
 bindsym $mod1+s [con_mark="s"] scratchpad show
 
-bindsym $mod3+d mark "d", border pixel $floating_border_size, move scratchpad
+bindsym $mod3+d mark "d", move scratchpad
 bindsym $mod1+d [con_mark="d"] scratchpad show
 
-bindsym $mod3+f mark "f", border pixel $floating_border_size, move scratchpad
+bindsym $mod3+f mark "f", move scratchpad
 bindsym $mod1+f [con_mark="f"] scratchpad show

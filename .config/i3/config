@@ -130,9 +130,9 @@ bindsym $mod1+$mod2+r mode "resize"
 # Slate theme by Jody Ribton <jody@ribton.me>
 # $i3-theme-window
 # class                 border  backgr. text    indicator
-client.focused          #2b3334 #2b3334 #9C9C9C #2b3334
-client.focused_inactive #2b3334 #2b3334 #9C9C9C #2b3334
-client.unfocused        #1B1F20 #1B1F20 #7C7C7C #1B1F20
+client.focused          #003030 #003030 #9C9C9C #003030
+client.focused_inactive #003030 #003030 #8C8C8C #003030
+client.unfocused        #002020 #002020 #7C7C7C #002020
 client.urgent           #501A10 #501A10 #ACACAC #501A10
 
 # Start i3bar to display a workspace bar (plus the system information i3status

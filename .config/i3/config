@@ -20,8 +20,8 @@ set $mod2 Mod1
 # windows mod, with setxkb settings it's control
 set $mod3 Mod4
 
-# set minimal font to disable titles
-font -*-terminus-medium-*-*-*-12-*-*-*-*-*-iso10646-*
+# set minimal font to minimize titles
+font pango:DejaVu Sans Mono 0
 
 # xf86 hotkeys
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 1
@@ -129,8 +129,8 @@ bindsym $mod1+$mod2+r mode "resize"
 
 # class                 border  backgr. text    indicator
 client.focused          #003030 #003030 #9C9C9C #003030
-client.focused_inactive #002929 #002929 #8C8C8C #002929
-client.unfocused        #002020 #002020 #7C7C7C #002020
+client.focused_inactive #002020 #002020 #8C8C8C #002020
+client.unfocused        #001010 #001010 #7C7C7C #001010
 client.urgent           #501A10 #501A10 #ACACAC #501A10
 
 bindsym $mod3+Shift+r resize set 80 ppt 90 ppt, move absolute position center
@@ -138,18 +138,19 @@ bindsym $mod3+r resize set 50 ppt 80 ppt, move absolute position center
 
 bindsym $mod1+t exec --no-startup-id "~/.bin/misc/show_time.sh"
 
-for_window [class="__text_scratchpad"] floating enable, resize set 50 ppt 80 ppt, move absolute position center
+set $floating_border_size 3
+for_window [class="__text_scratchpad"] floating enable, border pixel $floating_border_size, resize set 50 ppt 80 ppt, move absolute position center
 bindsym $mod1+v exec --no-startup-id "~/.bin/i3/vim.sh"
 
 # independent scratchpads, mark should be one symbol?
-bindsym $mod3+space mark "0", move scratchpad
+bindsym $mod3+space mark "0", border pixel $floating_border_size, move scratchpad
 bindsym $mod1+space [con_mark="0"] scratchpad show
 
-bindsym $mod3+s mark "s", move scratchpad
+bindsym $mod3+s mark "s", border pixel $floating_border_size, move scratchpad
 bindsym $mod1+s [con_mark="s"] scratchpad show
 
-bindsym $mod3+d mark "d", move scratchpad
+bindsym $mod3+d mark "d", border pixel $floating_border_size, move scratchpad
 bindsym $mod1+d [con_mark="d"] scratchpad show
 
-bindsym $mod3+f mark "f", move scratchpad
+bindsym $mod3+f mark "f", border pixel $floating_border_size, move scratchpad
 bindsym $mod1+f [con_mark="f"] scratchpad show

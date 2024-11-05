@@ -25,7 +25,7 @@ export QT_QPA_PLATFORMTHEME=gtk2
 export SDCV_HISTSIZE=0
 export SDCV_PAGER=w3m
 export SVN_EDITOR=vim
-export BAT_THEME="zenburn"
+export BAT_THEME="ansi"
 
 # disable ugly ffmpeg colors
 export AV_LOG_FORCE_NOCOLOR=1

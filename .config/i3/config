@@ -127,37 +127,11 @@ mode "resize" {
 
 bindsym $mod1+$mod2+r mode "resize"
 
-# Slate theme by Jody Ribton <jody@ribton.me>
-# $i3-theme-window
 # class                 border  backgr. text    indicator
 client.focused          #003030 #003030 #9C9C9C #003030
 client.focused_inactive #003030 #003030 #8C8C8C #003030
 client.unfocused        #002020 #002020 #7C7C7C #002020
 client.urgent           #501A10 #501A10 #ACACAC #501A10
-
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-#bar {
-##pc
-#    font pango:DejaVu Sans Mono 0
-#    position          bottom
-#    tray_output       none
-#    workspace_min_width 40
-#
-##   slate
-#    colors {
-#        separator          #000000
-#        background         #000000
-#        statusline         #000000
-#        focused_workspace  #3C4848 #3C4848 #3C4848
-#        active_workspace   #000000 #000000 #000000
-#        inactive_workspace #11282D #11282D #11282D
-#        urgent_workspace   #501A10 #501A10 #501A10
-#    }
-#
-#    wheel_up_cmd nop
-#    wheel_down_cmd nop
-#}
 
 bindsym $mod3+Shift+r resize set 80 ppt 90 ppt, move absolute position center
 bindsym $mod3+r resize set 50 ppt 80 ppt, move absolute position center

@@ -34,6 +34,7 @@ bindsym XF86AudioPlay exec --no-startup-id "mpc --host mute7@localhost toggle; m
 # other hotkeys
 bindsym --release $mod3+l exec --no-startup-id ~/.bin/misc/slock
 bindsym $mod1+b exec --no-startup-id "rofi -modi window,windowcd -show windowcd"
+bindsym $mod1+a exec --no-startup-id "rofi -modi window,windowcd -show windowcd"
 bindsym $mod1+r exec --no-startup-id ~/.bin/menu/static
 bindsym $mod1+Tab workspace back_and_forth
 bindsym $mod1+p focus parent;
@@ -131,7 +132,7 @@ bindsym $mod1+$mod2+r mode "resize"
 # class                 border  backgr. text    indicator
 client.focused          #2b3334 #2b3334 #9C9C9C #2b3334
 client.focused_inactive #2b3334 #2b3334 #9C9C9C #2b3334
-client.unfocused        #131617 #131617 #7C7C7C #131617
+client.unfocused        #1B1F20 #1B1F20 #7C7C7C #1B1F20
 client.urgent           #501A10 #501A10 #ACACAC #501A10
 
 # Start i3bar to display a workspace bar (plus the system information i3status

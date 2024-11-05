@@ -160,7 +160,7 @@ noremap <C-s> :wa<CR>
 
 " grep
 set grepprg=rg\ --vimgrep
-nnoremap <silent> <C-@>r :Rg! <C-R>=expand("<cword>")<CR><CR>
+nnoremap <silent> <leader>r :Rg! <C-R>=expand("<cword>")<CR><CR>
 
 "------ plugins settings ------
 
@@ -181,15 +181,15 @@ set cscopetag
 " if set to 0 cscopequickfix settings are applied
 set csto=1
 silent! cs add GTAGS
-nmap <silent><C-@>g <C-]>
+nmap <silent><leader>g <C-]>
 "nmap <silent><leader>g :silent! tag <C-R>=expand("<cword>")<CR><CR> <bar> :silent! ltag <CR>
-nmap <silent><C-@>c :lcs find c <C-R>=expand("<cword>")<CR><CR>
-nmap <silent><C-@>a :lcs find a <C-R>=expand("<cword>")<CR><CR>
-nmap <silent><C-@>s :lcs find s <C-R>=expand("<cword>")<CR><CR>
-nmap <silent><C-@>t :lcs find t "<C-R>=expand("<cword>")"<CR><CR>
-nmap <silent><C-@>f :lcs find f <C-R>=expand("<cfile>")<CR><CR>
-nmap <silent><C-@>i :lcs find i <C-R>=expand("<cfile>")<CR><CR>
-nmap <silent><C-@>e :lcs find e <C-R>=expand("<cword>")<CR><CR>
+nmap <silent><leader>c :lcs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <silent><leader>a :lcs find a <C-R>=expand("<cword>")<CR><CR>
+nmap <silent><leader>s :lcs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <silent><leader>t :lcs find t "<C-R>=expand("<cword>")"<CR><CR>
+nmap <silent><leader>f :lcs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap <silent><leader>i :lcs find i <C-R>=expand("<cfile>")<CR><CR>
+nmap <silent><leader>e :lcs find e <C-R>=expand("<cword>")<CR><CR>
 set cscopequickfix=g-,c-,a-,s-,t-,f-,i-,a-,e-
 "set cscopequickfix=s-,t-,e-,i-
 
@@ -205,7 +205,7 @@ let g:easy_align_delimiters = {
 \ ':': { 'pattern': ':', 'left_margin': 1, 'right_margin': 1, 'stick_to_left': 0, 'ignore_groups':   [] },
 \ }
 
-" redefine Rg for fzf to pass arguments
+" redefine Rg for fzf to pass arguments and follow symlinks
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
   \   'rg -L --column --line-number --no-heading --color=always --smart-case '.(<q-args>), 1,
@@ -230,18 +230,18 @@ let g:fzf_vim.tags_command = 'ctags -R'
 nmap <leader>j :lne<CR>
 nmap <leader>k :lp<CR>
 " TODO: change it later
-"nmap <leader>n :cn<CR>
-"nmap <leader>p :cp<CR>
+nmap <leader>n :cn<CR>
+nmap <leader>p :cp<CR>
 
 " gitgutter
 let g:gitgutter_map_keys = 0
 let g:gitgutter_preview_win_floating = 0
 let g:gitgutter_use_location_list = 1
-nmap <leader>hv <Plug>(GitGutterPreviewHunk)
-nmap <leader>hj <Plug>(GitGutterNextHunk)
-nmap <leader>hk <Plug>(GitGutterPrevHunk)
-nmap <leader>hs <Plug>(GitGutterStageHunk)
-nmap <leader>hu <Plug>(GitGutterUndoHunk)
+nmap <C-@>v <Plug>(GitGutterPreviewHunk)
+nmap <C-@>j <Plug>(GitGutterNextHunk)
+nmap <C-@>k <Plug>(GitGutterPrevHunk)
+nmap <C-@>s <Plug>(GitGutterStageHunk)
+nmap <C-@>u <Plug>(GitGutterUndoHunk)
 
 " signature
 let g:SignatureMarkTextHLDynamic = 1
@@ -270,5 +270,5 @@ let g:SignatureMap = {
     \ }
 
 let g:toggle_list_no_mappings=0
-nmap <script> <silent> <leader>tl :call ToggleLocationList()<CR>
-nmap <script> <silent> <leader>tq :call ToggleQuickfixList()<CR>
+nmap <script> <silent> <C-@>l :call ToggleLocationList()<CR>
+nmap <script> <silent> <C-@>q :call ToggleQuickfixList()<CR>

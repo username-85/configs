@@ -70,7 +70,7 @@ set hidden
 "search
 set hlsearch
 set incsearch
-nnoremap <silent><ESC> :nohlsearch<CR>
+nnoremap <silent><leader>, :nohlsearch<CR>
 
 " forcing unix file format to always see dos/windows linebreaks (^M)
 " new lines would be added without it

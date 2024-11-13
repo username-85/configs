@@ -12,13 +12,10 @@ focus_follows_mouse no
 focus_wrapping force
 title_align center
 
-# with xmodmap settings it's Control_R, with setxkb it's right alt
-# mod1 + control not always works
-set $mod1 Mod3
-# alt mod, with setxkb settings it's window key
+# windows is mapped to right control
+set $mod1 Mod4
+# alt mapped to windows
 set $mod2 Mod1
-# windows mod, with setxkb settings it's control
-set $mod3 Mod4
 
 # set minimal font to minimize titles
 font pango:DejaVu Sans Mono 0
@@ -32,11 +29,12 @@ bindsym XF86AudioLowerVolume exec --no-startup-id "mpc --host mute7@localhost vo
 bindsym XF86AudioPlay exec --no-startup-id "mpc --host mute7@localhost toggle; mpc --host /tmp/mpd toggle"
 
 # other hotkeys
-bindsym --release $mod3+l exec --no-startup-id ~/.bin/misc/slock
+bindsym --release $mod2+Shift+l exec --no-startup-id ~/.bin/misc/slock
 bindsym $mod1+b exec --no-startup-id "rofi -modi window,windowcd -show windowcd"
 bindsym $mod1+a exec --no-startup-id "rofi -modi window,windowcd -show windowcd"
 bindsym $mod1+r exec --no-startup-id ~/.bin/menu/static
 bindsym $mod1+Tab workspace back_and_forth
+bindsym $mod2+space workspace back_and_forth
 bindsym $mod1+p focus parent;
 bindsym $mod1+i focus child;
 bindsym $mod1+w focus next
@@ -50,7 +48,7 @@ bindsym button2 nop
 bindsym button3 nop
 
 # Use Mouse + this mod to drag floating windows to their wanted position
-floating_modifier $mod3
+floating_modifier $mod2
 
 # kill focused window
 bindsym $mod1+c kill
@@ -82,18 +80,12 @@ bindsym $mod1+$mod2+w layout tabbed
 bindsym $mod1+$mod2+e layout toggle split
 bindsym $mod1+$mod2+f floating toggle
 
-# change focus between tiling / floating windows
-bindsym $mod2+space focus mode_toggle
-
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
 set $ws0 "0"
-
-# center floating window
-bindsym $mod3+c move absolute position center
 
 # switch to workspace
 bindsym $mod1+1 workspace number $ws1
@@ -106,11 +98,6 @@ bindsym $mod1+$mod2+1 move container to workspace number $ws1
 bindsym $mod1+$mod2+2 move container to workspace number $ws2
 bindsym $mod1+$mod2+3 move container to workspace number $ws3
 bindsym $mod1+$mod2+0 move container to workspace number $ws0
-
-
-# layout
-bindsym Print exec --no-startup-id "~/.bin/misc/set_layout_en"
-bindsym --release Control+Print exec --no-startup-id "~/.bin/misc/set_layout_ru"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -125,7 +112,7 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-bindsym $mod1+$mod2+r mode "resize"
+bindsym $mod2+Shift+r mode "resize"
 
 # class                 border  backgr. text    indicator
 client.focused          #003030 #003030 #9C9C9C #003030
@@ -133,8 +120,7 @@ client.focused_inactive #002020 #002020 #8C8C8C #002020
 client.unfocused        #001010 #001010 #7C7C7C #001010
 client.urgent           #501A10 #501A10 #ACACAC #501A10
 
-bindsym $mod3+Shift+r resize set 80 ppt 90 ppt, move absolute position center
-bindsym $mod3+r resize set 50 ppt 80 ppt, move absolute position center
+bindsym $mod1+s resize set 80 ppt 90 ppt, move absolute position center
 
 bindsym $mod1+t exec --no-startup-id "~/.bin/misc/show_time.sh"
 
@@ -142,14 +128,11 @@ for_window [class="__text_scratchpad"] floating enable, resize set 50 ppt 80 ppt
 bindsym $mod1+v exec --no-startup-id "~/.bin/i3/vim.sh"
 
 # independent scratchpads, mark should be one symbol?
-bindsym $mod3+space mark "0", move scratchpad
+bindsym $mod1+Shift+space mark "0", move scratchpad
 bindsym $mod1+space [con_mark="0"] scratchpad show
 
-bindsym $mod3+s mark "s", move scratchpad
-bindsym $mod1+s [con_mark="s"] scratchpad show
-
-bindsym $mod3+d mark "d", move scratchpad
+bindsym $mod1+Shift+d mark "d", move scratchpad
 bindsym $mod1+d [con_mark="d"] scratchpad show
 
-bindsym $mod3+f mark "f", move scratchpad
+bindsym $mod1+Shift+f mark "f", move scratchpad
 bindsym $mod1+f [con_mark="f"] scratchpad show

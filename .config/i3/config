@@ -99,6 +99,10 @@ bindsym $mod1+$mod2+2 move container to workspace number $ws2
 bindsym $mod1+$mod2+3 move container to workspace number $ws3
 bindsym $mod1+$mod2+0 move container to workspace number $ws0
 
+# layout
+bindsym Print exec --no-startup-id "~/.bin/misc/set_layout_en"
+bindsym --release Control+Print exec --no-startup-id "~/.bin/misc/set_layout_ru"
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode

@@ -12,10 +12,8 @@ focus_follows_mouse no
 focus_wrapping force
 title_align center
 
-# windows is mapped to right control
+# with keyd right control is windows, left alt is control, windows is alt
 set $mod1 Mod4
-# alt mapped to windows
-set $mod2 Mod1
 
 # set minimal font to minimize titles
 font pango:DejaVu Sans Mono 0
@@ -59,25 +57,25 @@ bindsym $mod1+l focus right
 bindsym $mod1+h focus left
 
 # move window/container
-bindsym $mod1+$mod2+h move left
-bindsym $mod1+$mod2+j move down
-bindsym $mod1+$mod2+k move up
-bindsym $mod1+$mod2+l move right
+bindsym $mod1+Control+h move left
+bindsym $mod1+Control+j move down
+bindsym $mod1+Control+k move up
+bindsym $mod1+Control+l move right
 
 # split in vertical orientation
-bindsym $mod1+$mod2+v split h
+bindsym $mod1+Control+v split h
 
 # split in horizontal orientation
-bindsym $mod1+$mod2+s split v
+bindsym $mod1+Control+s split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod1+$mod2+m fullscreen toggle
+bindsym $mod1+Control+m fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod1+$mod2+t layout stacking
-bindsym $mod1+$mod2+w layout tabbed
-bindsym $mod1+$mod2+e layout toggle split
-bindsym $mod1+$mod2+f floating toggle
+bindsym $mod1+Control+t layout stacking
+bindsym $mod1+Control+w layout tabbed
+bindsym $mod1+Control+e layout toggle split
+bindsym $mod1+Control+f floating toggle
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -93,10 +91,10 @@ bindsym $mod1+3 workspace number $ws3
 bindsym $mod1+0 workspace $ws0
 
 # move focused container to workspace
-bindsym $mod1+$mod2+1 move container to workspace number $ws1
-bindsym $mod1+$mod2+2 move container to workspace number $ws2
-bindsym $mod1+$mod2+3 move container to workspace number $ws3
-bindsym $mod1+$mod2+0 move container to workspace number $ws0
+bindsym $mod1+Control+1 move container to workspace number $ws1
+bindsym $mod1+Control+2 move container to workspace number $ws2
+bindsym $mod1+Control+3 move container to workspace number $ws3
+bindsym $mod1+Control+0 move container to workspace number $ws0
 
 # layout
 bindsym Print exec --no-startup-id "~/.bin/misc/set_layout_en"
@@ -115,7 +113,7 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-bindsym $mod1+$mod2+r mode "resize"
+bindsym $mod1+Control+r mode "resize"
 
 # class                 border  backgr. text    indicator
 client.focused          #003030 #003030 #9C9C9C #003030

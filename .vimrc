@@ -7,10 +7,11 @@ call plug#begin('~/.vim/plugged')
     Plug 'majutsushi/tagbar', { 'commit': 'd55d454b' }
     Plug 'tpope/vim-fugitive', { 'commit': 'd4877e54' }
     Plug 'farmergreg/vim-lastplace', { 'commit': 'e58cb0df' }
-    Plug 'vifm/vifm.vim', { 'commit': 'b1fe33e5' }
+"    Plug 'vifm/vifm.vim', { 'commit': 'b1fe33e5' }
     Plug 'kshenoy/vim-signature', { 'commit': '6bc3dd12' }
     Plug 'milkypostman/vim-togglelist', { 'commit': '48f0d302' }
     Plug 'will133/vim-dirdiff', { 'commit': '84bc8999' }
+    Plug 'justinmk/vim-dirvish', { 'commit': '2ddd8ee6'}
 call plug#end()
 
 " --- blinking cursor start
@@ -124,7 +125,7 @@ imap <F1> <Nop>
 nmap <F1> <Nop>
 nnoremap <F1> :Spell <CR>
 nnoremap <F2> :set list! <bar> :ToggleWhitespace <CR>
-nnoremap <F3> :Vifm <CR>
+nnoremap <F3> :Dirvish <CR>
 nnoremap <F4> :GitGutterQuickFix<CR>
 nnoremap <F11> :BTags!<CR>
 nnoremap <F12> :TagbarToggle<CR>
@@ -163,6 +164,10 @@ set grepprg=rg\ --vimgrep
 nnoremap <silent> <leader>r :Rg! <C-R>=expand("<cword>")<CR><CR>
 
 "------ plugins settings ------
+
+" dirvish
+" sort folders at the top
+let g:dirvish_mode = ':sort ,^.*[\/],'
 
 " fugitive
 let g:fugitive_no_maps = 1

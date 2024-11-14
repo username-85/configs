@@ -67,6 +67,8 @@ set noautochdir
 set wrap
 set linebreak
 set hidden
+set splitright
+set splitbelow
 
 "search
 set hlsearch

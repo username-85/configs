@@ -57,10 +57,10 @@ bindsym $mod1+l focus right
 bindsym $mod1+h focus left
 
 # move window/container
-bindsym $mod1+Control+h move left
-bindsym $mod1+Control+j move down
-bindsym $mod1+Control+k move up
-bindsym $mod1+Control+l move right
+bindsym $mod1+Mod1+h move left
+bindsym $mod1+Mod1+j move down
+bindsym $mod1+Mod1+k move up
+bindsym $mod1+Mod1+l move right
 
 # split in vertical orientation
 bindsym $mod1+Control+v split h

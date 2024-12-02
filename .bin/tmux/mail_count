@@ -1,11 +1,10 @@
 #!/bin/bash
-MAX_UNREAD=10
-MAX_SHOW=5
+MAX_UNREAD=7
+MAX_SHOW=3
 
 # Set maildirs
 mdir="$HOME/data/Mail"
-mboxes="$mdir/gitlab/new/ $mdir/inbox/new/ $mdir/inbox-ext/new/ \
-        $mdir/redmine/new/ $mdir/xpon/new/"
+mboxes="$mdir/gitlab/new/ $mdir/inbox/new/ $mdir/inbox-ext/new/"
 
 counter=$(find $mboxes -type f | wc -l)
 symbol="░"

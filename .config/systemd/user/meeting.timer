@@ -2,7 +2,7 @@
 Description=Meeting time
 
 [Timer]
-OnCalendar=Mon..Fri 13:50
+OnCalendar=Mon..Fri 13:55
 
 [Install]
 WantedBy=timers.target

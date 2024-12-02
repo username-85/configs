@@ -69,7 +69,7 @@ bindsym $mod1+Control+v split h
 bindsym $mod1+Control+s split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod1+Control+m fullscreen toggle
+bindsym $mod1+m fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod1+Control+t layout stacking
@@ -117,7 +117,7 @@ bindsym $mod1+Control+r mode "resize"
 
 # class                 border  backgr. text    indicator
 client.focused          #003030 #003030 #9C9C9C #003030
-client.focused_inactive #002020 #002020 #8C8C8C #002020
+client.focused_inactive #002525 #002525 #8C8C8C #002525
 client.unfocused        #001010 #001010 #7C7C7C #001010
 client.urgent           #501A10 #501A10 #ACACAC #501A10
 

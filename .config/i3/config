@@ -16,7 +16,7 @@ title_align center
 set $mod1 Mod4
 
 # set minimal font to minimize titles
-font -*-terminus-medium-*-*-*-14-*-*-*-*-*-iso10646-*
+font -*-terminus-medium-*-*-*-13-*-*-*-*-*-iso10646-*
 
 # xf86 hotkeys
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 1

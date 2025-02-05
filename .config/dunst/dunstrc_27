@@ -103,7 +103,7 @@
 
     ### Text ###
 
-    font = Terminus normal 14
+    font = Terminus normal 12
 
 
     # The spacing between lines.  If the height is smaller than the

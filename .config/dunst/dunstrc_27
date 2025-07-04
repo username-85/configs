@@ -306,15 +306,15 @@
     background = "#265B4D"
     foreground = "#c6c6c6"
 
-[telegram]
-    timeout = 0
-    appname = "*elegram*"
-#   format = "telegram"
-#   script = ~/.config/dunst/telegram.sh
+#[telegram]
+#    timeout = 0
+#    appname = "*elegram*"
+##   format = "telegram"
+##   script = ~/.config/dunst/telegram.sh
 
-[firefox]
-    timeout = 0
-    appname = "Firefox"
+#[firefox]
+#    timeout = 0
+#    appname = "Firefox"
 
 # fullscreen values
 # show: show the notifications, regardless if there is a fullscreen window opened

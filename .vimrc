@@ -188,8 +188,9 @@ set cscopetag
 " if set to 0 cscopequickfix settings are applied
 set csto=1
 silent! cs add GTAGS
-nmap <silent><leader>g <C-]>
+"nmap <silent><leader>g <C-]>
 "nmap <silent><leader>g :silent! tag <C-R>=expand("<cword>")<CR><CR> <bar> :silent! ltag <CR>
+nmap <silent><leader>g :lcs find g <C-R>=expand("<cword>")<CR><CR>
 nmap <silent><leader>c :lcs find c <C-R>=expand("<cword>")<CR><CR>
 nmap <silent><leader>a :lcs find a <C-R>=expand("<cword>")<CR><CR>
 nmap <silent><leader>s :lcs find s <C-R>=expand("<cword>")<CR><CR>

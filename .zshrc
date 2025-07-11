@@ -123,14 +123,14 @@ if [ $HOSTNAME = "work" ]; then
     alias clear_tags="find . -type f '(' -name tags -o -name GPATH -o -name GRTAGS -o -name GTAGS -o -name gtags.files ')' -exec rm -v {} \;"
     alias clear_formatter_backups='find . -name "*unc-backup*~*" -exec rm -v {} \;'
 else
-    export MPD_HOST="/tmp/mpd"
+    export MPD_HOST="mute7@localhost"
     alias gphoto="gphoto2 --get-all-files"
     alias mpv="firejail --dns=77.88.8.7 mpv"
     alias mpa="firejail --dns=77.88.8.7 mpv --no-video"
     alias mpvns="\mpv"
     alias mpans="\mpv --no-video"
     alias dyv='firejail yt-dlp --proxy socks5://127.0.0.1:1080 --retries infinite --no-cache-dir -S res:360 --no-playlist -o "%(title)s-%(id)s.%(ext)s"'
-    alias dya="firejail yt-dlp --proxy socks5://127.0.0.1:1080 --retries infinite --no-cache-dir -f bestaudio --no-playlist -o '%(title)s-%(id)s.%(ext)s'"
+    alias dya="firejail yt-dlp --proxy socks5://127.0.0.1:1080 --socket-timeout 15 --retries infinite --no-cache-dir -f bestaudio --no-playlist -o '%(title)s-%(id)s.%(ext)s'"
     alias dual_monitor='xrandr --output eDP1 --auto --output HDMI1 --auto --right-of eDP1'
 
     # torrent

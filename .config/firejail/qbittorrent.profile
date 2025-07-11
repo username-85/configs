@@ -48,7 +48,6 @@ notv
 novideo
 protocol unix,inet,inet6,netlink
 seccomp
-shell none
 
 private-bin qbittorrent,qbittorrent-nox,python*
 private-dev

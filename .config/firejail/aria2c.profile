@@ -19,7 +19,6 @@ notv
 novideo
 protocol unix,inet,inet6,netlink
 seccomp
-shell none
 no3d
 nogroups
 

@@ -123,7 +123,9 @@ if [ $HOSTNAME = "work" ]; then
     alias clear_tags="find . -type f '(' -name tags -o -name GPATH -o -name GRTAGS -o -name GTAGS -o -name gtags.files ')' -exec rm -v {} \;"
     alias clear_formatter_backups='find . -name "*unc-backup*~*" -exec rm -v {} \;'
 else
-    export MPD_HOST="mute7@localhost"
+    if [ $HOSTNAME = "work" ]; then
+        export MPD_HOST="mute7@localhost"
+    fi
     alias gphoto="gphoto2 --get-all-files"
     alias mpv="firejail --dns=77.88.8.7 mpv"
     alias mpa="firejail --dns=77.88.8.7 mpv --no-video"

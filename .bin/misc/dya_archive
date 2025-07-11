@@ -1,3 +1,3 @@
 #!/bin/sh
 
-firejail yt-dlp --limit-rate 7M --proxy socks5://127.0.0.1:1080 --download-archive yt-dlp-archive.txt --retries infinite --no-cache-dir --no-playlist -f bestaudio -o "%(upload_date>%Y-%m-%d)s %(title)+.100U.m4a" "$1"
+firejail yt-dlp --socket-timeout 15 --limit-rate 7M --proxy socks5://127.0.0.1:1080 --download-archive yt-dlp-archive.txt --retries infinite --no-cache-dir --no-playlist -f bestaudio -o "%(upload_date>%Y-%m-%d)s %(title)+.100U.m4a" "$1"

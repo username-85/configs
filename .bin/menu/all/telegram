@@ -1,2 +1,2 @@
 #!/bin/sh
-firejail telegram-desktop
+firejail Telegram

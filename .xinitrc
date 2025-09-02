@@ -9,8 +9,9 @@ HOSTNAME=$(uname -n)
 xrdb -load "${HOME}/.config/xresources/config"
 
 if [ "$HOSTNAME" = "work" ]; then
-    slock
-    xss-lock --ignore-sleep "slock" &
+    locker="${HOME}/.bin/misc/slock"
+    "$locker"
+    xss-lock --ignore-sleep "$locker" &
     st &
     st -e sh -c "cat ${HOME}/.issue; $SHELL" &
 fi
